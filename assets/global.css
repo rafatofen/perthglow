@@ -1,0 +1,66 @@
+/* ============================================================
+   PERTH GLOW — global.css
+   Shared across all pages. Handles: nav, footer, mobile fixes.
+   ============================================================ */
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 5vw;height:76px;display:flex;align-items:center;justify-content:space-between;background:rgba(5,5,8,.92);backdrop-filter:blur(24px);border-bottom:1px solid rgba(255,255,255,0.07)}
+.nav-logo{display:flex;align-items:center;text-decoration:none}
+.nav-logo img{height:44px;width:auto;filter:drop-shadow(0 0 14px rgba(181,123,238,.4))}
+.nav-links{display:flex;gap:2.5rem;list-style:none;align-items:center}
+.nav-links a{font-family:'Syncopate',sans-serif;font-size:.58rem;letter-spacing:.18em;color:rgba(240,238,234,.55);text-decoration:none;text-transform:uppercase;transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:#b57bee}
+.nav-cta{border:1px solid #b57bee!important;color:#b57bee!important;padding:9px 22px!important;transition:all .2s!important}
+.nav-cta:hover{background:#b57bee!important;color:#050508!important;box-shadow:0 0 24px rgba(181,123,238,.4)!important}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;border:none;background:transparent;padding:4px}
+.hamburger span{display:block;width:24px;height:1.5px;background:#f0eeea;transition:.3s}
+.mobile-nav{display:none;position:fixed;inset:0;background:rgba(5,5,8,.97);backdrop-filter:blur(20px);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:2rem}
+.mobile-nav.open{display:flex}
+.mobile-nav a{font-family:'Syncopate',sans-serif;font-size:.9rem;letter-spacing:.25em;color:#f0eeea;text-decoration:none;text-transform:uppercase;transition:color .2s}
+.mobile-nav a:hover{color:#b57bee}
+.mob-close{position:absolute;top:24px;right:5vw;background:transparent;border:none;color:#f0eeea;font-size:1.4rem;cursor:pointer}
+
+/* ── FOOTER ── */
+footer{background:#050508;border-top:1px solid rgba(255,255,255,0.07);padding:64px 5vw 30px}
+.f-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3.5rem;max-width:1300px;margin-left:auto;margin-right:auto}
+.f-brand img{height:42px;filter:drop-shadow(0 0 10px rgba(181,123,238,.35))}
+.f-brand p{color:rgba(240,238,234,.55);font-size:.83rem;line-height:1.7;margin:1rem 0 1.4rem;max-width:270px}
+.socials{display:flex;gap:.7rem}
+.soc{width:36px;height:36px;border:1px solid rgba(255,255,255,0.07);display:flex;align-items:center;justify-content:center;color:rgba(240,238,234,.55);text-decoration:none;font-size:.8rem;transition:.2s}
+.soc:hover{border-color:#b57bee;color:#b57bee}
+.f-col h4{font-family:'Syncopate',sans-serif;font-size:.52rem;letter-spacing:.2em;color:#b57bee;margin-bottom:1.1rem;text-transform:uppercase}
+.f-col ul{list-style:none;display:flex;flex-direction:column;gap:.55rem}
+.f-col ul a{font-size:.83rem;color:rgba(240,238,234,.55);text-decoration:none;transition:color .2s}
+.f-col ul a:hover{color:#f0eeea}
+.f-bottom{border-top:1px solid rgba(255,255,255,0.07);padding-top:1.4rem;display:flex;flex-direction:column;align-items:center;text-align:center;gap:.5rem;max-width:1300px;margin:0 auto}
+.f-bottom-links{display:flex;gap:2rem;flex-wrap:wrap;justify-content:center;align-items:center}
+.f-bottom p,.f-bottom a{font-size:.76rem;color:rgba(255,255,255,.22);text-decoration:none}
+.f-bottom a:hover{color:#b57bee}
+.f-credit{font-size:.7rem;color:rgba(255,255,255,.18)}
+.f-credit a{color:rgba(181,123,238,.5);text-decoration:none;transition:.2s}
+.f-credit a:hover{color:#b57bee}
+
+/* ── SHARED UTILITIES ── */
+.btn{font-family:'Syncopate',sans-serif;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;padding:16px 38px;text-decoration:none;display:inline-block;transition:.3s;cursor:pointer;border:none}
+.btn-fill{background:linear-gradient(135deg,#c77dff,#b57bee);color:#050508;font-weight:700}
+.btn-fill:hover{box-shadow:0 0 40px rgba(181,123,238,.5);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:#f0eeea;border:1px solid rgba(255,255,255,.25)}
+.btn-ghost:hover{border-color:#b57bee;color:#b57bee}
+.label{font-family:'Syncopate',sans-serif;font-size:.55rem;letter-spacing:.3em;color:#b57bee;text-transform:uppercase;margin-bottom:.9rem}
+.rule{width:56px;height:1px;background:linear-gradient(to right,#b57bee,#c77dff,transparent);margin-bottom:2rem}
+.body-txt{color:rgba(240,238,234,.55);line-height:1.85;font-size:.95rem}
+
+/* ── MOBILE ── */
+@media(max-width:1100px){
+  .f-top{grid-template-columns:1fr 1fr}
+}
+@media(max-width:720px){
+  /* Nav */
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  /* Footer */
+  .f-top{grid-template-columns:1fr}
+  .f-bottom-links{flex-direction:column;gap:.6rem}
+  /* Buttons centered */
+  .hero-btns,.btns,.cta-strip-btns,.btn-group{display:flex;justify-content:center;flex-wrap:wrap;text-align:center}
+}

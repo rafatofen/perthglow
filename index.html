@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perth Glow Furniture Hire | Glow Your Event</title>
+<meta name="description" content="Perth's premier LED glow furniture, dance floors & 360 photo booth hire. 16 colour options. Serving Perth & surrounds. Book online today.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Syncopate:wght@400;700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   PERTH GLOW — index.html — Clean CSS (no duplicates)
+   ============================================================ */
+
+:root {
+  --black:#050508; --deep:#08080f; --card:#0e0e1c;
+  --border:rgba(255,255,255,0.07); --white:#f0eeea;
+  --dim:rgba(240,238,234,0.55); --cyan:#b57bee;
+  --purple:#c77dff; --magenta:#e040fb; --blue:#4361ee;
+  --display:'Syncopate',sans-serif;
+  --serif:'Cormorant Garamond',serif;
+  --body:'DM Sans',sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--black);color:var(--white);font-family:var(--body);font-weight:300;overflow-x:hidden}
+body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");pointer-events:none;z-index:9998;opacity:.3;mix-blend-mode:overlay}
+
+/* ── NAV ── */
+#nav{background:transparent;backdrop-filter:none;border-bottom:none}
+#nav.scrolled{background:rgba(5,5,8,.92)!important;backdrop-filter:blur(24px)!important;border-bottom:1px solid var(--border)!important}
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 5vw;height:76px;display:flex;align-items:center;justify-content:space-between;transition:background .4s,backdrop-filter .4s,border-color .4s}
+
+.nav-logo{display:flex;align-items:center;text-decoration:none}
+.nav-logo img{height:44px;filter:drop-shadow(0 0 14px rgba(181,123,238,.4))}
+.nav-links{display:flex;gap:2.5rem;list-style:none;align-items:center}
+.nav-links a{font-family:var(--display);font-size:.58rem;letter-spacing:.18em;color:var(--dim);text-decoration:none;text-transform:uppercase;transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--cyan)}
+.nav-cta{border:1px solid var(--cyan)!important;color:var(--cyan)!important;padding:9px 22px!important;transition:all .2s!important}
+.nav-cta:hover{background:var(--cyan)!important;color:var(--black)!important;box-shadow:0 0 24px rgba(181,123,238,.4)!important}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;border:none;background:transparent;padding:4px}
+.hamburger span{display:block;width:24px;height:1.5px;background:var(--white);transition:.3s}
+.mobile-nav{display:none;position:fixed;inset:0;background:rgba(5,5,8,.97);backdrop-filter:blur(20px);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:2rem}
+.mobile-nav.open{display:flex}
+.mobile-nav a{font-family:var(--display);font-size:.9rem;letter-spacing:.25em;color:var(--white);text-decoration:none;text-transform:uppercase;transition:color .2s}
+.mobile-nav a:hover{color:var(--cyan)}
+.mob-close{position:absolute;top:24px;right:5vw;background:transparent;border:none;color:var(--white);font-size:1.4rem;cursor:pointer}
+
+/* ── SECTIONS ── */
+section{padding:110px 5vw}
+.wrap{max-width:1300px;margin:0 auto}
+.label{font-family:var(--display);font-size:.55rem;letter-spacing:.3em;color:var(--cyan);text-transform:uppercase;margin-bottom:.9rem}
+.h2{font-family:var(--serif);font-size:clamp(2.2rem,5vw,4rem);font-weight:300;line-height:1.08;margin-bottom:1.4rem}
+.h2 em{font-style:italic;color:var(--cyan)}
+.rule{width:56px;height:1px;background:linear-gradient(to right,var(--cyan),var(--purple),transparent);margin-bottom:2rem}
+.body-txt{color:var(--dim);line-height:1.85;font-size:.95rem}
+.btn{font-family:var(--display);font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;padding:16px 38px;text-decoration:none;display:inline-block;transition:.3s;cursor:pointer;border:none}
+.btn-fill{background:linear-gradient(135deg,var(--purple),var(--cyan));color:var(--black);font-weight:700}
+.btn-fill:hover{box-shadow:0 0 40px rgba(181,123,238,.5);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--white);border:1px solid rgba(255,255,255,.25)}
+.btn-ghost:hover{border-color:var(--cyan);color:var(--cyan)}
+
+/* ── HERO ── */
+#hero{position:relative;height:100vh;min-height:640px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;opacity:.45}
+.hero-grad{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(5,5,8,.5) 0%,rgba(5,5,8,.05) 40%,rgba(5,5,8,.85) 100%)}
+.orb{position:absolute;border-radius:50%;filter:blur(90px);pointer-events:none;animation:orb ease-in-out infinite}
+.orb-a{width:600px;height:600px;background:var(--purple);top:-150px;left:-150px;opacity:.28;animation-duration:12s}
+.orb-b{width:500px;height:500px;background:#4361ee;bottom:-100px;right:5%;opacity:.2;animation-duration:11s;animation-delay:-4s}
+.orb-c{width:350px;height:350px;background:#e040fb;top:35%;left:42%;opacity:.15;animation-duration:14s;animation-delay:-7s}
+@keyframes orb{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(20px,-25px) scale(1.04)}}
+.hero-inner{position:relative;z-index:2;text-align:center;padding:0 5vw;max-width:940px}
+.eyebrow{font-family:var(--display);font-size:.58rem;letter-spacing:.35em;color:var(--cyan);text-transform:uppercase;margin-bottom:1.4rem;opacity:0;animation:up 1s .3s forwards}
+.hero-h1{font-family:var(--serif);font-size:clamp(3.2rem,8.5vw,7.5rem);font-weight:300;line-height:.93;margin-bottom:1.6rem;opacity:0;animation:up 1s .5s forwards}
+.hero-h1 em{font-style:italic;color:var(--cyan);text-shadow:0 0 50px rgba(181,123,238,.45)}
+.hero-sub{font-size:1rem;color:var(--dim);max-width:500px;margin:0 auto 2.8rem;line-height:1.75;opacity:0;animation:up 1s .7s forwards}
+.hero-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;opacity:0;animation:up 1s .9s forwards}
+.scroll-cue{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:7px;opacity:0;animation:up 1s 1.2s forwards}
+.scroll-cue span{font-family:var(--display);font-size:.48rem;letter-spacing:.28em;color:var(--dim)}
+.scroll-line{width:1px;height:48px;background:linear-gradient(to bottom,var(--cyan),transparent);animation:pulse 2s ease-in-out infinite}
+@keyframes up{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulse{0%,100%{opacity:.4}50%{opacity:1}}
+
+/* ── WELCOME ── */
+#welcome .wrap{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.img-stack{position:relative;height:580px}
+.img-main{position:absolute;top:0;left:0;width:78%;height:90%;overflow:hidden;border:1px solid var(--border)}
+.img-main img{width:100%;height:100%;object-fit:cover;opacity:.85;transition:transform .6s ease}
+.img-main:hover img{transform:scale(1.03)}
+.img-accent{position:absolute;bottom:0;right:0;width:50%;height:56%;overflow:hidden;border:1px solid var(--cyan);box-shadow:0 0 40px rgba(181,123,238,.1)}
+.img-accent img{width:100%;height:100%;object-fit:cover;opacity:.85}
+.badge{position:absolute;top:49%;left:71%;transform:translate(-50%,-50%);width:82px;height:82px;background:var(--black);border:1px solid var(--cyan);border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 0 32px rgba(181,123,238,.3);z-index:4;text-align:center}
+.badge b{font-family:var(--display);font-size:1.4rem;font-weight:700;color:var(--cyan);line-height:1}
+.badge small{font-family:var(--display);font-size:.38rem;letter-spacing:.08em;color:var(--dim)}
+.swatches{display:flex;gap:7px;flex-wrap:wrap;margin:1.8rem 0}
+.swatch{width:26px;height:26px;border-radius:50%;border:2px solid rgba(255,255,255,.1)}
+
+/* ── CATEGORIES ── */
+#categories{padding:0}
+.cat-header{padding:80px 5vw 60px;text-align:center}
+.cat-header .rule{margin:0 auto}
+.cat-carousel-wrap{position:relative}
+.cat-prev,.cat-next{display:none;position:absolute;top:50%;transform:translateY(-50%);z-index:10;background:rgba(5,5,8,.7);border:1px solid var(--purple);color:var(--white);font-size:2rem;width:44px;height:44px;align-items:center;justify-content:center;cursor:pointer;backdrop-filter:blur(8px);transition:.2s}
+.cat-prev:hover,.cat-next:hover{background:var(--purple);color:var(--black)}
+.cat-prev{left:4px}
+.cat-next{right:4px}
+.cat-grid{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:auto auto;gap:2px}
+.cat-card{position:relative;overflow:hidden;cursor:pointer;text-decoration:none;display:block}
+.cat-card:first-child{grid-row:span 2;grid-column:1}
+.cat-img{width:100%;height:100%;min-height:240px;overflow:hidden}
+.cat-card:first-child .cat-img{min-height:480px}
+.cat-img img{width:100%;height:100%;object-fit:cover;opacity:.65;transition:transform .7s ease,opacity .4s}
+.cat-card:hover .cat-img img{transform:scale(1.07);opacity:.8}
+.cat-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(5,5,8,.97) 0%,rgba(5,5,8,.55) 50%,rgba(5,5,8,.2) 100%)}
+.cat-info{position:absolute;bottom:0;left:0;right:0;padding:2rem 1.8rem}
+.cat-name{font-family:var(--serif);font-size:clamp(1.4rem,2.2vw,2rem);font-weight:300;margin-bottom:.4rem;color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.8)}
+.cat-desc{font-size:.82rem;color:rgba(255,255,255,.75);max-width:340px;line-height:1.6;text-shadow:0 1px 6px rgba(0,0,0,.8)}
+.cat-arrow{font-family:var(--display);font-size:.52rem;letter-spacing:.18em;color:var(--cyan);margin-top:.7rem;display:inline-flex;align-items:center;gap:7px;text-shadow:0 1px 8px rgba(0,0,0,.9)}
+.cat-arrow::after{content:'→';transition:transform .2s}
+.cat-card:hover .cat-arrow::after{transform:translateX(4px)}
+
+/* ── DANCE FLOOR ── */
+#dancefloor .wrap{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;max-width:1300px;margin:0 auto}
+.df-visual{position:relative;height:520px;overflow:hidden}
+.df-visual img{width:100%;height:100%;object-fit:cover;opacity:.8;border:1px solid var(--border)}
+.df-glow-bar{position:absolute;bottom:0;left:0;right:0;height:4px;background:linear-gradient(to right,var(--purple),var(--cyan),var(--magenta));opacity:.7}
+.feature-list{list-style:none;display:flex;flex-direction:column;gap:.9rem;margin:1.8rem 0}
+.feature-list li{display:flex;align-items:flex-start;gap:12px;color:var(--dim);font-size:.9rem;line-height:1.6}
+.feature-list li::before{content:'';flex-shrink:0;width:6px;height:6px;border-radius:50%;background:var(--cyan);box-shadow:0 0 10px var(--cyan);margin-top:6px}
+
+/* ── PHOTO BOOTH ── */
+#photobooth{background:var(--deep)}
+#photobooth .wrap{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;max-width:1300px;margin:0 auto}
+.pb-visual{position:relative;height:560px;overflow:hidden}
+.pb-visual img{width:100%;height:100%;object-fit:cover;opacity:.8;border:1px solid var(--border)}
+.pb-ring{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none}
+.pb-ring::before,.pb-ring::after{content:'';position:absolute;border-radius:50%;border:1px solid;animation:ring 3s ease-in-out infinite}
+.pb-ring::before{width:200px;height:200px;border-color:var(--cyan);opacity:.4}
+.pb-ring::after{width:320px;height:320px;border-color:var(--purple);opacity:.2;animation-delay:.6s}
+@keyframes ring{0%,100%{transform:scale(1);opacity:.4}50%{transform:scale(1.04);opacity:.7}}
+.pb-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin:1.8rem 0}
+.pb-feat{padding:1.1rem;background:var(--card);border:1px solid var(--border);border-left:2px solid var(--cyan)}
+.pb-feat h4{font-family:var(--display);font-size:.52rem;letter-spacing:.14em;color:var(--cyan);margin-bottom:.35rem}
+.pb-feat p{font-size:.82rem;color:var(--dim);line-height:1.5}
+
+/* ── GLOW FURNITURE ── */
+#glowfurniture .wrap>div{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;max-width:1300px;margin:0 auto}
+
+/* ── PACKAGES ── */
+#packages .wrap{max-width:1300px;margin:0 auto}
+.pkg-top{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:2.8rem;flex-wrap:wrap;gap:1rem}
+.pkg-carousel-wrap{position:relative;overflow:hidden;padding:0 60px}
+.pkg-track{overflow:hidden}
+.pkg-grid{display:flex;gap:0;transition:transform .4s ease}
+.pkg{flex:0 0 calc(33.333%);min-width:0;background:var(--card);border:1px solid var(--border);position:relative;overflow:hidden;transition:border-color .3s,transform .3s;display:flex;flex-direction:column}
+.pkg::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right,var(--purple),var(--cyan));opacity:0;transition:opacity .3s;z-index:2}
+.pkg:hover{border-color:rgba(181,123,238,.25);transform:translateY(-4px)}
+.pkg:hover::before,.pkg.best::before{opacity:1}
+.pkg.best{border-color:rgba(181,123,238,.28);background:linear-gradient(160deg,rgba(181,123,238,.06),rgba(67,97,238,.04))}
+.pkg-img{width:100%;height:200px;overflow:hidden;position:relative;flex-shrink:0}
+.pkg-img img{width:100%;height:100%;object-fit:cover;opacity:.7;transition:transform .5s ease,opacity .4s}
+.pkg:hover .pkg-img img{transform:scale(1.05);opacity:.85}
+.pkg-img-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,transparent 50%,var(--card) 100%)}
+.pkg-body{padding:1.8rem 1.6rem 1.6rem;display:flex;flex-direction:column;flex:1}
+.pkg-tag{font-family:var(--display);font-size:.44rem;letter-spacing:.2em;background:linear-gradient(135deg,var(--purple),var(--cyan));color:var(--black);padding:4px 12px;display:inline-block;margin-bottom:1.1rem;font-weight:700}
+.pkg-name{font-family:var(--serif);font-size:1.6rem;font-weight:300;margin-bottom:.35rem}
+.pkg-desc{font-size:.8rem;color:var(--dim);line-height:1.5}
+.pkg-price{display:flex;align-items:baseline;gap:8px;margin:1.2rem 0}
+.pkg-old{font-size:.88rem;color:var(--dim);text-decoration:line-through}
+.pkg-now{font-family:var(--serif);font-size:2.4rem;font-weight:300;color:var(--cyan)}
+.pkg-list{list-style:none;display:flex;flex-direction:column;gap:.5rem;margin-bottom:1.6rem;flex:1}
+.pkg-list li{font-size:.8rem;color:var(--dim);display:flex;align-items:center;gap:8px}
+.pkg-list li::before{content:'✓';color:var(--cyan);font-size:.72rem;flex-shrink:0}
+.pkg-btn{width:100%;font-family:var(--display);font-size:.52rem;letter-spacing:.16em;padding:13px;background:transparent;border:1px solid rgba(255,255,255,.14);color:var(--white);cursor:pointer;text-align:center;text-decoration:none;display:block;transition:.3s;margin-top:auto}
+.pkg-btn:hover,.pkg.best .pkg-btn{background:linear-gradient(135deg,var(--purple),var(--cyan));border-color:var(--purple);color:var(--black)}
+.pkg-arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:10;background:rgba(5,5,8,.85);border:1px solid var(--purple);color:var(--white);font-size:2rem;width:50px;height:50px;display:flex;align-items:center;justify-content:center;cursor:pointer;backdrop-filter:blur(12px);transition:.2s}
+.pkg-arrow:hover{background:var(--purple);color:var(--black)}
+.pkg-arrow-prev{left:-4px}
+.pkg-arrow-next{right:-4px}
+.pkg-dots{display:flex;justify-content:center;gap:.5rem;margin-top:1.5rem}
+.pkg-dot{width:6px;height:6px;border-radius:50%;background:rgba(181,123,238,.3);border:none;cursor:pointer;transition:.2s;padding:0}
+.pkg-dot.active{background:var(--purple);box-shadow:0 0 8px var(--purple)}
+
+/* ── TESTIMONIALS ── */
+#testimonials{background:var(--deep);text-align:center}
+#testimonials .wrap{max-width:1300px;margin:0 auto}
+#testimonials .rule{margin:0 auto 3.5rem}
+.testi-carousel-wrap{position:relative;max-width:1400px;margin:0 auto;padding:0 80px}
+.testi-track{overflow:hidden}
+.testi-grid{display:flex;gap:0;transition:transform .5s cubic-bezier(.25,.46,.45,.94)}
+.testi{flex:0 0 calc(33.333%);padding:1.5rem;background:var(--card);border:1px solid var(--border);text-align:left;box-sizing:border-box;transition:transform .5s ease,box-shadow .5s ease,opacity .5s ease}
+.testi.center-card{transform:translateZ(40px) scale(1.06);box-shadow:0 20px 60px rgba(181,123,238,.25);border-color:rgba(181,123,238,.3)}
+.testi.side-card{transform:scale(0.96);opacity:.7}
+.testi-event-photo{width:100%;height:140px;overflow:hidden;margin-bottom:1rem}
+.testi-event-photo img{width:100%;height:100%;object-fit:cover;opacity:.85;transition:transform .5s ease}
+.testi:hover .testi-event-photo img{transform:scale(1.04)}
+.testi-event-photo-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,transparent 60%,var(--card) 100%)}
+.testi-gmaps{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;padding-bottom:.8rem;border-bottom:1px solid var(--border)}
+.gmaps-logo{display:flex;align-items:center;gap:1px;font-size:1rem;font-weight:700;font-family:Arial,sans-serif}
+.g1{color:#4285F4}.g2{color:#EA4335}.g3{color:#FBBC04}.g4{color:#4285F4}.g5{color:#34A853}.g6{color:#EA4335}
+.gmaps-stars{display:flex;gap:2px;color:#FBBC04;font-size:1rem}
+.testi-q{font-family:var(--serif);font-size:1.05rem;font-style:italic;color:var(--white);line-height:1.75;margin-bottom:1rem;font-weight:300}
+.testi-q::before{content:'"';font-size:2.8rem;color:var(--cyan);line-height:0;vertical-align:-.65rem;margin-right:3px;opacity:.45}
+.testi-head{display:flex;align-items:center;gap:.9rem;margin-top:1rem}
+.testi-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--purple),var(--cyan));display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:.6rem;font-weight:700;color:var(--black);flex-shrink:0;overflow:hidden}
+.testi-avatar img{width:100%;height:100%;object-fit:cover}
+.testi-who{font-family:var(--display);font-size:.52rem;letter-spacing:.14em;color:var(--dim)}
+.testi-event{font-size:.75rem;color:var(--cyan);margin-top:2px}
+.testi-arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:10;background:rgba(5,5,8,.85);border:1px solid var(--purple);color:var(--white);font-size:2rem;width:50px;height:50px;display:flex;align-items:center;justify-content:center;cursor:pointer;backdrop-filter:blur(12px);transition:.2s}
+.testi-arrow:hover{background:var(--purple);color:var(--black)}
+.testi-prev{left:-4px}
+.testi-next{right:-4px}
+.testi-dots{display:flex;justify-content:center;gap:.5rem;margin-top:1.5rem}
+.testi-dot{width:6px;height:6px;border-radius:50%;background:rgba(181,123,238,.3);border:none;cursor:pointer;transition:.2s;padding:0}
+.testi-dot.active{background:var(--purple);box-shadow:0 0 8px var(--purple)}
+
+/* ── FAQ ── */
+#faq .wrap{max-width:760px;margin:0 auto;text-align:center}
+#faq .rule{margin:0 auto 2.5rem}
+.faq-list{text-align:left;margin-top:1.5rem}
+.faq-item{border-bottom:1px solid var(--border)}
+.faq-q{width:100%;background:transparent;border:none;color:var(--white);font-family:var(--body);font-size:.95rem;font-weight:400;text-align:left;padding:1.4rem 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.faq-icon{flex-shrink:0;width:22px;height:22px;border:1px solid var(--cyan);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--cyan);font-size:1rem;line-height:1;transition:transform .3s,background .3s}
+.faq-item.open .faq-icon{transform:rotate(45deg);background:var(--cyan);color:var(--black)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s;font-size:.88rem;color:var(--dim);line-height:1.85}
+.faq-item.open .faq-a{max-height:300px;padding-bottom:1.4rem}
+
+/* ── CTA / CONTACT ── */
+#cta{background:var(--deep)}
+#cta .wrap{max-width:1300px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.contact-list{display:flex;flex-direction:column;gap:.9rem;margin-top:1.8rem}
+.c-item{display:flex;align-items:center;gap:1rem;color:var(--dim);font-size:.88rem}
+.c-icon{width:36px;height:36px;border:1px solid var(--cyan);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--cyan);flex-shrink:0;font-size:.85rem}
+.form-box{background:var(--card);border:1px solid var(--border);padding:2.5rem}
+.form-box h3{font-family:var(--serif);font-size:1.7rem;font-weight:300;margin-bottom:2rem}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.fg{display:flex;flex-direction:column;gap:5px;margin-bottom:.9rem}
+.fg label{font-family:var(--display);font-size:.48rem;letter-spacing:.2em;color:var(--dim);text-transform:uppercase}
+.fg input,.fg select,.fg textarea{background:var(--deep);border:1px solid var(--border);color:var(--white);padding:12px 14px;font-family:var(--body);font-size:.88rem;outline:none;transition:border-color .2s;width:100%;-webkit-appearance:none}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--cyan)}
+.fg textarea{resize:vertical;min-height:96px}
+.fg select{cursor:pointer;color:var(--dim)}
+.fg select option{background:var(--deep);color:var(--white)}
+
+/* ── FOOTER ── */
+footer{background:var(--black);border-top:1px solid var(--border);padding:64px 5vw 30px}
+.f-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3.5rem;max-width:1300px;margin-left:auto;margin-right:auto}
+.f-brand img{height:42px;filter:drop-shadow(0 0 10px rgba(181,123,238,.35))}
+.f-brand p{color:var(--dim);font-size:.83rem;line-height:1.7;margin:1rem 0 1.4rem;max-width:270px}
+.socials{display:flex;gap:.7rem}
+.soc{width:36px;height:36px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--dim);text-decoration:none;font-size:.8rem;transition:.2s}
+.soc:hover{border-color:var(--cyan);color:var(--cyan)}
+.f-col h4{font-family:var(--display);font-size:.52rem;letter-spacing:.2em;color:var(--cyan);margin-bottom:1.1rem;text-transform:uppercase}
+.f-col ul{list-style:none;display:flex;flex-direction:column;gap:.55rem}
+.f-col ul a{font-size:.83rem;color:var(--dim);text-decoration:none;transition:color .2s}
+.f-col ul a:hover{color:var(--white)}
+.f-bottom{border-top:1px solid var(--border);padding-top:1.4rem;display:flex;flex-direction:column;align-items:center;text-align:center;gap:.5rem;max-width:1300px;margin:0 auto}
+.f-bottom-links{display:flex;gap:2rem;flex-wrap:wrap;justify-content:center;align-items:center}
+.f-bottom p,.f-bottom a{font-size:.76rem;color:rgba(255,255,255,.22);text-decoration:none}
+.f-bottom a:hover{color:var(--cyan)}
+.f-credit{font-size:.7rem;color:rgba(255,255,255,.18)}
+.f-credit a{color:rgba(181,123,238,.5);text-decoration:none}
+.f-credit a:hover{color:var(--cyan)}
+
+/* ── ANIMATIONS ── */
+[data-anim]{opacity:0;transition:opacity .7s ease,transform .7s ease}
+[data-anim="up"]{transform:translateY(40px)}
+[data-anim="down"]{transform:translateY(-30px)}
+[data-anim="left"]{transform:translateX(-44px)}
+[data-anim="right"]{transform:translateX(44px)}
+[data-anim="scale"]{transform:scale(0.92)}
+[data-anim="fade"]{transform:none}
+[data-anim].anim-in{opacity:1!important;transform:none!important}
+[data-anim-group]>*{opacity:0;transform:translateY(32px);transition:opacity .6s ease,transform .6s ease}
+[data-anim-group]>*.anim-in{opacity:1!important;transform:none!important}
+[data-anim-group]>*:nth-child(1){transition-delay:0s}
+[data-anim-group]>*:nth-child(2){transition-delay:.1s}
+[data-anim-group]>*:nth-child(3){transition-delay:.2s}
+[data-anim-group]>*:nth-child(4){transition-delay:.3s}
+[data-anim-group]>*:nth-child(5){transition-delay:.4s}
+[data-anim-group]>*:nth-child(6){transition-delay:.5s}
+body{animation:pageFadeIn .4s ease both}
+@keyframes pageFadeIn{from{opacity:0}to{opacity:1}}
+@media(prefers-reduced-motion:reduce){
+  [data-anim],[data-anim-group]>*{opacity:1!important;transform:none!important;transition:none!important}
+  body{animation:none!important}
+}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1100px){
+  .f-top{grid-template-columns:1fr 1fr}
+  #welcome .wrap{grid-template-columns:1fr}
+  #dancefloor .wrap{grid-template-columns:1fr}
+  #photobooth .wrap{grid-template-columns:1fr}
+  #photobooth .pb-visual{order:-1}
+  #glowfurniture .wrap>div{grid-template-columns:1fr!important;gap:2rem}
+  #glowfurniture [data-anim="right"]{order:-1}
+  #glowfurniture [data-anim="left"]{order:1}
+  #cta .wrap{grid-template-columns:1fr}
+  .cat-grid{grid-template-columns:1fr 1fr 1fr}
+  .cat-card:first-child{grid-row:span 2}
+  .pkg{flex:0 0 50%}
+  .pkg-carousel-wrap{padding:0 48px}
+}
+@media(max-width:720px){
+  section{padding:70px 5vw}
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .f-top{grid-template-columns:1fr}
+  .f-bottom-links{flex-direction:column;gap:.6rem}
+  /* Cat carousel on mobile */
+  .cat-carousel-wrap{overflow:hidden}
+  .cat-grid{display:flex!important;overflow-x:auto;scroll-snap-type:x mandatory;gap:0;scrollbar-width:none}
+  .cat-grid::-webkit-scrollbar{display:none}
+  .cat-grid .cat-card{flex:0 0 82vw;scroll-snap-align:start;min-height:320px}
+  .cat-grid .cat-card:first-child{flex:0 0 82vw}
+  .cat-carousel-wrap .cat-prev,.cat-carousel-wrap .cat-next{display:flex}
+  /* Pkg: 1 per slide */
+  .pkg{flex:0 0 85%}
+  .pkg-carousel-wrap{padding:0 24px}
+  .pkg-img{height:180px}
+  /* Testi: 1 per slide */
+  .testi{flex:0 0 85%}
+  .testi-arrow{display:flex}
+  .testi-carousel-wrap{padding:0 44px}
+  .testi.center-card,.testi.side-card{transform:none;opacity:1;box-shadow:none}
+  .testi-event-photo{height:120px}
+  /* Layout */
+  #photobooth .wrap{grid-template-columns:1fr!important}
+  #photobooth .pb-visual{order:-1}
+  .pb-grid{grid-template-columns:1fr}
+  .hero-btns,.btns,.cta-strip-btns{justify-content:center!important;flex-wrap:wrap}
+  .img-stack{height:320px}
+  .row{grid-template-columns:1fr}
+
+  .f-top{grid-template-columns:1fr}
+  .f-brand{text-align:center}
+  .f-brand p{margin-left:auto;margin-right:auto}
+  .socials{justify-content:center}
+  .f-col{text-align:center}
+  .f-col ul{align-items:center}
+  .f-bottom-links{flex-direction:column;gap:.5rem}
+}
+</style>
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180.png">
+  <meta name="theme-color" content="#050508">
+<link rel="stylesheet" href="assets/global.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="index.html" class="nav-logo">
+    <img src="assets/logo-transparent.png" alt="Perth Glow Furniture Hire">
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="hire.html">Hire Now</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="contact.html" class="nav-cta">Get a Quote</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMob()" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-nav" id="mobNav">
+  <button class="mob-close" onclick="toggleMob()">✕</button>
+  <a href="index.html" onclick="toggleMob()">Home</a>
+  <a href="about.html" onclick="toggleMob()">About</a>
+  <a href="hire.html" onclick="toggleMob()">Hire Now</a>
+  <a href="gallery.html" onclick="toggleMob()">Gallery</a>
+  <a href="faq.html" onclick="toggleMob()">FAQ</a>
+  <a href="contact.html" onclick="toggleMob()">Contact</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg">
+    <div class="orb orb-a"></div>
+    <div class="orb orb-b"></div>
+    <div class="orb orb-c"></div>
+    <img src="assets/aerial-event.jpg" alt="Perth Glow aerial event view">
+  </div>
+  <div class="hero-grad"></div>
+  <div class="hero-inner">
+    <p class="eyebrow">Perth's Premier Event Lighting</p>
+    <h1 class="hero-h1">Glow<br>Your <em>Event</em></h1>
+    <p class="hero-sub">LED glow furniture, dance floors & 360 photo booths — transforming Perth events into unforgettable experiences.</p>
+    <div class="hero-btns">
+      <a href="hire.html" class="btn btn-fill">Hire Now</a>
+      <a href="gallery.html" class="btn btn-ghost">View Gallery</a>
+    </div>
+  </div>
+  <div class="scroll-cue">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- WELCOME -->
+<section id="welcome">
+  <div class="wrap">
+    <div class="img-stack" data-anim="left">
+      <div class="img-main">
+        <img src="assets/dance-floor-love.jpg" alt="LED dance floor with glow furniture outdoor event">
+      </div>
+      <div class="img-accent">
+        <img src="assets/furniture-outdoor.jpg" alt="Glow furniture outdoor setup">
+      </div>
+      <div class="badge">
+        <b>16</b>
+        <small>COLOUR<br>MODES</small>
+      </div>
+    </div>
+    <div>
+      <p class="label">Welcome to Perth Glow</p>
+      <h2 class="h2">Light Up Every <em>Moment</em></h2>
+      <div class="rule"></div>
+      <p class="body-txt" style="margin-bottom:1.2rem">Perth Glow Furniture Hire is your go-to for glow event hire across Perth and surrounds. Whether you're planning an intimate birthday, a corporate function, or a large-scale wedding reception — our LED furniture and dance floors set the perfect scene.</p>
+      <p class="body-txt">Choose from 16 vibrant colours and multiple lighting modes. From sleek, single-colour elegance to dynamic multi-colour party energy — you're in full control.</p>
+      <div class="swatches">
+        <div class="swatch" style="background:#ff0040"></div>
+        <div class="swatch" style="background:#ff6600"></div>
+        <div class="swatch" style="background:#ffcc00"></div>
+        <div class="swatch" style="background:#ccff00"></div>
+        <div class="swatch" style="background:#00ff44"></div>
+        <div class="swatch" style="background:#b57bee"></div>
+        <div class="swatch" style="background:#0066ff"></div>
+        <div class="swatch" style="background:#7700ff"></div>
+        <div class="swatch" style="background:#cc00ff"></div>
+        <div class="swatch" style="background:#ff00aa"></div>
+        <div class="swatch" style="background:#ffffff"></div>
+        <div class="swatch" style="background:#ffaacc"></div>
+      </div>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:.5rem">
+        <a href="about.html" class="btn btn-ghost">Our Story</a>
+        <a href="hire.html" class="btn btn-fill">Browse Products</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+<section id="categories">
+  <div class="cat-header" data-anim="up">
+    <p class="label">What We Offer</p>
+    <h2 class="h2" style="max-width:520px;margin:0 auto .5rem">Everything You Need to <em>Glow</em></h2>
+    <div class="rule"></div>
+  </div>
+  <div class="cat-carousel-wrap">
+    <div class="cat-grid" id="catGrid" data-anim-group>
+      <a href="dance-floor.html" class="cat-card">
+        <div class="cat-img"><img src="assets/dance-floor-nye.jpg" alt="LED Dance Floor Perth hire"></div>
+        <div class="cat-overlay"></div>
+        <div class="cat-info">
+          <h3 class="cat-name">LED Dance Floors</h3>
+          <p class="cat-desc">Infinity mirror LED floors — the centrepiece of any event.</p>
+          <span class="cat-arrow">Explore & Hire</span>
+        </div>
+      </a>
+      <a href="glow-furniture.html" class="cat-card">
+        <div class="cat-img"><img src="assets/dance-floor-30.jpg" alt="LED Glow Furniture Perth hire"></div>
+        <div class="cat-overlay"></div>
+        <div class="cat-info">
+          <h3 class="cat-name">LED Glow Furniture</h3>
+          <p class="cat-desc">Chairs, bars, tables & more — lit in 16 colours.</p>
+          <span class="cat-arrow">Explore & Hire</span>
+        </div>
+      </a>
+      <a href="photo-booth.html" class="cat-card">
+        <div class="cat-img"><img src="assets/glow-bench.jpg" alt="360 Photo Booth Perth hire"></div>
+        <div class="cat-overlay"></div>
+        <div class="cat-info">
+          <h3 class="cat-name">360° Photo Booth</h3>
+          <p class="cat-desc">Cinematic slow-motion videos shared instantly.</p>
+          <span class="cat-arrow">Explore & Hire</span>
+        </div>
+      </a>
+      <a href="numbers-letters.html" class="cat-card">
+        <div class="cat-img"><img src="assets/disco-letters.jpg" alt="LED Light Up Numbers and Letters Perth hire"></div>
+        <div class="cat-overlay"></div>
+        <div class="cat-info">
+          <h3 class="cat-name">LED Numbers & Letters</h3>
+          <p class="cat-desc">Marquee light-up numbers and letters for any occasion.</p>
+          <span class="cat-arrow">Explore & Hire</span>
+        </div>
+      </a>
+      <a href="photo-booth.html" class="cat-card">
+        <div class="cat-img"><img src="assets/marry-me.jpg" alt="Light Up Letters Perth hire"></div>
+        <div class="cat-overlay"></div>
+        <div class="cat-info">
+          <h3 class="cat-name">Light Up Letters</h3>
+          <p class="cat-desc">Spell out LOVE, DISCO, your name — anything you like.</p>
+          <span class="cat-arrow">Explore & Hire</span>
+        </div>
+      </a>
+    </div>
+    <!-- Mobile carousel arrows -->
+    <button class="cat-prev" onclick="scrollCat(-1)" aria-label="Previous">&#8249;</button>
+    <button class="cat-next" onclick="scrollCat(1)" aria-label="Next">&#8250;</button>
+  </div>
+</section>
+
+<!-- DANCE FLOOR FEATURE -->
+<section id="dancefloor">
+  <div class="wrap">
+    <div class="df-visual" data-anim="left">
+      <img src="assets/disco-letters.jpg" alt="DISCO marquee letters with mirror balls">
+      <div class="df-glow-bar"></div>
+    </div>
+    <div data-anim="right">
+      <p class="label">Feature Product</p>
+      <h2 class="h2">LED <em>Dance Floors</em></h2>
+      <div class="rule"></div>
+      <p class="body-txt" style="margin-bottom:1rem">Our infinity mirror LED dance floors are the ultimate centrepiece. Available in various sizes to suit your venue — from intimate backyard parties to grand ballroom events.</p>
+      <ul class="feature-list">
+        <li>Multiple size configurations — small to large</li>
+        <li>16 colour options with wireless remote control</li>
+        <li>Flashing, fade, rainbow & static lighting modes</li>
+        <li>Suitable for indoor and outdoor events</li>
+        <li>Professional setup and pack-down included</li>
+        <li>Pairs perfectly with our glow furniture packages</li>
+      </ul>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem">
+        <a href="dance-floor.html" class="btn btn-fill">See More →</a>
+        <a href="hire.html" class="btn btn-ghost">Hire a Dance Floor</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHOTO BOOTH -->
+<section id="photobooth">
+  <div class="wrap">
+    <div data-anim="left">
+      <p class="label">The Experience</p>
+      <h2 class="h2">360° <em>Photo Booth</em></h2>
+      <div class="rule"></div>
+      <p class="body-txt" style="margin-bottom:1.8rem">Capture stunning panoramic moments from your event. Our 360° photo booth creates cinematic slow-motion videos your guests will be sharing for years to come.</p>
+      <div class="pb-grid">
+        <div class="pb-feat">
+          <h4>Immersive</h4>
+          <p>Panoramic slow-motion videos from every angle</p>
+        </div>
+        <div class="pb-feat">
+          <h4>Customisable</h4>
+          <p>Personalised overlays, themes & backdrops</p>
+        </div>
+        <div class="pb-feat">
+          <h4>Instant Share</h4>
+          <p>Videos delivered straight to guests' phones</p>
+        </div>
+        <div class="pb-feat">
+          <h4>All Ages</h4>
+          <p>Simple, intuitive platform for everyone</p>
+        </div>
+      </div>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1rem">
+        <a href="photo-booth.html" class="btn btn-fill">See More →</a>
+        <a href="hire.html" class="btn btn-ghost">Book Photo Booth</a>
+      </div>
+    </div>
+    <div class="pb-visual" data-anim="right">
+      <img src="assets/marry-me.jpg" alt="Marquee letter event - Marry Me waterfront Perth">
+      <div class="pb-ring"></div>
+    </div>
+  </div>
+</section>
+
+<!-- LED GLOW FURNITURE SECTION -->
+<section id="glowfurniture">
+  <div class="wrap">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;max-width:1300px;margin:0 auto" id="furniture-wrap">
+      <div data-anim="left">
+        <p class="label">LED Glow Furniture</p>
+        <h2 class="h2">Set the <em>Scene</em></h2>
+        <div class="rule"></div>
+        <p class="body-txt">Our LED furniture range is fully wireless, rechargeable, and available in 16 stunning colours. Mix chairs, bars, tables and stools to create the perfect layout for any event.</p>
+        <p class="body-txt">Choose a single colour for an elegant look, or set it to fade and flash for a high-energy party atmosphere.</p>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:.8rem;margin:1.5rem 0">
+          <li style="display:flex;align-items:flex-start;gap:12px;color:var(--dim);font-size:.9rem;line-height:1.6"><span style="flex-shrink:0;width:6px;height:6px;border-radius:50%;background:var(--cyan);box-shadow:0 0 8px var(--cyan);display:inline-block;margin-top:7px"></span>Egg chairs, cube stools, curved benches</li>
+          <li style="display:flex;align-items:flex-start;gap:12px;color:var(--dim);font-size:.9rem;line-height:1.6"><span style="flex-shrink:0;width:6px;height:6px;border-radius:50%;background:var(--cyan);box-shadow:0 0 8px var(--cyan);display:inline-block;margin-top:7px"></span>Cocktail tables, bar sections & bar stools</li>
+          <li style="display:flex;align-items:flex-start;gap:12px;color:var(--dim);font-size:.9rem;line-height:1.6"><span style="flex-shrink:0;width:6px;height:6px;border-radius:50%;background:var(--cyan);box-shadow:0 0 8px var(--cyan);display:inline-block;margin-top:7px"></span>16 colour modes, wireless remote included</li>
+          <li style="display:flex;align-items:flex-start;gap:12px;color:var(--dim);font-size:.9rem;line-height:1.6"><span style="flex-shrink:0;width:6px;height:6px;border-radius:50%;background:var(--cyan);box-shadow:0 0 8px var(--cyan);display:inline-block;margin-top:7px"></span>8–10hr battery — fully wireless, no cables</li>
+        </ul>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1rem">
+          <a href="glow-furniture.html" class="btn btn-fill">See More →</a>
+          <a href="hire.html" class="btn btn-ghost">Hire Furniture</a>
+        </div>
+      </div>
+      <div data-anim="right" style="display:grid;grid-template-columns:1fr 1fr;gap:3px">
+        <div style="overflow:hidden;height:260px"><img src="assets/furniture-outdoor.jpg" alt="LED glow furniture outdoor" style="width:100%;height:100%;object-fit:cover;opacity:.8;transition:transform .6s ease" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"></div>
+        <div style="overflow:hidden;height:260px"><img src="assets/glow-bench.jpg" alt="LED glow bench seating" style="width:100%;height:100%;object-fit:cover;opacity:.8;transition:transform .6s ease" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"></div>
+        <div style="overflow:hidden;height:260px"><img src="assets/dance-floor-love.jpg" alt="LED glow chairs and dance floor" style="width:100%;height:100%;object-fit:cover;opacity:.8;transition:transform .6s ease" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"></div>
+        <div style="overflow:hidden;height:260px"><img src="assets/aerial-event.jpg" alt="Aerial glow event" style="width:100%;height:100%;object-fit:cover;opacity:.8;transition:transform .6s ease" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PACKAGES -->
+<section id="packages">
+  <div class="wrap">
+    <div class="pkg-top" data-anim="up">
+      <div>
+        <p class="label">Save More</p>
+        <h2 class="h2">Package <em>Deals</em></h2>
+      </div>
+      <a href="https://perth-glow-furniture-hire.booqable.com" target="_blank" class="btn btn-ghost" style="white-space:nowrap">Browse All Products</a>
+    </div>
+    <div class="pkg-carousel-wrap">
+      <button class="pkg-arrow pkg-arrow-prev" onclick="pkgSlide(-1)" aria-label="Previous">&#8249;</button>
+      <div class="pkg-track">
+        <div class="pkg-grid" id="pkgGrid">
+
+      <!-- Package 1: Dance Floor & Furniture -->
+      <div class="pkg best">
+        <div class="pkg-img">
+          <img src="assets/dance-floor-love.jpg" alt="Dance Floor & Furniture Package">
+          <div class="pkg-img-overlay"></div>
+        </div>
+        <div class="pkg-body">
+          <div class="pkg-tag">BEST VALUE</div>
+          <p class="pkg-name">Dance Floor & Furniture</p>
+          <p class="pkg-desc">The ultimate combo — floor plus furniture at one unbeatable price.</p>
+          <div class="pkg-price"><span class="pkg-old">$1,000</span><span class="pkg-now">$799</span></div>
+          <ul class="pkg-list">
+            <li>LED Dance Floor (size TBC)</li>
+            <li>Selection of Glow Furniture</li>
+            <li>Delivery & Setup</li>
+            <li>Remote Colour Control</li>
+          </ul>
+          <a href="https://perth-glow-furniture-hire.booqable.com/products/package-deal-dance-floor" target="_blank" class="pkg-btn">Book Now</a>
+        </div>
+      </div>
+
+      <!-- Package 2: Glow Bar -->
+      <div class="pkg">
+        <div class="pkg-img">
+          <img src="assets/glow-bench.jpg" alt="Glow Bar Package">
+          <div class="pkg-img-overlay"></div>
+        </div>
+        <div class="pkg-body">
+          <p class="pkg-name">Glow Bar 3 Pieces</p>
+          <p class="pkg-desc">A stunning glow bar setup for any event or function.</p>
+          <div class="pkg-price"><span class="pkg-old">$365</span><span class="pkg-now">$332</span></div>
+          <ul class="pkg-list">
+            <li>3x Glow Bar Sections</li>
+            <li>16 Colour Options</li>
+            <li>Delivery & Setup</li>
+          </ul>
+          <a href="https://perth-glow-furniture-hire.booqable.com/products/glow-bar-3-pieces" target="_blank" class="pkg-btn">Book Now</a>
+        </div>
+      </div>
+
+      <!-- Package 3 -->
+      <div class="pkg">
+        <div class="pkg-img">
+          <img src="assets/dance-floor-30.jpg" alt="Package Deal 2">
+          <div class="pkg-img-overlay"></div>
+        </div>
+        <div class="pkg-body">
+          <p class="pkg-name">Package Deal 2</p>
+          <p class="pkg-desc">A curated mix of our most popular glow furniture pieces.</p>
+          <div class="pkg-price"><span class="pkg-old">$546</span><span class="pkg-now">$397</span></div>
+          <ul class="pkg-list">
+            <li>Mixed Glow Furniture</li>
+            <li>Flexible Configuration</li>
+            <li>Delivery & Setup</li>
+          </ul>
+          <a href="https://perth-glow-furniture-hire.booqable.com/products/package-deal-2-dabd350b-110a-464a-bd88-0ee5d903686f" target="_blank" class="pkg-btn">Book Now</a>
+        </div>
+      </div>
+
+      <!-- Package 4 -->
+      <div class="pkg">
+        <div class="pkg-img">
+          <img src="assets/furniture-outdoor.jpg" alt="Package Deal 3">
+          <div class="pkg-img-overlay"></div>
+        </div>
+        <div class="pkg-body">
+          <p class="pkg-name">Package Deal 3</p>
+          <p class="pkg-desc">Perfect for medium-sized events that want maximum impact.</p>
+          <div class="pkg-price"><span class="pkg-old">$486</span><span class="pkg-now">$342</span></div>
+          <ul class="pkg-list">
+            <li>Mixed Glow Furniture</li>
+            <li>Remote Colour Control</li>
+            <li>Delivery & Setup</li>
+          </ul>
+          <a href="https://perth-glow-furniture-hire.booqable.com/products/package-deal-3-dd4a0c89-9f0d-42ad-a55a-9002ec47abf4" target="_blank" class="pkg-btn">Book Now</a>
+        </div>
+      </div>
+
+        </div><!-- /pkg-grid -->
+      </div><!-- /pkg-track -->
+      <button class="pkg-arrow pkg-arrow-next" onclick="pkgSlide(1)" aria-label="Next">&#8250;</button>
+      <div class="pkg-dots" id="pkgDots"></div>
+    </div><!-- /pkg-carousel-wrap -->
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="wrap">
+    <p class="label">What They Say</p>
+    <h2 class="h2">Happy <em>Clients</em></h2>
+    <div class="rule"></div>
+    <div class="testi-carousel-wrap">
+      <button class="testi-arrow testi-prev" onclick="testiSlide(-1)" aria-label="Previous">&#8249;</button>
+      <div class="testi-track">
+        <div class="testi-grid" id="testiGrid">
+          <div class="testi">
+            <div class="testi-gmaps">
+              <div class="gmaps-logo"><span class="g-dot g1">G</span><span class="g-dot g2">o</span><span class="g-dot g3">o</span><span class="g-dot g4">g</span><span class="g-dot g5">l</span><span class="g-dot g6">e</span></div>
+              <div class="gmaps-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            </div>
+            <p class="testi-q">The dance floor was absolutely incredible! Everyone at our wedding couldn't stop talking about it. Setup crew were fast and professional — couldn't recommend more.</p>
+            <div class="testi-head">
+              <div class="testi-avatar" style="background:linear-gradient(135deg,#4361ee,#7b5ef8)"><img class="testi-avatar-img" src="https://ui-avatars.com/api/?name=Sarah+T&background=4361ee&color=fff&size=88" alt="Sarah T" onerror="this.style.display='none'"></div>
+              <div>
+                <p class="testi-who">SARAH & JAMES T.</p>
+                <p class="testi-event">Wedding Reception — Fremantle</p>
+              </div>
+            </div>
+          </div>
+          <div class="testi">
+            <div class="testi-gmaps">
+              <div class="gmaps-logo"><span class="g-dot g1">G</span><span class="g-dot g2">o</span><span class="g-dot g3">o</span><span class="g-dot g4">g</span><span class="g-dot g5">l</span><span class="g-dot g6">e</span></div>
+              <div class="gmaps-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            </div>
+            <p class="testi-q">Hired the glow furniture for my 30th and it completely transformed the backyard. The colour options were amazing — we went full rainbow and it looked stunning.</p>
+            <div class="testi-head">
+              <div class="testi-avatar" style="background:linear-gradient(135deg,#e040fb,#b57bee)"><img class="testi-avatar-img" src="https://ui-avatars.com/api/?name=Alex+M&background=e040fb&color=fff&size=88" alt="Alex M" onerror="this.style.display='none'"></div>
+              <div>
+                <p class="testi-who">ALEX M.</p>
+                <p class="testi-event">30th Birthday — Subiaco</p>
+              </div>
+            </div>
+          </div>
+          <div class="testi">
+            <div class="testi-gmaps">
+              <div class="gmaps-logo"><span class="g-dot g1">G</span><span class="g-dot g2">o</span><span class="g-dot g3">o</span><span class="g-dot g4">g</span><span class="g-dot g5">l</span><span class="g-dot g6">e</span></div>
+              <div class="gmaps-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            </div>
+            <p class="testi-q">Used Perth Glow for our NYE corporate event. The 360 photo booth was a massive hit — guests loved it and the content was incredible. Will definitely use again.</p>
+            <div class="testi-head">
+              <div class="testi-avatar" style="background:linear-gradient(135deg,#ff6eb4,#c77dff)"><img class="testi-avatar-img" src="https://ui-avatars.com/api/?name=Michelle+K&background=ff6eb4&color=fff&size=88" alt="Michelle K" onerror="this.style.display='none'"></div>
+              <div>
+                <p class="testi-who">MICHELLE K.</p>
+                <p class="testi-event">Corporate NYE — Perth CBD</p>
+              </div>
+            </div>
+          </div>
+          <div class="testi">
+            <div class="testi-gmaps">
+              <div class="gmaps-logo"><span class="g-dot g1">G</span><span class="g-dot g2">o</span><span class="g-dot g3">o</span><span class="g-dot g4">g</span><span class="g-dot g5">l</span><span class="g-dot g6">e</span></div>
+              <div class="gmaps-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            </div>
+            <p class="testi-q">The light-up letters and dance floor together looked absolutely magical. So many compliments from guests. The whole process was seamless from booking to pickup.</p>
+            <div class="testi-head">
+              <div class="testi-avatar" style="background:linear-gradient(135deg,#4cc9f0,#4361ee)"><img class="testi-avatar-img" src="https://ui-avatars.com/api/?name=Jessica+B&background=4cc9f0&color=fff&size=88" alt="Jessica B" onerror="this.style.display='none'"></div>
+              <div>
+                <p class="testi-who">JESSICA B.</p>
+                <p class="testi-event">21st Birthday — Joondalup</p>
+              </div>
+            </div>
+          </div>
+          <div class="testi">
+            <div class="testi-gmaps">
+              <div class="gmaps-logo"><span class="g-dot g1">G</span><span class="g-dot g2">o</span><span class="g-dot g3">o</span><span class="g-dot g4">g</span><span class="g-dot g5">l</span><span class="g-dot g6">e</span></div>
+              <div class="gmaps-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            </div>
+            <p class="testi-q">Super easy to book online, great communication, and the glow furniture looked amazing at our engagement party. Would 100% use again for future events.</p>
+            <div class="testi-head">
+              <div class="testi-avatar" style="background:linear-gradient(135deg,#b57bee,#e040fb)"><img class="testi-avatar-img" src="https://ui-avatars.com/api/?name=Ryan+P&background=b57bee&color=fff&size=88" alt="Ryan P" onerror="this.style.display='none'"></div>
+              <div>
+                <p class="testi-who">RYAN P.</p>
+                <p class="testi-event">Engagement Party — Cottesloe</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="testi-arrow testi-next" onclick="testiSlide(1)" aria-label="Next">&#8250;</button>
+      <div class="testi-dots" id="testiDots"></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <p class="label">Got Questions?</p>
+    <h2 class="h2">Frequently Asked <em>Questions</em></h2>
+    <div class="rule"></div>
+    <div class="faq-list" data-anim="up">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          How far in advance should I book?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">We recommend booking at least 2–4 weeks in advance to secure your preferred date, especially during peak season (October–March). For popular weekends like New Year's Eve, bookings can fill up months ahead — so the earlier the better!</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          What areas in Perth do you service?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">We service all areas across Perth and surrounding regions. Delivery fees may apply depending on your location. Contact us with your suburb and we'll give you a delivery quote.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Is setup and delivery included?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">Yes! Professional setup and pack-down is included with all our hire packages. Our team will arrive early to ensure everything is perfectly in place before your guests arrive.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Can I use the furniture outdoors?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">Absolutely — our LED furniture and dance floors are suitable for both indoor and outdoor events. All equipment is weather-resistant. For outdoor setups, we just ask that you have a backup plan in case of heavy rain.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          How do I control the colours?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">All our furniture comes with a wireless remote control that lets you cycle through 16 colours and multiple lighting modes — including static, slow fade, and flash. Our team will walk you through the controls during setup.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Can I create a custom package?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">Yes! Our packages are starting points — we're happy to mix and match products to suit your event and budget. Get in touch and we'll put together a custom quote for you.</div>
+      </div>
+    </div>
+    <div style="margin-top:2.5rem">
+      <a href="faq.html" class="btn btn-ghost">View All FAQs</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA / CONTACT -->
+<section id="cta">
+  <div class="wrap">
+    <div class="cta-info" data-anim="left">
+      <p class="label">Ready to Glow?</p>
+      <h2 class="h2">Let's Create Something <em>Unforgettable</em></h2>
+      <div class="rule"></div>
+      <p class="body-txt">Whether you have a specific vision or need inspiration — our team is here to help you plan the perfect event setup. Get in touch and we'll put together a custom quote.</p>
+      <div class="contact-list">
+        <div class="c-item">
+          <div class="c-icon">📞</div>
+          <span><a href="tel:0455484192" style="color:inherit;text-decoration:none">0455 484 192</a></span>
+        </div>
+        <div class="c-item">
+          <div class="c-icon">✉️</div>
+          <span><a href="mailto:info@pgfh.com.au" style="color:inherit;text-decoration:none">info@pgfh.com.au</a></span>
+        </div>
+        <div class="c-item">
+          <div class="c-icon">📍</div>
+          <span>Unit 5, 33 McDonald Cres, Bassendean 6054</span>
+        </div>
+        <div class="c-item">
+          <div class="c-icon">💬</div>
+          <span><a href="https://www.instagram.com/perth_glow_furniture_hire/" target="_blank" style="color:var(--cyan);text-decoration:none">Instagram</a></span>
+        </div>
+      </div>
+    </div>
+    <div class="form-box" data-anim="right">
+      <h3>Get a Free Quote</h3>
+      <div class="row">
+        <div class="fg"><label>First Name</label><input type="text" placeholder="Jane"></div>
+        <div class="fg"><label>Last Name</label><input type="text" placeholder="Smith"></div>
+      </div>
+      <div class="fg"><label>Email</label><input type="email" placeholder="jane@example.com"></div>
+      <div class="fg"><label>Phone</label><input type="tel" placeholder="04XX XXX XXX"></div>
+      <div class="row">
+        <div class="fg"><label>Event Date</label><input type="date"></div>
+        <div class="fg">
+          <label>Event Type</label>
+          <select>
+            <option value="">Select…</option>
+            <option>Birthday Party</option>
+            <option>Wedding</option>
+            <option>Corporate Event</option>
+            <option>NYE / Festival</option>
+            <option>Other</option>
+          </select>
+        </div>
+      </div>
+      <div class="fg">
+        <label>Products Interested In</label>
+        <select>
+          <option value="">Select…</option>
+          <option>LED Dance Floor</option>
+          <option>Glow Furniture</option>
+          <option>360 Photo Booth</option>
+          <option>Package Deal</option>
+          <option>Multiple / Unsure</option>
+        </select>
+      </div>
+      <div class="fg"><label>Message</label><textarea placeholder="Tell us about your event…"></textarea></div>
+      <button class="btn btn-fill" style="width:100%;padding:16px;font-size:.58rem;margin-top:.5rem" onclick="alert('Form submission — connect to your backend or Netlify Forms.')">Send Enquiry</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="f-top">
+    <div class="f-brand">
+      <img src="assets/logo-transparent.png" alt="Perth Glow Furniture Hire">
+      <p>Perth's premier LED furniture, dance floor and 360 photo booth hire. Transforming events across Perth & surrounds.</p>
+      <div class="socials">
+        <a href="https://www.facebook.com/PerthGLOWFurnitureHire" target="_blank" class="soc">f</a>
+        <a href="https://www.instagram.com/perth_glow_furniture_hire/" target="_blank" class="soc">ig</a>
+        <a href="https://www.youtube.com/channel/UCYcpUvd9s-UxPmfELeZsySg" target="_blank" class="soc">▶</a>
+      </div>
+    </div>
+    <div class="f-col"><h4>Pages</h4><ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="hire.html">Hire Now</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul></div>
+    <div class="f-col"><h4>Products</h4><ul>
+      <li><a href="dance-floor.html">LED Dance Floors</a></li>
+      <li><a href="glow-furniture.html">Glow Furniture</a></li>
+      <li><a href="photo-booth.html">360° Photo Booth</a></li>
+      <li><a href="numbers-letters.html">Light Up Numbers & Letters</a></li>
+      <li><a href="hire.html">Package Deals</a></li>
+    </ul></div>
+    <div class="f-col"><h4>Contact</h4><ul>
+      <li><a href="tel:0455484192">0455 484 192</a></li>
+      <li><a href="mailto:info@pgfh.com.au">info@pgfh.com.au</a></li>
+      <li><a>Bassendean, Perth WA</a></li>
+    </ul></div>
+  </div>
+  <div class="f-bottom">
+    <div class="f-bottom-links">
+      <p>© 2026 Perth Glow Furniture Hire. All rights reserved.</p>
+      <a href="terms.html">Terms & Conditions</a>
+      <a href="terms.html">Privacy Policy</a>
+      <a href="https://pgfh.com.au">pgfh.com.au</a>
+    </div>
+    <p class="f-credit">Developed by <a href="https://rafatofen.netlify.app" target="_blank">Rafael Thofehrn</a></p>
+  </div>
+</footer>
+
+<script>
+// Nav scroll
+window.addEventListener('scroll',()=>{
+  document.getElementById('nav').classList.toggle('scrolled',window.scrollY>60)
+})
+
+// Mobile menu
+function toggleMob(){
+  document.getElementById('mobNav').classList.toggle('open')
+  document.body.style.overflow=document.getElementById('mobNav').classList.contains('open')?'hidden':''
+}
+
+// FAQ
+function toggleFaq(btn){
+  const item=btn.closest('.faq-item')
+  const isOpen=item.classList.contains('open')
+  document.querySelectorAll('.faq-item.open').forEach(i=>i.classList.remove('open'))
+  if(!isOpen) item.classList.add('open')
+}
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    e.preventDefault()
+    const t=document.querySelector(a.getAttribute('href'))
+    if(t) t.scrollIntoView({behavior:'smooth'})
+  })
+})
+</script>
+
+<script>
+// Scroll-in animations — IntersectionObserver
+document.addEventListener('DOMContentLoaded', function() {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) {
+        e.target.classList.add('anim-in');
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+  // Animate single elements
+  document.querySelectorAll('[data-anim]').forEach(function(el) {
+    obs.observe(el);
+  });
+
+  // Animate group children with stagger
+  document.querySelectorAll('[data-anim-group]').forEach(function(group) {
+    group.querySelectorAll(':scope > *').forEach(function(child) {
+      obs.observe(child);
+    });
+  });
+});
+
+
+// ── CATEGORY CAROUSEL (mobile) ──
+function scrollCat(dir) {
+  var grid = document.getElementById('catGrid');
+  if (!grid) return;
+  grid.scrollBy({ left: dir * (window.innerWidth * 0.8), behavior: 'smooth' });
+}
+
+// ── PACKAGE CAROUSEL ──
+var pkgIndex = 0;
+function pkgSlide(dir) {
+  var grid = document.getElementById('pkgGrid');
+  if (!grid) return;
+  var cards = grid.children;
+  var perView = window.innerWidth < 720 ? 1 : 3;
+  var max = cards.length - perView;
+  pkgIndex = Math.max(0, Math.min(pkgIndex + dir, max));
+  var w = cards[0].offsetWidth;
+  grid.style.transform = 'translateX(-' + (pkgIndex * w) + 'px)';
+  updatePkgDots();
+}
+function updatePkgDots() {
+  var dots = document.getElementById('pkgDots');
+  if (!dots) return;
+  var grid = document.getElementById('pkgGrid');
+  var perView = window.innerWidth < 720 ? 1 : 3;
+  var total = Math.ceil(grid.children.length - perView + 1);
+  dots.innerHTML = '';
+  for (var i = 0; i < total; i++) {
+    var d = document.createElement('button');
+    d.className = 'pkg-dot' + (i === pkgIndex ? ' active' : '');
+    d.setAttribute('aria-label', 'Go to slide ' + (i+1));
+    (function(idx){ d.onclick = function(){ pkgIndex = idx - 1; pkgSlide(1); }; })(i);
+    dots.appendChild(d);
+  }
+}
+
+// ── TESTIMONIAL CAROUSEL ──
+var testiIndex = 0;
+function testiSlide(dir) {
+  var grid = document.getElementById('testiGrid');
+  if (!grid) return;
+  var cards = Array.from(grid.children);
+  var perView = window.innerWidth < 720 ? 1 : 3;
+  var max = cards.length - perView;
+  testiIndex = Math.max(0, Math.min(testiIndex + dir, max));
+  var w = cards[0].offsetWidth;
+  grid.style.transform = 'translateX(-' + (testiIndex * w) + 'px)';
+  // 3D perspective: center card is bigger
+  if (perView === 3) {
+    cards.forEach(function(card, i) {
+      card.classList.remove('center-card','side-card');
+      if (i === testiIndex + 1) card.classList.add('center-card');
+      else card.classList.add('side-card');
+    });
+  } else {
+    cards.forEach(function(card) { card.classList.remove('center-card','side-card'); });
+  }
+  updateTestiDots();
+}
+function updateTestiDots() {
+  var dots = document.getElementById('testiDots');
+  if (!dots) return;
+  var grid = document.getElementById('testiGrid');
+  var perView = window.innerWidth < 720 ? 1 : 3;
+  var total = Math.ceil(grid.children.length - perView + 1);
+  dots.innerHTML = '';
+  for (var i = 0; i < total; i++) {
+    var d = document.createElement('button');
+    d.className = 'testi-dot' + (i === testiIndex ? ' active' : '');
+    d.setAttribute('aria-label', 'Go to slide ' + (i+1));
+    (function(idx){ d.onclick = function(){ testiIndex = idx - 1; testiSlide(1); }; })(i);
+    dots.appendChild(d);
+  }
+}
+
+// Init carousels after load
+window.addEventListener('load', function() {
+  updatePkgDots();
+  updateTestiDots();
+  testiSlide(0);
+  // Recalc on resize
+  window.addEventListener('resize', function() {
+    pkgIndex = 0;
+    testiIndex = 0;
+    var pg = document.getElementById('pkgGrid');
+    var tg = document.getElementById('testiGrid');
+    if (pg) pg.style.transform = '';
+    if (tg) tg.style.transform = '';
+    updatePkgDots();
+    updateTestiDots();
+  });
+  // Touch swipe for testimonials
+  var track = document.querySelector('.testi-track');
+  if (track) {
+    var startX = 0;
+    track.addEventListener('touchstart', function(e){ startX = e.touches[0].clientX; });
+    track.addEventListener('touchend', function(e){
+      var dx = e.changedTouches[0].clientX - startX;
+      if (Math.abs(dx) > 50) testiSlide(dx < 0 ? 1 : -1);
+    });
+  }
+  var pkgTrack = document.querySelector('.pkg-track');
+  if (pkgTrack) {
+    var sx = 0;
+    pkgTrack.addEventListener('touchstart', function(e){ sx = e.touches[0].clientX; });
+    pkgTrack.addEventListener('touchend', function(e){
+      var dx = e.changedTouches[0].clientX - sx;
+      if (Math.abs(dx) > 50) pkgSlide(dx < 0 ? 1 : -1);
+    });
+  }
+});
+</script>
+
+</body>
+</html>

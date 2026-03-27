@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery | Perth Glow Furniture Hire</title>
+<meta name="description" content="View our event gallery — LED dance floors, glow furniture and 360 photo booth setups across Perth events.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Syncopate:wght@400;700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 5vw;height:76px;display:flex;align-items:center;justify-content:space-between;background:rgba(5,5,8,.92);backdrop-filter:blur(24px);border-bottom:1px solid var(--border)}
+nav.scrolled{background:rgba(5,5,8,.92);backdrop-filter:blur(24px);border-bottom:1px solid var(--border)}
+.nav-logo{display:flex;align-items:center;text-decoration:none}
+.nav-logo img{height:44px;filter:drop-shadow(0 0 14px rgba(181,123,238,.4))}
+.nav-links{display:flex;gap:2.5rem;list-style:none;align-items:center}
+.nav-links a{font-family:var(--display);font-size:.58rem;letter-spacing:.18em;color:var(--dim);text-decoration:none;text-transform:uppercase;transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--cyan)}
+.nav-cta{border:1px solid var(--cyan)!important;color:var(--cyan)!important;padding:9px 22px!important;transition:all .2s!important}
+.nav-cta:hover{background:var(--cyan)!important;color:var(--black)!important}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;border:none;background:transparent;padding:4px}
+.hamburger span{display:block;width:24px;height:1.5px;background:var(--white)}
+.mobile-nav{display:none;position:fixed;inset:0;background:rgba(5,5,8,.97);backdrop-filter:blur(20px);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:2rem}
+.mobile-nav.open{display:flex}
+.mobile-nav a{font-family:var(--display);font-size:.9rem;letter-spacing:.25em;color:var(--white);text-decoration:none;text-transform:uppercase}
+.mobile-nav a:hover{color:var(--cyan)}
+.mob-close{position:absolute;top:24px;right:5vw;background:transparent;border:none;color:var(--white);font-size:1.4rem;cursor:pointer}
+/* PAGE HERO — always below fixed nav */
+.page-hero{position:relative;height:55vh;min-height:380px;display:flex;align-items:center;justify-content:center;overflow:hidden;margin-top:76px}
+.page-hero-bg{position:absolute;inset:0}
+.page-hero-bg img{width:100%;height:100%;object-fit:cover;opacity:.4}
+.page-hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(5,5,8,.5),rgba(5,5,8,.75))}
+.page-hero-inner{position:relative;z-index:2;text-align:center;padding:0 5vw}
+/* FOOTER */
+footer{background:var(--black);border-top:1px solid var(--border);padding:64px 5vw 30px}
+.f-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3.5rem;max-width:1300px;margin-left:auto;margin-right:auto}
+.f-brand img{height:42px;filter:drop-shadow(0 0 10px rgba(181,123,238,.35))}
+.f-brand p{color:var(--dim);font-size:.83rem;line-height:1.7;margin:1rem 0 1.4rem;max-width:270px}
+.socials{display:flex;gap:.7rem}
+.soc{width:36px;height:36px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--dim);text-decoration:none;font-size:.8rem;transition:.2s}
+.soc:hover{border-color:var(--cyan);color:var(--cyan)}
+.f-col h4{font-family:var(--display);font-size:.52rem;letter-spacing:.2em;color:var(--cyan);margin-bottom:1.1rem;text-transform:uppercase}
+.f-col ul{list-style:none;display:flex;flex-direction:column;gap:.55rem}
+.f-col ul a{font-size:.83rem;color:var(--dim);text-decoration:none;transition:color .2s}
+.f-col ul a:hover{color:var(--white)}
+.f-bottom{border-top:1px solid var(--border);padding-top:1.4rem;display:flex;flex-direction:column;align-items:center;text-align:center;gap:.5rem;max-width:1300px;margin:0 auto}
+.f-bottom-links{display:flex;gap:2rem;flex-wrap:wrap;justify-content:center;align-items:center}
+.f-bottom p,.f-bottom a{font-size:.76rem;color:rgba(255,255,255,.22);text-decoration:none}
+.f-bottom a:hover{color:var(--cyan)}
+.f-credit{font-size:.7rem;color:rgba(255,255,255,.18)}
+.f-credit a{color:rgba(181,123,238,.5);text-decoration:none}
+.f-credit a:hover{color:var(--cyan)}
+
+
+/* ── NAV ── */
+.mobile-
+/* ── FOOTER ── */
+.f-bottom p,
+:root{--black:#050508;--deep:#08080f;--card:#0e0e1c;--border:rgba(255,255,255,0.07);--white:#f0eeea;--dim:rgba(240,238,234,0.55);--cyan:#b57bee;--purple:#c77dff;--pink:#ff6eb4;--display:'Syncopate',sans-serif;--serif:'Cormorant Garamond',serif;--body:'DM Sans',sans-serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--black);color:var(--white);font-family:var(--body);font-weight:300;overflow-x:hidden}
+body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");pointer-events:none;z-index:9998;opacity:.3;mix-blend-mode:overlay}
+.mobile-
+.label{font-family:var(--display);font-size:.55rem;letter-spacing:.3em;color:var(--cyan);text-transform:uppercase;margin-bottom:.9rem}
+
+section{padding:90px 5vw}
+.h2{font-family:var(--serif);font-size:clamp(2rem,4.5vw,3.5rem);font-weight:300;line-height:1.08;margin-bottom:1rem}
+.h2 em{font-style:italic;color:var(--cyan)}
+.h1{font-family:var(--serif);font-size:clamp(3rem,7vw,6rem);font-weight:300;line-height:.95}
+.h1 em{font-style:italic;color:var(--cyan)}
+.rule{width:56px;height:1px;background:linear-gradient(to right,var(--cyan),var(--purple),transparent);margin-bottom:2rem}
+
+/* FILTER TABS */
+.filter-bar{display:flex;gap:.5rem;flex-wrap:wrap;justify-content:center;margin-bottom:3rem}
+.filter-btn{font-family:var(--display);font-size:.5rem;letter-spacing:.18em;text-transform:uppercase;padding:10px 22px;background:transparent;border:1px solid var(--border);color:var(--dim);cursor:pointer;transition:.25s}
+.filter-btn:hover,.filter-btn.active{border-color:var(--cyan);color:var(--cyan);background:rgba(181,123,238,.05)}
+
+/* MASONRY GALLERY */
+.gallery-grid{columns:3;column-gap:3px;max-width:1400px;margin:0 auto}
+.gallery-item{break-inside:avoid;margin-bottom:3px;position:relative;overflow:hidden;cursor:pointer;display:block}
+.gallery-item img,.gallery-item video{width:100%;display:block;opacity:.8;transition:transform .6s ease,opacity .4s}
+.gallery-item:hover img,.gallery-item:hover video{transform:scale(1.04);opacity:1}
+.gallery-item-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(5,5,8,.7) 0%,transparent 50%);opacity:0;transition:opacity .3s}
+.gallery-item:hover .gallery-item-overlay{opacity:1}
+.gallery-item-info{position:absolute;bottom:0;left:0;right:0;padding:1.2rem;transform:translateY(6px);transition:transform .3s;opacity:0}
+.gallery-item:hover .gallery-item-info{opacity:1;transform:translateY(0)}
+.gallery-item-cat{font-family:var(--display);font-size:.44rem;letter-spacing:.2em;color:var(--cyan);margin-bottom:.2rem}
+.gallery-item-title{font-family:var(--serif);font-size:1rem;font-weight:300}
+/* Video badge */
+.vid-badge{position:absolute;top:.8rem;right:.8rem;background:rgba(0,0,0,.6);border:1px solid rgba(255,255,255,.2);border-radius:2px;padding:4px 10px;font-family:var(--display);font-size:.42rem;letter-spacing:.1em;color:var(--white)}
+
+/* LIGHTBOX */
+.lightbox{position:fixed;inset:0;background:rgba(0,0,0,.94);z-index:9000;display:none;align-items:center;justify-content:center;padding:2rem}
+.lightbox.open{display:flex}
+.lightbox-media{max-width:90vw;max-height:88vh;object-fit:contain;border:1px solid var(--border)}
+.lightbox-close{position:absolute;top:1.5rem;right:2rem;background:transparent;border:none;color:var(--white);font-size:2rem;cursor:pointer;z-index:2;opacity:.7;transition:opacity .2s}
+.lightbox-close:hover{opacity:1}
+.lightbox-prev,.lightbox-next{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.5);border:1px solid var(--border);color:var(--white);font-size:1.5rem;cursor:pointer;padding:12px 16px;transition:.2s;z-index:2}
+.lightbox-prev{left:1rem}
+.lightbox-next{right:1rem}
+.lightbox-prev:hover,.lightbox-next:hover{border-color:var(--cyan);color:var(--cyan)}
+
+/* VIDEO PLACEHOLDER */
+.video-placeholder{background:var(--card);border:1px solid var(--border);aspect-ratio:16/9;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.7rem;color:var(--dim);font-family:var(--display);font-size:.48rem;letter-spacing:.15em}
+.video-placeholder svg{opacity:.3}
+
+/* CTA */
+#cta-strip{background:var(--deep);border-top:1px solid var(--border)}
+.cta-inner{max-width:1300px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+.cta-inner h2{font-family:var(--serif);font-size:clamp(1.6rem,3vw,2.6rem);font-weight:300}
+.cta-inner h2 em{font-style:italic;color:var(--cyan)}
+.btns{display:flex;gap:1rem;flex-wrap:wrap;flex-shrink:0}
+.btn{font-family:var(--display);font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;padding:16px 38px;text-decoration:none;display:inline-block;transition:.3s;cursor:pointer;border:none}
+.btn-fill{background:var(--cyan);color:var(--black);font-weight:700}
+.btn-fill:hover{box-shadow:0 0 40px rgba(181,123,238,.45);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--white);border:1px solid rgba(255,255,255,.25)}
+.btn-ghost:hover{border-color:var(--cyan);color:var(--cyan)}
+
+
+
+
+
+
+
+
+
+
+
+/* ── SCROLL ANIMATIONS ── */
+[data-anim] {
+  opacity: 0;
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+[data-anim="up"]    { transform: translateY(40px); }
+[data-anim="down"]  { transform: translateY(-30px); }
+[data-anim="left"]  { transform: translateX(-44px); }
+[data-anim="right"] { transform: translateX(44px); }
+[data-anim="scale"] { transform: scale(0.92); }
+[data-anim="fade"]  { transform: none; }
+[data-anim].anim-in { opacity: 1 !important; transform: none !important; }
+
+/* Staggered grid children */
+[data-anim-group] > * {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+[data-anim-group] > *.anim-in { opacity: 1 !important; transform: none !important; }
+[data-anim-group] > *:nth-child(1) { transition-delay: 0s; }
+[data-anim-group] > *:nth-child(2) { transition-delay: 0.1s; }
+[data-anim-group] > *:nth-child(3) { transition-delay: 0.2s; }
+[data-anim-group] > *:nth-child(4) { transition-delay: 0.3s; }
+[data-anim-group] > *:nth-child(5) { transition-delay: 0.4s; }
+[data-anim-group] > *:nth-child(6) { transition-delay: 0.5s; }
+
+/* Page fade-in on load */
+body { animation: pageFadeIn 0.4s ease both; }
+@keyframes pageFadeIn { from { opacity:0; } to { opacity:1; } }
+
+/* Respect reduced motion */
+
+
+
+@media (prefers-reduced-motion: reduce) {
+  [data-anim], [data-anim-group] > * { opacity:1 !important; transform:none !important; transition:none !important; }
+
+
+
+
+
+
+@media(max-width:1100px){
+  .f-top{grid-template-columns:1fr 1fr}
+}
+@media(max-width:720px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .f-top{grid-template-columns:1fr}
+  .f-bottom-links{flex-direction:column;gap:.6rem}
+  section{padding:70px 5vw}
+  .row{grid-template-columns:1fr}
+  .btns,.hero-btns,.cta-strip-btns{justify-content:center!important;flex-wrap:wrap}
+  .page-hero{min-height:280px}
+
+  .gallery-grid{columns:1!important}
+  .gallery-item{margin-bottom:4px}
+
+  .f-top{grid-template-columns:1fr}
+  .f-brand{text-align:center}
+  .f-brand p{margin-left:auto;margin-right:auto}
+  .socials{justify-content:center}
+  .f-col{text-align:center}
+  .f-col ul{align-items:center}
+  .f-bottom-links{flex-direction:column;gap:.5rem}
+}
+</style>
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180.png">
+  <meta name="theme-color" content="#050508">
+<link rel="stylesheet" href="assets/global.css">
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo"><img src="assets/logo-transparent.png" alt="Perth Glow Furniture Hire"></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="hire.html">Hire Now</a></li>
+    <li><a href="gallery.html" class="active">Gallery</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="contact.html" class="nav-cta">Get a Quote</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMob()"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-nav" id="mobNav">
+  <button class="mob-close" onclick="toggleMob()">✕</button>
+  <a href="index.html" onclick="toggleMob()">Home</a><a href="about.html" onclick="toggleMob()">About</a><a href="hire.html" onclick="toggleMob()">Hire Now</a><a href="gallery.html" onclick="toggleMob()">Gallery</a><a href="faq.html" onclick="toggleMob()">FAQ</a><a href="contact.html" onclick="toggleMob()">Contact</a>
+</div>
+
+<div class="page-hero">
+  <div class="page-hero-bg"><img src="assets/glow-bench.jpg" alt="Perth Glow event gallery"></div>
+  <div class="page-hero-inner">
+    <p class="label">Our Events</p>
+    <h1 class="h1">Event <em>Gallery</em></h1>
+  </div>
+</div>
+
+<section>
+  <div style="text-align:center;max-width:560px;margin:0 auto 2.5rem">
+    <p class="label">Browse By Category</p>
+    <h2 class="h2">Moments We've <em>Glow</em></h2>
+    <div class="rule" style="margin:0 auto 2rem"></div>
+  </div>
+
+  <!-- FILTER TABS -->
+  <div class="filter-bar" data-anim="up">
+    <button class="filter-btn active" data-filter="all">All Events</button>
+    <button class="filter-btn" data-filter="dancefloor">Dance Floors</button>
+    <button class="filter-btn" data-filter="furniture">Glow Furniture</button>
+    <button class="filter-btn" data-filter="photobooth">Photo Booth</button>
+    <button class="filter-btn" data-filter="wedding">Weddings</button>
+    <button class="filter-btn" data-filter="birthday">Birthdays</button>
+    <button class="filter-btn" data-filter="corporate">Corporate</button>
+  </div>
+
+  <!-- GALLERY GRID -->
+  <div class="gallery-grid" data-anim-group id="galleryGrid">
+
+    <!-- These use the real uploaded photos — add more as you get them -->
+    <div class="gallery-item" data-cat="dancefloor birthday" onclick="openLightbox(0)">
+      <img src="assets/dance-floor-nye.jpg" alt="LED Dance Floor NYE 2025">
+      <div class="gallery-item-overlay"></div>
+      <div class="gallery-item-info">
+        <p class="gallery-item-cat">Dance Floor</p>
+        <p class="gallery-item-title">NYE 2025 — Private Venue</p>
+      </div>
+    </div>
+
+    <div class="gallery-item" data-cat="dancefloor furniture wedding" onclick="openLightbox(1)">
+      <img src="assets/dance-floor-love.jpg" alt="Dance floor and glow furniture outdoor wedding">
+      <div class="gallery-item-overlay"></div>
+      <div class="gallery-item-info">
+        <p class="gallery-item-cat">Dance Floor + Furniture</p>
+        <p class="gallery-item-title">Outdoor Wedding — Swan Valley</p>
+      </div>
+    </div>
+
+    <div class="gallery-item" data-cat="furniture birthday" onclick="openLightbox(2)">
+      <img src="assets/furniture-outdoor.jpg" alt="Glow furniture outdoor setup">
+      <div class="gallery-item-overlay"></div>
+      <div class="gallery-item-info">
+        <p class="gallery-item-cat">Glow Furniture</p>
+        <p class="gallery-item-title">Outdoor Birthday Party</p>
+      </div>
+    </div>
+
+    <div class="gallery-item" data-cat="dancefloor furniture birthday" onclick="openLightbox(3)">
+      <img src="assets/aerial-event.jpg" alt="Aerial view of full event setup">
+      <div class="gallery-item-overlay"></div>
+      <div class="gallery-item-info">
+        <p class="gallery-item-cat">Full Event Setup</p>
+        <p class="gallery-item-title">21st Birthday — Aerial View</p>
+      </div>
+    </div>
+
+    <div class="gallery-item" data-cat="dancefloor birthday" onclick="openLightbox(4)">
+      <img src="assets/dance-floor-30.jpg" alt="Dance floor 30th birthday">
+      <div class="gallery-item-overlay"></div>
+      <div class="gallery-item-info">
+        <p class="gallery-item-cat">Dance Floor</p>
+        <p class="gallery-item-title">30th Birthday — Function Room</p>
+      </div>
+    </div>
+
+    <div class="gallery-item" data-cat="furniture corporate birthday" onclick="openLightbox(5)">
+      <img src="assets/glow-bench.jpg" alt="LED glow bench seating">
+      <div class="gallery-item-overlay"></div>
+      <div class="gallery-item-info">
+        <p class="gallery-item-cat">Glow Furniture</p>
+        <p class="gallery-item-title">Curved Bench Setup — Corporate</p>
+      </div>
+    </div>
+
+    <div class="gallery-item" data-cat="photobooth wedding" onclick="openLightbox(6)">
+      <img src="assets/marry-me.jpg" alt="Marry Me marquee letters waterfront">
+      <div class="gallery-item-overlay"></div>
+      <div class="gallery-item-info">
+        <p class="gallery-item-cat">Marquee Letters</p>
+        <p class="gallery-item-title">Proposal Setup — Matilda Bay</p>
+      </div>
+    </div>
+
+    <div class="gallery-item" data-cat="furniture birthday" onclick="openLightbox(7)">
+      <img src="assets/disco-letters.jpg" alt="DISCO marquee letters">
+      <div class="gallery-item-overlay"></div>
+      <div class="gallery-item-info">
+        <p class="gallery-item-cat">Marquee Letters</p>
+        <p class="gallery-item-title">Disco Night — Private Party</p>
+      </div>
+    </div>
+
+    <!-- VIDEO PLACEHOLDER — replace src with actual video file -->
+    <div class="gallery-item" data-cat="dancefloor corporate">
+      <div class="video-placeholder">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.8"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        <span>VIDEO — ADD YOUR MP4</span>
+      </div>
+      <div class="vid-badge">▶ VIDEO</div>
+      <div class="gallery-item-overlay"></div>
+      <div class="gallery-item-info">
+        <p class="gallery-item-cat">360° Highlight Reel</p>
+        <p class="gallery-item-title">Upload your video here</p>
+      </div>
+    </div>
+
+  </div>
+
+  <p style="text-align:center;color:var(--dim);font-family:var(--display);font-size:.5rem;letter-spacing:.2em;margin-top:3rem">MORE EVENTS ADDED REGULARLY — FOLLOW US ON <a href="https://www.facebook.com/PerthGLOWFurnitureHire" target="_blank" style="color:var(--cyan)">FACEBOOK</a></p>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightboxOutside(event)">
+  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <button class="lightbox-prev" onclick="prevMedia()">‹</button>
+  <img src="" alt="" class="lightbox-media" id="lightboxImg">
+  <button class="lightbox-next" onclick="nextMedia()">›</button>
+</div>
+
+<section id="cta-strip">
+  <div class="cta-inner">
+    <h2>Like What You See? Let's <em>Glow</em></h2>
+    <div class="btns">
+      <a href="hire.html" class="btn btn-fill">Hire Now</a>
+      <a href="contact.html" class="btn btn-ghost">Get a Quote</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="f-top">
+    <div class="f-brand">
+      <img src="assets/logo-transparent.png" alt="Perth Glow Furniture Hire">
+      <p>Perth's premier LED furniture, dance floor and 360 photo booth hire. Transforming events across Perth & surrounds.</p>
+      <div class="socials">
+        <a href="https://www.facebook.com/PerthGLOWFurnitureHire" target="_blank" class="soc">f</a>
+        <a href="https://www.instagram.com/perth_glow_furniture_hire/" target="_blank" class="soc">ig</a>
+        <a href="https://www.youtube.com/channel/UCYcpUvd9s-UxPmfELeZsySg" target="_blank" class="soc">▶</a>
+      </div>
+    </div>
+    <div class="f-col"><h4>Pages</h4><ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="hire.html">Hire Now</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul></div>
+    <div class="f-col"><h4>Products</h4><ul>
+      <li><a href="dance-floor.html">LED Dance Floors</a></li>
+      <li><a href="glow-furniture.html">Glow Furniture</a></li>
+      <li><a href="photo-booth.html">360° Photo Booth</a></li>
+      <li><a href="numbers-letters.html">Light Up Numbers & Letters</a></li>
+      <li><a href="hire.html">Package Deals</a></li>
+    </ul></div>
+    <div class="f-col"><h4>Contact</h4><ul>
+      <li><a href="tel:0455484192">0455 484 192</a></li>
+      <li><a href="mailto:info@pgfh.com.au">info@pgfh.com.au</a></li>
+      <li><a>Bassendean, Perth WA</a></li>
+    </ul></div>
+  </div>
+  <div class="f-bottom">
+    <div class="f-bottom-links">
+      <p>© 2026 Perth Glow Furniture Hire. All rights reserved.</p>
+      <a href="terms.html">Terms & Conditions</a>
+      <a href="terms.html">Privacy Policy</a>
+      <a href="https://pgfh.com.au">pgfh.com.au</a>
+    </div>
+    <p class="f-credit">Developed by <a href="https://rafatofen.netlify.app" target="_blank">Rafael Thofehrn</a></p>
+  </div>
+</footer>
+
+<script>
+function toggleMob(){document.getElementById('mobNav').classList.toggle('open');document.body.style.overflow=document.getElementById('mobNav').classList.contains('open')?'hidden':''}
+
+// Filter
+document.querySelectorAll('.filter-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'))
+    btn.classList.add('active')
+    const f=btn.dataset.filter
+    document.querySelectorAll('.gallery-item').forEach(item=>{
+      if(f==='all'||item.dataset.cat.includes(f)){
+        item.style.display='block'
+      } else {
+        item.style.display='none'
+      }
+    })
+  })
+})
+
+// Lightbox
+const imgs=[
+  'assets/dance-floor-nye.jpg',
+  'assets/dance-floor-love.jpg',
+  'assets/furniture-outdoor.jpg',
+  'assets/aerial-event.jpg',
+  'assets/dance-floor-30.jpg',
+  'assets/glow-bench.jpg',
+  'assets/marry-me.jpg',
+  'assets/disco-letters.jpg'
+]
+let current=0
+function openLightbox(i){
+  current=i
+  document.getElementById('lightboxImg').src=imgs[i]
+  document.getElementById('lightbox').classList.add('open')
+  document.body.style.overflow='hidden'
+}
+function closeLightbox(){
+  document.getElementById('lightbox').classList.remove('open')
+  document.body.style.overflow=''
+}
+function closeLightboxOutside(e){if(e.target===document.getElementById('lightbox'))closeLightbox()}
+function prevMedia(){current=(current-1+imgs.length)%imgs.length;document.getElementById('lightboxImg').src=imgs[current]}
+function nextMedia(){current=(current+1)%imgs.length;document.getElementById('lightboxImg').src=imgs[current]}
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape')closeLightbox()
+  if(e.key==='ArrowLeft')prevMedia()
+  if(e.key==='ArrowRight')nextMedia()
+})
+</script>
+
+<script>
+// Scroll-in animations — IntersectionObserver
+document.addEventListener('DOMContentLoaded', function() {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) {
+        e.target.classList.add('anim-in');
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+  // Animate single elements
+  document.querySelectorAll('[data-anim]').forEach(function(el) {
+    obs.observe(el);
+  });
+
+  // Animate group children with stagger
+  document.querySelectorAll('[data-anim-group]').forEach(function(group) {
+    group.querySelectorAll(':scope > *').forEach(function(child) {
+      obs.observe(child);
+    });
+  });
+});
+</script>
+
+</body>
+</html>

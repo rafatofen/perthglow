@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LED Dance Floor Hire Perth | Digital & Infinity Mirror | Perth Glow</title>
+<meta name="description" content="Hire LED dance floors in Perth — Digital and Infinity Mirror options. Available in multiple sizes, 16 colours, full setup included. Book online instantly.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Syncopate:wght@400;700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+<meta name="theme-color" content="#050508">
+<style>section{padding:90px 5vw}
+
+/* Page hero */
+.page-hero{position:relative;height:70vh;min-height:480px;display:flex;align-items:center;justify-content:flex-start;overflow:hidden;margin-top:76px;padding:0 5vw}
+.hero-bg{position:absolute;inset:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;opacity:.4}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,rgba(5,5,8,.9) 40%,rgba(5,5,8,.3) 100%)}
+.hero-content{position:relative;z-index:2;max-width:600px;text-align:left}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 5vw;height:76px;display:flex;align-items:center;justify-content:space-between;background:rgba(5,5,8,.92);backdrop-filter:blur(24px);border-bottom:1px solid var(--border)}
+nav.scrolled{background:rgba(5,5,8,.92);backdrop-filter:blur(24px);border-bottom:1px solid var(--border)}
+.nav-logo{display:flex;align-items:center;text-decoration:none}
+.nav-logo img{height:44px;width:auto;filter:drop-shadow(0 0 14px rgba(181,123,238,.4))}
+.nav-links{display:flex;gap:2.5rem;list-style:none;align-items:center}
+.nav-links a{font-family:var(--display);font-size:.58rem;letter-spacing:.18em;color:var(--dim);text-decoration:none;text-transform:uppercase;transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--cyan)}
+.nav-cta{border:1px solid var(--cyan)!important;color:var(--cyan)!important;padding:9px 22px!important;transition:all .2s!important}
+.nav-cta:hover{background:var(--cyan)!important;color:var(--black)!important;box-shadow:0 0 24px rgba(181,123,238,.4)!important}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;border:none;background:transparent;padding:4px}
+.hamburger span{display:block;width:24px;height:1.5px;background:var(--white);transition:.3s}
+.mobile-nav{display:none;position:fixed;inset:0;background:rgba(5,5,8,.97);backdrop-filter:blur(20px);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:2rem}
+.mobile-nav.open{display:flex}
+.mobile-nav a{font-family:var(--display);font-size:.9rem;letter-spacing:.25em;color:var(--white);text-decoration:none;text-transform:uppercase;transition:color .2s}
+.mobile-nav a:hover{color:var(--cyan)}
+.mob-close{position:absolute;top:24px;right:5vw;background:transparent;border:none;color:var(--white);font-size:1.4rem;cursor:pointer}
+/* ── FOOTER ── */
+footer{background:var(--black);border-top:1px solid var(--border);padding:64px 5vw 30px}
+.f-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3.5rem;max-width:1300px;margin-left:auto;margin-right:auto}
+.f-brand img{height:42px;filter:drop-shadow(0 0 10px rgba(181,123,238,.35))}
+.f-brand p{color:var(--dim);font-size:.83rem;line-height:1.7;margin:1rem 0 1.4rem;max-width:270px}
+.socials{display:flex;gap:.7rem}
+.soc{width:36px;height:36px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--dim);text-decoration:none;font-size:.8rem;transition:.2s}
+.soc:hover{border-color:var(--cyan);color:var(--cyan)}
+.f-col h4{font-family:var(--display);font-size:.52rem;letter-spacing:.2em;color:var(--cyan);margin-bottom:1.1rem;text-transform:uppercase}
+.f-col ul{list-style:none;display:flex;flex-direction:column;gap:.55rem}
+.f-col ul a{font-size:.83rem;color:var(--dim);text-decoration:none;transition:color .2s}
+.f-col ul a:hover{color:var(--white)}
+.f-bottom{border-top:1px solid var(--border);padding-top:1.4rem;display:flex;flex-direction:column;align-items:center;text-align:center;gap:.5rem;max-width:1300px;margin:0 auto}
+.f-bottom-links{display:flex;gap:2rem;flex-wrap:wrap;justify-content:center;align-items:center}
+.f-bottom p,.f-bottom a{font-size:.76rem;color:rgba(255,255,255,.22);text-decoration:none}
+.f-bottom a:hover{color:var(--cyan)}
+.f-credit{font-size:.7rem;color:rgba(255,255,255,.18)}
+.f-credit a{color:rgba(181,123,238,.5);text-decoration:none}
+.f-credit a:hover{color:var(--cyan)}
+
+:root{--black:#050508;--deep:#08080f;--card:#0e0e1c;--border:rgba(255,255,255,0.07);--white:#f0eeea;--dim:rgba(240,238,234,0.55);--cyan:#b57bee;--purple:#c77dff;--display:'Syncopate',sans-serif;--serif:'Cormorant Garamond',serif;--body:'DM Sans',sans-serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--black);color:var(--white);font-family:var(--body);font-weight:300;overflow-x:hidden}
+body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");pointer-events:none;z-index:9998;opacity:.3;mix-blend-mode:overlay}
+.nav-logo img{height:44px;filter:drop-shadow(0 0 14px rgba(181,123,238,.4))}
+.nav-links a{font-family:var(--display);font-size:.58rem;letter-spacing:.18em;color:var(--dim);text-decoration:none;text-transform:uppercase;transition:color .2s}
+.nav-links a:hover{color:var(--cyan)}
+.mobile-
+.wrap{max-width:1300px;margin:0 auto}
+.label{font-family:var(--display);font-size:.55rem;letter-spacing:.3em;color:var(--cyan);text-transform:uppercase;margin-bottom:.9rem}
+.h1{font-family:var(--serif);font-size:clamp(3rem,7vw,6rem);font-weight:300;line-height:.95}
+.h1 em{font-style:italic;color:var(--cyan);text-shadow:0 0 40px rgba(181,123,238,.45)}
+.h2{font-family:var(--serif);font-size:clamp(2rem,4vw,3.2rem);font-weight:300;line-height:1.08;margin-bottom:1rem}
+.h2 em{font-style:italic;color:var(--cyan)}
+.rule{width:56px;height:1px;background:linear-gradient(to right,var(--cyan),var(--purple),transparent);margin-bottom:2rem}
+.body-txt{color:var(--dim);line-height:1.85;font-size:.95rem;margin-bottom:1rem}
+.btn{font-family:var(--display);font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;padding:16px 38px;text-decoration:none;display:inline-block;transition:.3s;cursor:pointer;border:none}
+.btn-fill{background:linear-gradient(135deg,var(--purple),var(--cyan));color:var(--black);font-weight:700}
+.btn-fill:hover{box-shadow:0 0 40px rgba(181,123,238,.5);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--white);border:1px solid rgba(255,255,255,.25)}
+.btn-ghost:hover{border-color:var(--cyan);color:var(--cyan)}
+
+/* Hero */
+.hero-bg{position:absolute;inset:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;opacity:.4}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,rgba(5,5,8,.9) 40%,rgba(5,5,8,.3) 100%)}
+.hero-content{position:relative;z-index:2;max-width:600px}
+.hero-content .label{display:block;margin-bottom:1rem}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem}
+
+/* Options: 2 cards */
+.options-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:2.5rem}
+.option-card{background:var(--card);border:1px solid var(--border);overflow:hidden;position:relative;transition:border-color .3s,transform .3s}
+.option-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right,var(--purple),var(--cyan));opacity:0;transition:opacity .3s;z-index:2}
+.option-card:hover{border-color:rgba(181,123,238,.3);transform:translateY(-4px)}
+.option-card:hover::before{opacity:1}
+.option-img{height:280px;overflow:hidden;position:relative}
+.option-img img{width:100%;height:100%;object-fit:cover;opacity:.75;transition:transform .6s ease}
+.option-card:hover .option-img img{transform:scale(1.04)}
+.option-img-grad{position:absolute;inset:0;background:linear-gradient(to bottom,transparent 50%,var(--card) 100%)}
+.option-badge{position:absolute;top:1rem;left:1rem;font-family:var(--display);font-size:.44rem;letter-spacing:.18em;background:linear-gradient(135deg,var(--purple),var(--cyan));color:var(--black);padding:5px 12px;font-weight:700;z-index:3}
+.option-body{padding:2rem}
+.option-name{font-family:var(--serif);font-size:1.8rem;font-weight:300;margin-bottom:.6rem}
+.option-desc{color:var(--dim);font-size:.88rem;line-height:1.75;margin-bottom:1.5rem}
+.option-features{list-style:none;display:flex;flex-direction:column;gap:.5rem;margin-bottom:1.8rem}
+.option-features li{font-size:.85rem;color:var(--dim);display:flex;align-items:flex-start;gap:10px}
+.option-features li::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--purple);box-shadow:0 0 8px var(--purple);flex-shrink:0;margin-top:6px}
+
+/* Features grid */
+.features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2rem}
+.feat-item{background:var(--card);border:1px solid var(--border);padding:1.8rem;border-top:2px solid var(--purple);transition:transform .3s,border-color .3s}
+.feat-item:hover{transform:translateY(-3px);border-top-color:var(--cyan)}
+.feat-icon{width:48px;height:48px;border-radius:50%;border:1px solid rgba(199,125,255,.35);display:flex;align-items:center;justify-content:center;color:var(--purple);margin-bottom:1rem;box-shadow:0 0 16px rgba(181,123,238,.12)}
+.feat-icon svg{width:22px;height:22px}
+.feat-item h3{font-family:var(--serif);font-size:1.2rem;font-weight:300;margin-bottom:.5rem}
+.feat-item p{font-size:.83rem;color:var(--dim);line-height:1.65}
+
+/* Process */
+.process-section{background:var(--deep)}
+.proc-row{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;margin-top:3rem}
+
+.proc-card{text-align:center;padding:1.5rem 1rem;background:rgba(181,123,238,.04);border:1px solid rgba(181,123,238,.1);transition:border-color .3s,transform .3s;position:relative;z-index:1}
+.proc-card:hover{border-color:rgba(181,123,238,.25);transform:translateY(-4px)}
+.proc-glow-icon{width:64px;height:64px;border-radius:50%;border:1px solid rgba(199,125,255,.4);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;color:var(--purple);background:rgba(181,123,238,.08);box-shadow:0 0 20px rgba(181,123,238,.15);transition:box-shadow .3s}
+.proc-card:hover .proc-glow-icon{box-shadow:0 0 35px rgba(199,125,255,.3)}
+.proc-card .num{font-family:var(--display);font-size:.48rem;letter-spacing:.15em;color:rgba(181,123,238,.5);margin-bottom:.4rem}
+.proc-card h4{font-family:var(--serif);font-size:1.1rem;font-weight:300;margin-bottom:.4rem}
+.proc-card p{font-size:.8rem;color:var(--dim);line-height:1.6}
+
+/* FAQ */
+.faq-list{max-width:800px;margin:2rem auto 0}
+.faq-item{border-bottom:1px solid var(--border)}
+.faq-q{width:100%;background:transparent;border:none;color:var(--white);font-family:var(--body);font-size:.95rem;font-weight:400;text-align:left;padding:1.3rem 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.faq-icon{flex-shrink:0;width:22px;height:22px;border:1px solid var(--cyan);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--cyan);font-size:1rem;line-height:1;transition:transform .3s,background .3s}
+.faq-item.open .faq-icon{transform:rotate(45deg);background:var(--cyan);color:var(--black)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s;font-size:.88rem;color:var(--dim);line-height:1.85}
+.faq-item.open .faq-a{max-height:300px;padding-bottom:1.3rem}
+
+/* CTA band */
+.cta-band{background:linear-gradient(135deg,rgba(181,123,238,.1),rgba(67,97,238,.08));border-top:1px solid rgba(181,123,238,.15);border-bottom:1px solid rgba(181,123,238,.15);padding:60px 5vw;text-align:center}
+.cta-band h2{font-family:var(--serif);font-size:clamp(2rem,4vw,3.2rem);font-weight:300;margin-bottom:1rem}
+.cta-band h2 em{font-style:italic;color:var(--cyan)}
+.cta-band p{color:var(--dim);max-width:480px;margin:0 auto 2rem;line-height:1.7}
+.cta-band .btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+
+/* Footer */
+
+
+
+
+
+
+
+
+
+
+[data-anim]{opacity:0;transition:opacity .7s ease,transform .7s ease}
+[data-anim="up"]{transform:translateY(40px)}
+[data-anim="left"]{transform:translateX(-40px)}
+[data-anim="right"]{transform:translateX(40px)}
+[data-anim].anim-in{opacity:1!important;transform:none!important}
+[data-anim-group]>*{opacity:0;transform:translateY(32px);transition:opacity .6s ease,transform .6s ease}
+[data-anim-group]>*.anim-in{opacity:1;transform:none}
+[data-anim-group]>*:nth-child(1){transition-delay:0s}
+[data-anim-group]>*:nth-child(2){transition-delay:.1s}
+[data-anim-group]>*:nth-child(3){transition-delay:.2s}
+[data-anim-group]>*:nth-child(4){transition-delay:.3s}
+body{animation:pageFadeIn .4s ease both}
+@keyframes pageFadeIn{from{opacity:0}to{opacity:1}}
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:1100px){
+  .f-top{grid-template-columns:1fr 1fr}
+  .options-grid{grid-template-columns:1fr!important}
+  .features-grid{grid-template-columns:1fr 1fr!important}
+  .proc-row{grid-template-columns:1fr 1fr!important}
+}
+@media(max-width:720px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .f-top{grid-template-columns:1fr}
+  .f-bottom-links{flex-direction:column;gap:.6rem}
+  .options-grid{grid-template-columns:1fr!important}
+  .features-grid{grid-template-columns:1fr!important}
+  .proc-row{grid-template-columns:1fr 1fr!important}
+  .proc-row::before{display:none}
+  .faq-list{text-align:left}
+  .btns,.hero-btns{justify-content:center!important;flex-wrap:wrap}
+  .page-hero{min-height:280px}
+
+  .f-top{grid-template-columns:1fr}
+  .f-brand{text-align:center}
+  .f-brand p{margin-left:auto;margin-right:auto}
+  .socials{justify-content:center}
+  .f-col{text-align:center}
+  .f-col ul{align-items:center}
+  .f-bottom-links{flex-direction:column;gap:.5rem}
+}
+</style>
+<link rel="stylesheet" href="assets/global.css">
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo"><img src="assets/logo-transparent.png" alt="Perth Glow Furniture Hire"></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="hire.html" class="active">Hire Now</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="faq.html">FAQ</a></li><li><a href="contact.html" class="nav-cta">Get a Quote</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMob()"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-nav" id="mobNav">
+  <button class="mob-close" onclick="toggleMob()">✕</button>
+  <a href="index.html" onclick="toggleMob()">Home</a><a href="about.html" onclick="toggleMob()">About</a><a href="hire.html" onclick="toggleMob()">Hire Now</a><a href="gallery.html" onclick="toggleMob()">Gallery</a><a href="faq.html" onclick="toggleMob()">FAQ</a><a href="contact.html" onclick="toggleMob()">Contact</a>
+</div>
+
+<!-- HERO -->
+<div class="page-hero">
+  <div class="hero-bg"><img src="assets/dance-floor-nye.jpg" alt="LED Dance Floor hire Perth"></div>
+  <div class="hero-content">
+    <span class="label">Perth LED Dance Floor Hire</span>
+    <h1 class="h1">LED Dance<br><em>Floors</em></h1>
+    <p style="color:var(--dim);font-size:.95rem;line-height:1.7;max-width:440px;margin-top:1rem">Perth's most stunning LED dance floors for hire — infinity mirror and digital options. The centrepiece of any event.</p>
+    <div class="hero-btns">
+      <a href="hire.html" class="btn btn-fill">Browse & Book Now</a>
+      <a href="contact.html" class="btn btn-ghost">Get a Quote</a>
+    </div>
+  </div>
+</div>
+
+<!-- OPTIONS -->
+<section>
+  <div class="wrap">
+    <div data-anim="up" style="text-align:center;max-width:560px;margin:0 auto 0">
+      <p class="label">Two Options</p>
+      <h2 class="h2">Choose Your <em>Dance Floor</em></h2>
+      <div class="rule" style="margin:0 auto"></div>
+    </div>
+    <div class="options-grid" data-anim-group>
+
+      <!-- Option 1: 3rd Gen Infinity -->
+      <div class="option-card">
+        <div class="option-img">
+          <img src="assets/dance-floor-love.jpg" alt="Infinity Mirror LED Dance Floor Perth">
+          <div class="option-img-grad"></div>
+          <div class="option-badge">★ MOST POPULAR</div>
+        </div>
+        <div class="option-body">
+          <h3 class="option-name">3rd Gen Infinity Dance Floor</h3>
+          <p class="option-desc">Our flagship floor — infinity mirrors create a mesmerising depth effect that makes it look like you're dancing on a portal to another world. The ultimate wow factor for weddings, birthdays and corporate events.</p>
+          <ul class="option-features">
+            <li>Infinity mirror depth effect — looks incredible in photos</li>
+            <li>16 colour modes with wireless remote</li>
+            <li>Multiple size configurations available</li>
+            <li>Suitable for indoor and outdoor events</li>
+            <li>Professional setup and pack-down included</li>
+          </ul>
+          <a href="hire.html" class="btn btn-fill">Book This Floor</a>
+        </div>
+      </div>
+
+      <!-- Option 2: Digital -->
+      <div class="option-card">
+        <div class="option-img">
+          <img src="assets/dance-floor-30.jpg" alt="Digital LED Dance Floor Perth hire">
+          <div class="option-img-grad"></div>
+          <div class="option-badge" style="background:rgba(14,14,28,.85);border:1px solid var(--purple);color:var(--purple)">DIGITAL</div>
+        </div>
+        <div class="option-body">
+          <h3 class="option-name">Digital LED Dance Floor</h3>
+          <p class="option-desc">Bright, vibrant and bold — our digital dance floor tiles produce crisp, vivid colours across the full spectrum. Perfect for high-energy parties, birthdays and events where you want the floor to pop.</p>
+          <ul class="option-features">
+            <li>Vivid full-colour digital LED panels</li>
+            <li>16 colour modes + multi-colour effects</li>
+            <li>Flash, fade and static modes</li>
+            <li>Modular — available in multiple sizes</li>
+            <li>Indoor and outdoor compatible</li>
+          </ul>
+          <a href="hire.html" class="btn btn-fill">Book This Floor</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section style="background:var(--deep);padding:90px 5vw">
+  <div class="wrap">
+    <div data-anim="up" style="text-align:center;max-width:560px;margin:0 auto 0">
+      <p class="label">Why Our Floors</p>
+      <h2 class="h2">What Makes Them <em>Special</em></h2>
+      <div class="rule" style="margin:0 auto"></div>
+    </div>
+    <div class="features-grid" data-anim-group>
+      <div class="feat-item">
+        <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 8v4l3 3"/></svg></div>
+        <h3>8–10hr Battery Life</h3>
+        <p>Fully wireless — no cables running across your event space. Runs all night on a single charge.</p>
+      </div>
+      <div class="feat-item">
+        <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div>
+        <h3>Modular Sizing</h3>
+        <p>Mix and match panels to create the exact size you need — from intimate setups to large ballroom configurations.</p>
+      </div>
+      <div class="feat-item">
+        <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3>Pro Setup Included</h3>
+        <p>Our team handles delivery, full setup and pack-down. You don't lift a finger — just arrive and enjoy.</p>
+      </div>
+      <div class="feat-item">
+        <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/></svg></div>
+        <h3>16 Colour Modes</h3>
+        <p>Wireless remote lets you cycle through 16 colours and lighting effects — static, fade, flash, or rainbow.</p>
+      </div>
+      <div class="feat-item">
+        <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <h3>Indoor & Outdoor</h3>
+        <p>Weather-resistant design for outdoor events. Looks stunning in gardens, backyards, marquees and rooftops.</p>
+      </div>
+      <div class="feat-item">
+        <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+        <h3>Easy Online Booking</h3>
+        <p>Browse availability, select your floor and book online in minutes. Secure deposit locks in your date instantly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process-section" style="padding:90px 5vw">
+  <div class="wrap">
+    <div data-anim="up" style="text-align:center;max-width:560px;margin:0 auto 0">
+      <p class="label">How It Works</p>
+      <h2 class="h2">Simple as <em>That</em></h2>
+      <div class="rule" style="margin:0 auto"></div>
+    </div>
+    <div class="proc-row" data-anim-group>
+      <div class="proc-card">
+        <div class="proc-glow-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+        <p class="num">01</p><h4>Browse & Choose</h4>
+        <p>Pick your floor type and size from our online catalogue.</p>
+      </div>
+      <div class="proc-card">
+        <div class="proc-glow-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+        <p class="num">02</p><h4>Lock In Your Date</h4>
+        <p>Select your event date and pay a deposit to confirm your booking.</p>
+      </div>
+      <div class="proc-card">
+        <div class="proc-glow-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+        <p class="num">03</p><h4>We Deliver & Set Up</h4>
+        <p>Our crew arrives early and has everything ready before your first guests.</p>
+      </div>
+      <div class="proc-card">
+        <div class="proc-glow-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <p class="num">04</p><h4>Enjoy & We Pick Up</h4>
+        <p>Dance the night away. We handle pack-down after the event.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="wrap">
+    <div data-anim="up" style="text-align:center;max-width:560px;margin:0 auto 2rem">
+      <p class="label">Common Questions</p>
+      <h2 class="h2">Dance Floor <em>FAQ</em></h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What sizes are your dance floors available in?<span class="faq-icon">+</span></button><div class="faq-a">Our floors are modular — we can configure them in multiple sizes to suit your venue and guest numbers. The most common sizes range from small (3m x 3m) to large (6m x 6m). Contact us with your venue dimensions and we'll recommend the best fit.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What's the difference between the Infinity and Digital floors?<span class="faq-icon">+</span></button><div class="faq-a">The Infinity Mirror floor uses mirror technology to create a stunning depth effect — lights appear to stretch infinitely below the surface. It's particularly photogenic. The Digital floor uses standard LED panels that produce brighter, more vivid solid colours — great for high-energy parties where you want maximum visual impact.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Can I use the dance floor outdoors?<span class="faq-icon">+</span></button><div class="faq-a">Yes — both our dance floor options are suitable for outdoor events. They're weather-resistant and work well in gardens, backyards, marquees and outdoor venues. We recommend having a backup plan for heavy rain, and we'll discuss this with you at booking.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Do you set it up for us?<span class="faq-icon">+</span></button><div class="faq-a">Yes, always. Our team handles delivery, full setup and pack-down. We arrive well before your event starts and leave everything looking perfect. You don't need to do anything except enjoy the night.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How far in advance should I book?<span class="faq-icon">+</span></button><div class="faq-a">We recommend 2–4 weeks minimum, and earlier for peak season (October–March) or major dates like NYE and long weekends. A 30% deposit locks in your date — you pay the balance 7 days before your event.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Can I pair the dance floor with glow furniture?<span class="faq-icon">+</span></button><div class="faq-a">Absolutely — this is one of our most popular combinations. Check out our <a href="hire.html" style="color:var(--cyan)">Package Deals</a> for dance floor + furniture bundles at a reduced price.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-band">
+  <h2>Ready to Light Up Your <em>Dance Floor?</em></h2>
+  <p>Book online instantly or get in touch for a custom quote. We service all of Perth & surrounds.</p>
+  <div class="btns">
+    <a href="hire.html" class="btn btn-fill">Book Online Now</a>
+    <a href="contact.html" class="btn btn-ghost">Get a Custom Quote</a>
+  </div>
+</div>
+
+<footer>
+  <div class="f-top">
+    <div class="f-brand">
+      <img src="assets/logo-transparent.png" alt="Perth Glow Furniture Hire">
+      <p>Perth's premier LED furniture, dance floor and 360 photo booth hire. Transforming events across Perth & surrounds.</p>
+      <div class="socials">
+        <a href="https://www.facebook.com/PerthGLOWFurnitureHire" target="_blank" class="soc">f</a>
+        <a href="https://www.instagram.com/perth_glow_furniture_hire/" target="_blank" class="soc">ig</a>
+        <a href="https://www.youtube.com/channel/UCYcpUvd9s-UxPmfELeZsySg" target="_blank" class="soc">▶</a>
+      </div>
+    </div>
+    <div class="f-col"><h4>Pages</h4><ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="hire.html">Hire Now</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul></div>
+    <div class="f-col"><h4>Products</h4><ul>
+      <li><a href="dance-floor.html">LED Dance Floors</a></li>
+      <li><a href="glow-furniture.html">Glow Furniture</a></li>
+      <li><a href="photo-booth.html">360° Photo Booth</a></li>
+      <li><a href="numbers-letters.html">Light Up Numbers & Letters</a></li>
+      <li><a href="hire.html">Package Deals</a></li>
+    </ul></div>
+    <div class="f-col"><h4>Contact</h4><ul>
+      <li><a href="tel:0455484192">0455 484 192</a></li>
+      <li><a href="mailto:info@pgfh.com.au">info@pgfh.com.au</a></li>
+      <li><a>Bassendean, Perth WA</a></li>
+    </ul></div>
+  </div>
+  <div class="f-bottom">
+    <div class="f-bottom-links">
+      <p>© 2026 Perth Glow Furniture Hire. All rights reserved.</p>
+      <a href="terms.html">Terms & Conditions</a>
+      <a href="terms.html">Privacy Policy</a>
+      <a href="https://pgfh.com.au">pgfh.com.au</a>
+    </div>
+    <p class="f-credit">Developed by <a href="https://rafatofen.netlify.app" target="_blank">Rafael Thofehrn</a></p>
+  </div>
+</footer>
+<script>
+function toggleMob(){document.getElementById('mobNav').classList.toggle('open');document.body.style.overflow=document.getElementById('mobNav').classList.contains('open')?'hidden':'';}
+function toggleFaq(btn){var item=btn.closest('.faq-item');var isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(function(i){i.classList.remove('open')});if(!isOpen)item.classList.add('open');}
+document.addEventListener('DOMContentLoaded',function(){var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('anim-in');obs.unobserve(e.target);}});},{threshold:.1,rootMargin:'0px 0px -50px 0px'});document.querySelectorAll('[data-anim]').forEach(function(el){obs.observe(el)});document.querySelectorAll('[data-anim-group]').forEach(function(g){g.querySelectorAll(':scope > *').forEach(function(c){obs.observe(c)})});});
+</script>
+</body>
+</html>

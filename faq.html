@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ | Perth Glow Furniture Hire</title>
+<meta name="description" content="Frequently asked questions about Perth Glow Furniture Hire — LED dance floors, glow furniture and 360 photo booth hire in Perth WA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Syncopate:wght@400;700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+:root{--black:#050508;--deep:#08080f;--card:#0e0e1c;--border:rgba(255,255,255,0.07);--white:#f0eeea;--dim:rgba(240,238,234,0.55);--cyan:#b57bee;--purple:#c77dff;--display:'Syncopate',sans-serif;--serif:'Cormorant Garamond',serif;--body:'DM Sans',sans-serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--black);color:var(--white);font-family:var(--body);font-weight:300;overflow-x:hidden}
+body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");pointer-events:none;z-index:9998;opacity:.3;mix-blend-mode:overlay}
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 5vw;height:76px;display:flex;align-items:center;justify-content:space-between;background:rgba(5,5,8,.92);backdrop-filter:blur(24px);border-bottom:1px solid var(--border)}
+nav.scrolled{background:rgba(5,5,8,.92);backdrop-filter:blur(24px);border-bottom:1px solid var(--border)}
+.nav-logo img{height:44px;filter:drop-shadow(0 0 12px rgba(181,123,238,.25))}
+.nav-links{display:flex;gap:2.5rem;list-style:none;align-items:center}
+.nav-links a{font-family:var(--display);font-size:.58rem;letter-spacing:.18em;color:var(--dim);text-decoration:none;text-transform:uppercase;transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--cyan)}
+.nav-cta{border:1px solid var(--cyan)!important;color:var(--cyan)!important;padding:9px 22px!important}
+.nav-cta:hover{background:var(--cyan)!important;color:var(--black)!important}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;border:none;background:transparent;padding:4px}
+.hamburger span{display:block;width:24px;height:1.5px;background:var(--white)}
+.mobile-nav{display:none;position:fixed;inset:0;background:rgba(5,5,8,.97);backdrop-filter:blur(20px);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:2rem}
+.mobile-nav.open{display:flex}
+.mobile-nav a{font-family:var(--display);font-size:.9rem;letter-spacing:.25em;color:var(--white);text-decoration:none;text-transform:uppercase}
+.mobile-nav a:hover{color:var(--cyan)}
+.mob-close{position:absolute;top:24px;right:5vw;background:transparent;border:none;color:var(--white);font-size:1.4rem;cursor:pointer}
+.page-hero{position:relative;height:50vh;min-height:360px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.page-hero-bg{position:absolute;inset:0}
+.page-hero-bg img{width:100%;height:100%;object-fit:cover;opacity:.35}
+.page-hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(5,5,8,.5),rgba(5,5,8,.8))}
+.page-hero-inner{position:relative;z-index:2;text-align:center;padding:0 5vw}
+.label{font-family:var(--display);font-size:.55rem;letter-spacing:.3em;color:var(--cyan);text-transform:uppercase;margin-bottom:.9rem}
+.h1{font-family:var(--serif);font-size:clamp(3rem,7vw,6rem);font-weight:300;line-height:.95}
+.h1 em{font-style:italic;color:var(--cyan)}
+section{padding:90px 5vw}
+.h2{font-family:var(--serif);font-size:clamp(1.8rem,4vw,3rem);font-weight:300;line-height:1.1;margin-bottom:1rem}
+.h2 em{font-style:italic;color:var(--cyan)}
+.rule{width:56px;height:1px;background:linear-gradient(to right,var(--cyan),var(--purple),transparent);margin-bottom:2rem}
+.body-txt{color:var(--dim);line-height:1.85;font-size:.95rem}
+.btn{font-family:var(--display);font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;padding:16px 38px;text-decoration:none;display:inline-block;transition:.3s;cursor:pointer;border:none}
+.btn-fill{background:var(--cyan);color:var(--black);font-weight:700}
+.btn-fill:hover{box-shadow:0 0 40px rgba(181,123,238,.45);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--white);border:1px solid rgba(255,255,255,.25)}
+.btn-ghost:hover{border-color:var(--cyan);color:var(--cyan)}
+
+/* FAQ CATEGORIES */
+.faq-cats{display:grid;grid-template-columns:1fr 3fr;gap:60px;max-width:1100px;margin:0 auto;align-items:start}
+.faq-nav{position:sticky;top:100px;display:flex;flex-direction:column;gap:.4rem}
+.faq-nav a{font-family:var(--display);font-size:.5rem;letter-spacing:.15em;color:var(--dim);text-decoration:none;text-transform:uppercase;padding:.7rem 1rem;border-left:1px solid var(--border);transition:.2s}
+.faq-nav a:hover,.faq-nav a.active{color:var(--cyan);border-left-color:var(--cyan)}
+.faq-group{margin-bottom:3rem}
+.faq-group-title{font-family:var(--display);font-size:.55rem;letter-spacing:.25em;color:var(--cyan);text-transform:uppercase;margin-bottom:1.2rem;padding-bottom:.6rem;border-bottom:1px solid var(--border)}
+.faq-item{border-bottom:1px solid var(--border)}
+.faq-q{width:100%;background:transparent;border:none;color:var(--white);font-family:var(--body);font-size:.95rem;font-weight:400;text-align:left;padding:1.3rem 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.faq-icon{flex-shrink:0;width:22px;height:22px;border:1px solid var(--cyan);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--cyan);font-size:1rem;line-height:1;transition:transform .3s,background .3s}
+.faq-item.open .faq-icon{transform:rotate(45deg);background:var(--cyan);color:var(--black)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s;font-size:.88rem;color:var(--dim);line-height:1.85}
+.faq-item.open .faq-a{max-height:400px;padding-bottom:1.3rem}
+
+/* CTA */
+#cta-strip{background:var(--deep);border-top:1px solid var(--border)}
+.cta-inner{max-width:1300px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+.cta-inner h2{font-family:var(--serif);font-size:clamp(1.6rem,3vw,2.6rem);font-weight:300}
+.cta-inner h2 em{font-style:italic;color:var(--cyan)}
+.btns{display:flex;gap:1rem;flex-wrap:wrap;flex-shrink:0}
+
+footer{background:var(--black);border-top:1px solid var(--border);padding:64px 5vw 30px}
+.f-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3.5rem;max-width:1300px;margin-left:auto;margin-right:auto}
+.f-brand img{height:42px;filter:drop-shadow(0 0 8px rgba(181,123,238,.2))}
+.f-brand p{color:var(--dim);font-size:.83rem;line-height:1.7;margin:1rem 0 1.4rem;max-width:270px}
+.socials{display:flex;gap:.7rem}
+.soc{width:36px;height:36px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--dim);text-decoration:none;font-size:.8rem;transition:.2s}
+.soc:hover{border-color:var(--cyan);color:var(--cyan)}
+.f-col h4{font-family:var(--display);font-size:.52rem;letter-spacing:.2em;color:var(--cyan);margin-bottom:1.1rem;text-transform:uppercase}
+.f-col ul{list-style:none;display:flex;flex-direction:column;gap:.55rem}
+.f-col ul a{font-size:.83rem;color:var(--dim);text-decoration:none;transition:color .2s}
+.f-col ul a:hover{color:var(--white)}
+.f-bottom{border-top:1px solid var(--border);padding-top:1.4rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;max-width:1300px;margin:0 auto}
+.f-bottom p,.f-bottom a{font-size:.76rem;color:rgba(255,255,255,.22);text-decoration:none}
+.f-bottom a:hover{color:var(--cyan)}
+
+@media(max-width:900px){.faq-cats{grid-template-columns:1fr}.faq-nav{position:static;flex-direction:row;flex-wrap:wrap;gap:.3rem}.faq-nav a{border-left:none;border:1px solid var(--border);padding:.5rem .9rem}}
+@media(max-width:720px){section{padding:70px 5vw}
+.cta-inner{flex-direction:column;text-align:center}.f-top{grid-template-columns:1fr}}
+
+/* ── SCROLL ANIMATIONS ── */
+[data-anim] {
+  opacity: 0;
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+[data-anim="up"]    { transform: translateY(40px); }
+[data-anim="down"]  { transform: translateY(-30px); }
+[data-anim="left"]  { transform: translateX(-44px); }
+[data-anim="right"] { transform: translateX(44px); }
+[data-anim="scale"] { transform: scale(0.92); }
+[data-anim="fade"]  { transform: none; }
+[data-anim].anim-in { opacity: 1 !important; transform: none !important; }
+
+/* Staggered grid children */
+[data-anim-group] > * {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+[data-anim-group] > *.anim-in { opacity: 1 !important; transform: none !important; }
+[data-anim-group] > *:nth-child(1) { transition-delay: 0s; }
+[data-anim-group] > *:nth-child(2) { transition-delay: 0.1s; }
+[data-anim-group] > *:nth-child(3) { transition-delay: 0.2s; }
+[data-anim-group] > *:nth-child(4) { transition-delay: 0.3s; }
+[data-anim-group] > *:nth-child(5) { transition-delay: 0.4s; }
+[data-anim-group] > *:nth-child(6) { transition-delay: 0.5s; }
+
+/* Page fade-in on load */
+body { animation: pageFadeIn 0.4s ease both; }
+@keyframes pageFadeIn { from { opacity:0; } to { opacity:1; } }
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  [data-anim], [data-anim-group] > * { opacity:1 !important; transform:none !important; transition:none !important; }
+  body { animation: none !important; }
+}
+
+/* Animations */
+[data-anim]{opacity:0;transition:opacity .7s ease,transform .7s ease}
+[data-anim="up"]{transform:translateY(40px)}
+[data-anim].anim-in{opacity:1!important;transform:none!important}
+[data-anim-group]>*{opacity:0;transform:translateY(32px);transition:opacity .6s ease,transform .6s ease}
+[data-anim-group]>*.anim-in{opacity:1!important;transform:none!important}
+[data-anim-group]>*:nth-child(1){transition-delay:0s}
+[data-anim-group]>*:nth-child(2){transition-delay:.1s}
+[data-anim-group]>*:nth-child(3){transition-delay:.2s}
+[data-anim-group]>*:nth-child(4){transition-delay:.3s}
+</style>
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180.png">
+  <meta name="theme-color" content="#050508">
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo"><img src="assets/logo-transparent.png" alt="Perth Glow Furniture Hire"></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="hire.html">Hire Now</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="faq.html" class="active">FAQ</a></li><li><a href="contact.html" class="nav-cta">Get a Quote</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMob()"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-nav" id="mobNav">
+  <button class="mob-close" onclick="toggleMob()">✕</button>
+  <a href="index.html" onclick="toggleMob()">Home</a><a href="about.html" onclick="toggleMob()">About</a><a href="hire.html" onclick="toggleMob()">Hire Now</a><a href="gallery.html" onclick="toggleMob()">Gallery</a><a href="faq.html" onclick="toggleMob()">FAQ</a><a href="contact.html" onclick="toggleMob()">Contact</a>
+</div>
+
+<div class="page-hero">
+  <div class="page-hero-bg"><img src="assets/dance-floor-nye.jpg" alt="Perth Glow FAQ"></div>
+  <div class="page-hero-inner">
+    <p class="label">Got Questions?</p>
+    <h1 class="h1">Frequently Asked <em>Questions</em></h1>
+  </div>
+</div>
+
+<section>
+  <div class="faq-cats">
+    <nav class="faq-nav">
+      <a href="#booking" class="active">Booking</a>
+      <a href="#products">Products</a>
+      <a href="#setup">Setup</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#events">Events</a>
+    </nav>
+    <div>
+
+      <div class="faq-group" id="booking">
+        <p class="faq-group-title">Booking & Availability</p>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">How far in advance should I book?<span class="faq-icon">+</span></button>
+          <div class="faq-a">We recommend booking at least 2–4 weeks in advance to secure your preferred date. During peak season (October to March) and for major events like New Year's Eve, bookings can fill months ahead — so the sooner the better.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Can I book online?<span class="faq-icon">+</span></button>
+          <div class="faq-a">Yes! You can browse and book our full range of products directly through our <a href="hire.html" style="color:var(--cyan)">Hire Now</a> page via our Booqable online store. Select your products, choose your dates, and complete your booking securely online.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Is a deposit required?<span class="faq-icon">+</span></button>
+          <div class="faq-a">Yes, a deposit is required to secure your booking. The remaining balance is due before or on the day of your event. Full details are provided during the booking process.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What is your cancellation policy?<span class="faq-icon">+</span></button>
+          <div class="faq-a">We understand plans can change. Please contact us as early as possible if you need to cancel or reschedule. Cancellation terms depend on how far in advance you contact us — get in touch and we'll work something out.</div>
+        </div>
+      </div>
+
+      <div class="faq-group" id="products">
+        <p class="faq-group-title">Products & Equipment</p>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">How does the colour control work?<span class="faq-icon">+</span></button>
+          <div class="faq-a">All our LED furniture comes with a wireless remote control that lets you cycle through 16 colours and multiple lighting modes — including static, slow fade, rapid fade, and flash. Our team will demonstrate how to use it during setup.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">How long do the batteries last?<span class="faq-icon">+</span></button>
+          <div class="faq-a">Our LED furniture is fully rechargeable and typically lasts 8–10 hours on a full charge, which is more than enough for any event. Each piece is fully charged before delivery.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What sizes are the dance floors available in?<span class="faq-icon">+</span></button>
+          <div class="faq-a">Our LED dance floors are modular and available in multiple sizes to suit your venue and guest numbers. Contact us with your venue dimensions and expected guest count and we'll recommend the best size for you.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What furniture pieces do you have available?<span class="faq-icon">+</span></button>
+          <div class="faq-a">We have a wide range including LED glow chairs, stools, low lounges, coffee tables, bar tables, bar stools, curved benches, cube seats, drink buckets, and bar sections. Browse the full range in our <a href="hire.html" style="color:var(--cyan)">online store</a>.</div>
+        </div>
+      </div>
+
+      <div class="faq-group" id="setup">
+        <p class="faq-group-title">Setup & Logistics</p>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Is delivery and setup included?<span class="faq-icon">+</span></button>
+          <div class="faq-a">Yes! Professional delivery, setup, and pack-down is included with all hire packages. Our team arrives early to have everything perfectly set up before your guests arrive, and returns after the event to pack it all down.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Can I use the furniture outdoors?<span class="faq-icon">+</span></button>
+          <div class="faq-a">Absolutely — our LED furniture and dance floors are suitable for both indoor and outdoor events. All equipment is weather-resistant. For outdoor setups, we do recommend having a backup plan in case of heavy or unexpected rain.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Do I need to provide power?<span class="faq-icon">+</span></button>
+          <div class="faq-a">Our furniture runs on battery — no power points needed! The dance floor may require a power connection. We'll let you know specific requirements when you book so you can prepare your venue.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What areas of Perth do you service?<span class="faq-icon">+</span></button>
+          <div class="faq-a">We service all areas across Perth metropolitan and surrounding regions. A delivery fee may apply depending on your location. Contact us with your suburb for a delivery quote.</div>
+        </div>
+      </div>
+
+      <div class="faq-group" id="pricing">
+        <p class="faq-group-title">Pricing & Packages</p>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">How is pricing calculated?<span class="faq-icon">+</span></button>
+          <div class="faq-a">Pricing is per hire period (typically per event or per day). All prices are listed in our online store. Delivery fees may apply based on location. For large or custom orders, contact us for a tailored quote.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Can I create a custom package?<span class="faq-icon">+</span></button>
+          <div class="faq-a">Yes! Our listed packages are great starting points, but we're happy to mix and match products to suit your event and budget. Get in touch via our <a href="contact.html" style="color:var(--cyan)">contact page</a> and we'll put together a custom quote.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Do you offer discounts for large events?<span class="faq-icon">+</span></button>
+          <div class="faq-a">For large orders or repeat bookings, we're happy to discuss pricing. Get in touch directly and let us know what you're looking for.</div>
+        </div>
+      </div>
+
+      <div class="faq-group" id="events">
+        <p class="faq-group-title">Events & Use Cases</p>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What types of events is glow furniture suitable for?<span class="faq-icon">+</span></button>
+          <div class="faq-a">Almost any event! Our most popular events include birthday parties (18th, 21st, 30th, 50th), weddings and receptions, engagements, corporate functions, Christmas parties, NYE celebrations, school formals, product launches and more.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Is the 360 photo booth suitable for all ages?<span class="faq-icon">+</span></button>
+          <div class="faq-a">Yes! The 360 photo booth is designed to be easy and fun for guests of all ages. The platform and operation is safe, and our team will be on hand to assist guests and ensure everything runs smoothly.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Can you help me plan my event setup?<span class="faq-icon">+</span></button>
+          <div class="faq-a">Absolutely — we love helping clients plan the perfect setup. Share your venue details, guest count, and vision and we'll recommend the right products, quantities, and layout to create an amazing atmosphere.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="cta-strip">
+  <div class="cta-inner">
+    <h2>Still Have Questions? <em>Let's Chat</em></h2>
+    <div class="btns">
+      <a href="contact.html" class="btn btn-fill">Contact Us</a>
+      <a href="https://www.instagram.com/perth_glow_furniture_hire/" target="_blank" class="btn btn-ghost">Instagram</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="f-top">
+    <div class="f-brand"><img src="assets/logo-transparent.png" alt="Perth Glow"><p>Perth's premier LED furniture, dance floor and 360 photo booth hire.</p><div class="socials"><a href="https://www.facebook.com/PerthGLOWFurnitureHire" target="_blank" class="soc">f</a><a href="https://www.instagram.com/perth_glow_furniture_hire/" target="_blank" class="soc">ig</a><a href="https://www.youtube.com/channel/UCYcpUvd9s-UxPmfELeZsySg" target="_blank" class="soc">▶</a></div></div>
+    <div class="f-col"><h4>Pages</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="hire.html">Hire Now</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="f-col"><h4>Products</h4><ul>
+        <li><a href="dance-floor.html">LED Dance Floors</a></li>
+        <li><a href="glow-furniture.html">Glow Furniture</a></li>
+        <li><a href="photo-booth.html">360° Photo Booth</a></li>
+        <li><a href="numbers-letters.html">Light Up Numbers & Letters</a></li>
+        <li><a href="hire.html">Package Deals</a></li>
+      </ul></div>
+    <div class="f-col"><h4>Contact</h4><ul><li><a href="tel:0455484192">0455 484 192</a></li><li><a href="/cdn-cgi/l/email-protection#4b22252d240b3b2c2d2365282426652a3e"><span class="__cf_email__" data-cfemail="bed7d0d8d1feced9d8d690ddd1d390dfcb">[email&#160;protected]</span></a></li><li><a>Bassendean, Perth WA</a></li></ul></div>
+  </div>
+  <div class="f-bottom"><p>© 2025 Perth Glow Furniture Hire.</p><a href="https://pgfh.com.au">pgfh.com.au</a></div>
+    <div style="border-top:1px solid var(--border);padding-top:1rem;margin-top:1rem;text-align:center;max-width:1300px;margin-left:auto;margin-right:auto">
+      <p style="font-size:.7rem;color:rgba(255,255,255,.18);font-family:var(--body)">Developed by <a href="https://rafatofen.netlify.app" target="_blank" style="color:rgba(181,123,238,.5);text-decoration:none;transition:.2s" onmouseover="this.style.color='#b57bee'" onmouseout="this.style.color='rgba(181,123,238,.5)'">Rafael Thofehrn</a></p>
+    </div>
+</footer>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+function toggleMob(){document.getElementById('mobNav').classList.toggle('open');document.body.style.overflow=document.getElementById('mobNav').classList.contains('open')?'hidden':''}
+function toggleFaq(btn){const item=btn.closest('.faq-item');const isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(i=>i.classList.remove('open'));if(!isOpen)item.classList.add('open')}
+</script>
+
+<script>
+// Scroll-in animations — IntersectionObserver
+document.addEventListener('DOMContentLoaded', function() {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) {
+        e.target.classList.add('anim-in');
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+  // Animate single elements
+  document.querySelectorAll('[data-anim]').forEach(function(el) {
+    obs.observe(el);
+  });
+
+  // Animate grou

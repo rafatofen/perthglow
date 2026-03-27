@@ -1,0 +1,101 @@
+/* ─────────────────────────────────────────
+   Perth Glow — Page Loader & Skeleton
+   Include this file in all pages via:
+   <link rel="stylesheet" href="assets/loader.css">
+   ───────────────────────────────────────── */
+
+/* ── PAGE LOADER (full screen on first paint) ── */
+#pg-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: #050508;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+#pg-loader.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.loader-logo {
+  height: 52px;
+  width: auto;
+  filter: drop-shadow(0 0 20px rgba(181,123,238,.5));
+  animation: logoPulse 1.8s ease-in-out infinite;
+}
+@keyframes logoPulse {
+  0%, 100% { opacity: .6; filter: drop-shadow(0 0 14px rgba(181,123,238,.3)); }
+  50%       { opacity: 1;  filter: drop-shadow(0 0 28px rgba(181,123,238,.7)); }
+}
+.loader-bar-wrap {
+  width: 160px;
+  height: 2px;
+  background: rgba(255,255,255,.07);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.loader-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(to right, #c77dff, #b57bee);
+  border-radius: 2px;
+  animation: barFill 1.2s ease forwards;
+}
+@keyframes barFill {
+  to { width: 100%; }
+}
+.loader-text {
+  font-family: 'Syncopate', sans-serif;
+  font-size: .48rem;
+  letter-spacing: .3em;
+  color: rgba(181,123,238,.6);
+  text-transform: uppercase;
+  animation: textBlink 1.8s ease-in-out infinite;
+}
+@keyframes textBlink {
+  0%, 100% { opacity: .4; }
+  50%       { opacity: 1; }
+}
+
+/* ── SKELETON SHIMMER (for content cards) ── */
+@keyframes shimmer {
+  0%   { background-position: -600px 0; }
+  100% { background-position:  600px 0; }
+}
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    #0e0e1c 25%,
+    #1a1a2e 50%,
+    #0e0e1c 75%
+  );
+  background-size: 600px 100%;
+  animation: shimmer 1.6s infinite linear;
+  border-radius: 2px;
+}
+/* Pre-built skeleton shapes */
+.sk-img   { width: 100%; aspect-ratio: 16/10; }
+.sk-title { height: 28px; width: 65%; margin-bottom: .8rem; }
+.sk-line  { height: 14px; width: 100%; margin-bottom: .5rem; }
+.sk-line-short { height: 14px; width: 45%; margin-bottom: .5rem; }
+.sk-price { height: 36px; width: 30%; margin: .8rem 0; }
+.sk-btn   { height: 42px; width: 100%; margin-top: 1rem; }
+
+/* Skeleton card grid (used while Booqable loads) */
+.sk-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+}
+.sk-card {
+  background: #0e0e1c;
+  border: 1px solid rgba(255,255,255,.07);
+  overflow: hidden;
+  padding-bottom: 1.5rem;
+}
+.sk-card .sk-body { padding: 1.2rem 1.2rem 0; }

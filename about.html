@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | Perth Glow Furniture Hire</title>
+<meta name="description" content="Learn about Perth Glow Furniture Hire — Perth's premier LED furniture, dance floor and 360 photo booth specialists.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Syncopate:wght@400;700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 5vw;height:76px;display:flex;align-items:center;justify-content:space-between;background:rgba(5,5,8,.92);backdrop-filter:blur(24px);border-bottom:1px solid var(--border)}
+nav.scrolled{background:rgba(5,5,8,.92);backdrop-filter:blur(24px);border-bottom:1px solid var(--border)}
+.nav-logo{display:flex;align-items:center;text-decoration:none}
+.nav-logo img{height:44px;filter:drop-shadow(0 0 14px rgba(181,123,238,.4))}
+.nav-links{display:flex;gap:2.5rem;list-style:none;align-items:center}
+.nav-links a{font-family:var(--display);font-size:.58rem;letter-spacing:.18em;color:var(--dim);text-decoration:none;text-transform:uppercase;transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--cyan)}
+.nav-cta{border:1px solid var(--cyan)!important;color:var(--cyan)!important;padding:9px 22px!important;transition:all .2s!important}
+.nav-cta:hover{background:var(--cyan)!important;color:var(--black)!important}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;border:none;background:transparent;padding:4px}
+.hamburger span{display:block;width:24px;height:1.5px;background:var(--white)}
+.mobile-nav{display:none;position:fixed;inset:0;background:rgba(5,5,8,.97);backdrop-filter:blur(20px);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:2rem}
+.mobile-nav.open{display:flex}
+.mobile-nav a{font-family:var(--display);font-size:.9rem;letter-spacing:.25em;color:var(--white);text-decoration:none;text-transform:uppercase}
+.mobile-nav a:hover{color:var(--cyan)}
+.mob-close{position:absolute;top:24px;right:5vw;background:transparent;border:none;color:var(--white);font-size:1.4rem;cursor:pointer}
+/* PAGE HERO — always below fixed nav */
+.page-hero{position:relative;height:70vh;min-height:480px;display:flex;align-items:center;justify-content:center;overflow:hidden;margin-top:76px}
+.page-hero-bg{position:absolute;inset:0}
+.page-hero-bg img{width:100%;height:100%;object-fit:cover;opacity:.4}
+.page-hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(5,5,8,.5),rgba(5,5,8,.75))}
+.page-hero-inner{position:relative;z-index:2;text-align:center;padding:0 5vw}
+/* FOOTER */
+footer{background:var(--black);border-top:1px solid var(--border);padding:64px 5vw 30px}
+.f-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3.5rem;max-width:1300px;margin-left:auto;margin-right:auto}
+.f-brand img{height:42px;filter:drop-shadow(0 0 10px rgba(181,123,238,.35))}
+.f-brand p{color:var(--dim);font-size:.83rem;line-height:1.7;margin:1rem 0 1.4rem;max-width:270px}
+.socials{display:flex;gap:.7rem}
+.soc{width:36px;height:36px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--dim);text-decoration:none;font-size:.8rem;transition:.2s}
+.soc:hover{border-color:var(--cyan);color:var(--cyan)}
+.f-col h4{font-family:var(--display);font-size:.52rem;letter-spacing:.2em;color:var(--cyan);margin-bottom:1.1rem;text-transform:uppercase}
+.f-col ul{list-style:none;display:flex;flex-direction:column;gap:.55rem}
+.f-col ul a{font-size:.83rem;color:var(--dim);text-decoration:none;transition:color .2s}
+.f-col ul a:hover{color:var(--white)}
+.f-bottom{border-top:1px solid var(--border);padding-top:1.4rem;display:flex;flex-direction:column;align-items:center;text-align:center;gap:.5rem;max-width:1300px;margin:0 auto}
+.f-bottom-links{display:flex;gap:2rem;flex-wrap:wrap;justify-content:center;align-items:center}
+.f-bottom p,.f-bottom a{font-size:.76rem;color:rgba(255,255,255,.22);text-decoration:none}
+.f-bottom a:hover{color:var(--cyan)}
+.f-credit{font-size:.7rem;color:rgba(255,255,255,.18)}
+.f-credit a{color:rgba(181,123,238,.5);text-decoration:none}
+.f-credit a:hover{color:var(--cyan)}
+
+
+/* ── NAV ── */
+.mobile-
+/* ── FOOTER ── */
+.f-bottom p,
+:root{--black:#050508;--deep:#08080f;--card:#0e0e1c;--border:rgba(255,255,255,0.07);--white:#f0eeea;--dim:rgba(240,238,234,0.55);--cyan:#b57bee;--purple:#c77dff;--pink:#ff6eb4;--display:'Syncopate',sans-serif;--serif:'Cormorant Garamond',serif;--body:'DM Sans',sans-serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--black);color:var(--white);font-family:var(--body);font-weight:300;overflow-x:hidden}
+body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");pointer-events:none;z-index:9998;opacity:.3;mix-blend-mode:overlay}
+.mobile-
+
+/* PAGE HERO */
+.label{font-family:var(--display);font-size:.55rem;letter-spacing:.3em;color:var(--cyan);text-transform:uppercase;margin-bottom:.9rem}
+.page-hero-inner .h1{font-family:var(--serif);font-size:clamp(3rem,7vw,6rem);font-weight:300;line-height:.95}
+.page-hero-inner .h1 em{font-style:italic;color:var(--cyan);text-shadow:0 0 40px rgba(181,123,238,.35)}
+
+section{padding:100px 5vw}
+.wrap{max-width:1300px;margin:0 auto}
+.h2{font-family:var(--serif);font-size:clamp(2rem,4.5vw,3.5rem);font-weight:300;line-height:1.08;margin-bottom:1.4rem}
+.h2 em{font-style:italic;color:var(--cyan)}
+.rule{width:56px;height:1px;background:linear-gradient(to right,var(--cyan),var(--purple),transparent);margin-bottom:2rem}
+.body-txt{color:var(--dim);line-height:1.85;font-size:.95rem}
+.btn{font-family:var(--display);font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;padding:16px 38px;text-decoration:none;display:inline-block;transition:.3s;cursor:pointer;border:none}
+.btn-fill{background:var(--cyan);color:var(--black);font-weight:700}
+.btn-fill:hover{box-shadow:0 0 40px rgba(181,123,238,.45);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--white);border:1px solid rgba(255,255,255,.25)}
+.btn-ghost:hover{border-color:var(--cyan);color:var(--cyan)}
+
+/* ABOUT GRID */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.about-img{height:560px;overflow:hidden;border:1px solid var(--border);position:relative}
+.about-img img{width:100%;height:100%;object-fit:cover;opacity:.85}
+.about-img::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(181,123,238,.05),transparent)}
+
+/* STATS */
+#stats{background:var(--deep)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;max-width:1300px;margin:0 auto}
+.stat{background:var(--card);border:1px solid var(--border);padding:2.5rem 2rem;text-align:center;transition:border-color .3s}
+.stat:hover{border-color:rgba(181,123,238,.3);box-shadow:0 0 20px rgba(181,123,238,.08)}
+.stat-num{font-family:var(--serif);font-size:3.5rem;font-weight:300;color:var(--cyan);line-height:1;margin-bottom:.4rem}
+.stat-lbl{font-family:var(--display);font-size:.5rem;letter-spacing:.2em;color:var(--dim);text-transform:uppercase}
+
+/* WHY US */
+#why .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:0}
+.why-card{background:var(--card);border:1px solid var(--border);padding:2rem;border-top:2px solid var(--cyan);transition:transform .3s,border-color .3s}
+.why-card:hover{transform:translateY(-4px);border-top-color:var(--purple)}
+.why-icon{font-size:2rem;margin-bottom:1rem}
+.why-card h3{font-family:var(--serif);font-size:1.4rem;font-weight:300;margin-bottom:.7rem}
+.why-card p{font-size:.85rem;color:var(--dim);line-height:1.7}
+
+/* CTA STRIP */
+#cta-strip{background:var(--deep)}
+.cta-strip-inner{max-width:1300px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+.cta-strip-inner h2{font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,3rem);font-weight:300}
+.cta-strip-inner h2 em{font-style:italic;color:var(--cyan)}
+.cta-strip-btns{display:flex;gap:1rem;flex-wrap:wrap;flex-shrink:0}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ── SCROLL ANIMATIONS ── */
+[data-anim] {
+  opacity: 0;
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+[data-anim="up"]    { transform: translateY(40px); }
+[data-anim="down"]  { transform: translateY(-30px); }
+[data-anim="left"]  { transform: translateX(-44px); }
+[data-anim="right"] { transform: translateX(44px); }
+[data-anim="scale"] { transform: scale(0.92); }
+[data-anim="fade"]  { transform: none; }
+[data-anim].anim-in { opacity: 1 !important; transform: none !important; }
+
+/* Staggered grid children */
+[data-anim-group] > * {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+[data-anim-group] > *.anim-in { opacity: 1 !important; transform: none !important; }
+[data-anim-group] > *:nth-child(1) { transition-delay: 0s; }
+[data-anim-group] > *:nth-child(2) { transition-delay: 0.1s; }
+[data-anim-group] > *:nth-child(3) { transition-delay: 0.2s; }
+[data-anim-group] > *:nth-child(4) { transition-delay: 0.3s; }
+[data-anim-group] > *:nth-child(5) { transition-delay: 0.4s; }
+[data-anim-group] > *:nth-child(6) { transition-delay: 0.5s; }
+
+/* Page fade-in on load */
+body { animation: pageFadeIn 0.4s ease both; }
+@keyframes pageFadeIn { from { opacity:0; } to { opacity:1; } }
+
+/* Respect reduced motion */
+
+
+/* Process cards */
+.proc-step,.hire-proc-card{text-align:center;padding:1.5rem 1rem;background:rgba(181,123,238,.04);border:1px solid rgba(181,123,238,.12);position:relative;z-index:1;transition:border-color .3s,transform .3s}
+.proc-step:hover,.hire-proc-card:hover{border-color:rgba(181,123,238,.28);transform:translateY(-4px)}
+.proc-glow-icon,.hire-proc-icon{width:64px;height:64px;border-radius:50%;border:1px solid rgba(199,125,255,.4);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;color:var(--purple);background:rgba(181,123,238,.08);box-shadow:0 0 20px rgba(181,123,238,.15),inset 0 0 10px rgba(181,123,238,.05);transition:box-shadow .3s}
+.proc-step:hover .proc-glow-icon,.hire-proc-card:hover .hire-proc-icon{box-shadow:0 0 35px rgba(199,125,255,.3)}
+.proc-num,.hire-proc-num{font-family:var(--display);font-size:.48rem;letter-spacing:.15em;color:rgba(181,123,238,.5);margin-bottom:.4rem}
+.proc-step h4,.hire-proc-h{font-family:var(--serif);font-size:1.1rem;font-weight:300;margin-bottom:.4rem;color:var(--white)}
+.proc-step p,.hire-proc-p{font-size:.8rem;color:var(--dim);line-height:1.65}
+/* Feat item cards */
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2rem}
+.feat-item{background:var(--card);border:1px solid var(--border);padding:1.8rem;border-top:2px solid var(--purple);transition:transform .3s,border-top-color .3s}
+.feat-item:hover{transform:translateY(-3px);border-top-color:var(--cyan)}
+.feat-icon-wrap{width:48px;height:48px;border-radius:50%;border:1px solid rgba(199,125,255,.35);display:flex;align-items:center;justify-content:center;color:var(--purple);margin-bottom:1rem;box-shadow:0 0 16px rgba(181,123,238,.12);transition:box-shadow .3s}
+.feat-item:hover .feat-icon-wrap{box-shadow:0 0 28px rgba(181,123,238,.25)}
+.feat-icon-wrap svg{width:22px;height:22px}
+.feat-item h3{font-family:var(--serif);font-size:1.2rem;font-weight:300;margin-bottom:.5rem}
+.feat-item p{font-size:.83rem;color:var(--dim);line-height:1.65}
+
+
+
+
+@media (prefers-reduced-motion: reduce) {
+  [data-anim], [data-anim-group] > * { opacity:1 !important; transform:none !important; transition:none !important; }
+
+
+
+
+
+
+@media(max-width:1100px){
+  .f-top{grid-template-columns:1fr 1fr}
+}
+@media(max-width:720px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .f-top{grid-template-columns:1fr}
+  .f-bottom-links{flex-direction:column;gap:.6rem}
+  section{padding:70px 5vw}
+  .row{grid-template-columns:1fr}
+  .btns,.hero-btns,.cta-strip-btns{justify-content:center!important;flex-wrap:wrap}
+  .page-hero{min-height:280px}
+
+  .f-top{grid-template-columns:1fr}
+  .f-brand{text-align:center}
+  .f-brand p{margin-left:auto;margin-right:auto}
+  .socials{justify-content:center}
+  .f-col{text-align:center}
+  .f-col ul{align-items:center}
+  .f-bottom-links{flex-direction:column;gap:.5rem}
+}
+</style>
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180.png">
+  <meta name="theme-color" content="#050508">
+<link rel="stylesheet" href="assets/global.css">
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo"><img src="assets/logo-transparent.png" alt="Perth Glow Furniture Hire"></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html" class="active">About</a></li>
+    <li><a href="hire.html">Hire Now</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="contact.html" class="nav-cta">Get a Quote</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMob()"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-nav" id="mobNav">
+  <button class="mob-close" onclick="toggleMob()">✕</button>
+  <a href="index.html" onclick="toggleMob()">Home</a>
+  <a href="about.html" onclick="toggleMob()">About</a>
+  <a href="hire.html" onclick="toggleMob()">Hire Now</a>
+  <a href="gallery.html" onclick="toggleMob()">Gallery</a>
+  <a href="faq.html" onclick="toggleMob()">FAQ</a>
+  <a href="contact.html" onclick="toggleMob()">Contact</a>
+</div>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-bg">
+    <img src="assets/dance-floor-love.jpg" alt="Perth Glow outdoor event">
+  </div>
+  <div class="page-hero-inner">
+    <p class="label">Our Story</p>
+    <h1 class="h1">About <em>Perth Glow</em></h1>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section>
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-img" data-anim="left">
+        <img src="assets/aerial-event.jpg" alt="Aerial view of Perth Glow event setup">
+      </div>
+      <div data-anim="right">
+        <p class="label">Who We Are</p>
+        <h2 class="h2">Perth's <em>Glow</em> Event Specialists</h2>
+        <div class="rule"></div>
+        <p class="body-txt" style="margin-bottom:1.2rem">Perth Glow Furniture Hire was born from a simple idea: every event deserves to be extraordinary. We specialise in LED glow furniture, dance floors, and 360 photo booths — the kind of setups that make guests stop and stare.</p>
+        <p class="body-txt" style="margin-bottom:1.2rem">Based in Bassendean, we service all of Perth and surrounding areas. Over the years, we've helped light up hundreds of events — from intimate backyard birthdays to large-scale corporate functions and weddings.</p>
+        <p class="body-txt">Our furniture is fully wireless, rechargeable, and available in 16 stunning colours. You control the vibe — slow fade for an elegant dinner, full flash for a party atmosphere, or a single colour to match your theme.</p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem">
+          <a href="hire.html" class="btn btn-fill">Browse Products</a>
+          <a href="contact.html" class="btn btn-ghost">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section id="stats">
+  <div class="stats-grid" data-anim-group>
+    <div class="stat">
+      <div class="stat-num" data-count="200" data-suffix="+">0</div>
+      <div class="stat-lbl">Events Completed</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num" data-count="5" data-suffix="★">0</div>
+      <div class="stat-lbl">Star Google Rating</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num" data-count="8" data-suffix="hrs">0</div>
+      <div class="stat-lbl">Battery Life Per Charge</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num" data-count="100" data-suffix="%">0</div>
+      <div class="stat-lbl">Wireless & Cable-Free</div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section id="why">
+  <div class="wrap">
+    <div style="text-align:center;max-width:560px;margin:0 auto 3.5rem">
+      <p class="label">Why Choose Us</p>
+      <h2 class="h2">The Perth Glow <em>Difference</em></h2>
+      <div class="rule" style="margin:0 auto 0"></div>
+    </div>
+    <div class="feat-grid" data-anim-group>
+      <div class="feat-item">
+        <div class="feat-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3>Premium Quality</h3>
+        <p>Our LED furniture is commercial-grade, fully wireless and rechargeable. No messy cables, no compromises.</p>
+      </div>
+      <div class="feat-item">
+        <div class="feat-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/></svg></div>
+        <h3>16 Colour Options</h3>
+        <p>Choose from 16 vibrant colours with multiple lighting modes — flash, fade, static and more. You control the vibe.</p>
+      </div>
+      <div class="feat-item">
+        <div class="feat-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+        <h3>Delivery & Setup</h3>
+        <p>Our team handles everything — delivery, setup and pack-down. All you need to do is enjoy the event.</p>
+      </div>
+      <div class="feat-item">
+        <div class="feat-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+        <h3>Any Event, Any Size</h3>
+        <p>From small backyard gatherings to large corporate events and weddings — we scale to your needs.</p>
+      </div>
+      <div class="feat-item">
+        <div class="feat-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <h3>Indoor & Outdoor</h3>
+        <p>All our equipment is suitable for both indoor venues and outdoor setups across Perth.</p>
+      </div>
+      <div class="feat-item">
+        <div class="feat-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <h3>Local & Responsive</h3>
+        <p>Perth-based and proud of it. Easy to reach, quick to respond, and genuinely passionate about your event.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA STRIP -->
+<section id="cta-strip">
+  <div class="cta-strip-inner">
+    <h2>Ready to <em>Glow</em> Your Event?</h2>
+    <div class="cta-strip-btns">
+      <a href="hire.html" class="btn btn-fill">Hire Now</a>
+      <a href="contact.html" class="btn btn-ghost">Get a Quote</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="f-top">
+    <div class="f-brand">
+      <img src="assets/logo-transparent.png" alt="Perth Glow Furniture Hire">
+      <p>Perth's premier LED furniture, dance floor and 360 photo booth hire. Transforming events across Perth & surrounds.</p>
+      <div class="socials">
+        <a href="https://www.facebook.com/PerthGLOWFurnitureHire" target="_blank" class="soc">f</a>
+        <a href="https://www.instagram.com/perth_glow_furniture_hire/" target="_blank" class="soc">ig</a>
+        <a href="https://www.youtube.com/channel/UCYcpUvd9s-UxPmfELeZsySg" target="_blank" class="soc">▶</a>
+      </div>
+    </div>
+    <div class="f-col"><h4>Pages</h4><ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="hire.html">Hire Now</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul></div>
+    <div class="f-col"><h4>Products</h4><ul>
+      <li><a href="dance-floor.html">LED Dance Floors</a></li>
+      <li><a href="glow-furniture.html">Glow Furniture</a></li>
+      <li><a href="photo-booth.html">360° Photo Booth</a></li>
+      <li><a href="numbers-letters.html">Light Up Numbers & Letters</a></li>
+      <li><a href="hire.html">Package Deals</a></li>
+    </ul></div>
+    <div class="f-col"><h4>Contact</h4><ul>
+      <li><a href="tel:0455484192">0455 484 192</a></li>
+      <li><a href="mailto:info@pgfh.com.au">info@pgfh.com.au</a></li>
+      <li><a>Bassendean, Perth WA</a></li>
+    </ul></div>
+  </div>
+  <div class="f-bottom">
+    <div class="f-bottom-links">
+      <p>© 2026 Perth Glow Furniture Hire. All rights reserved.</p>
+      <a href="terms.html">Terms & Conditions</a>
+      <a href="terms.html">Privacy Policy</a>
+      <a href="https://pgfh.com.au">pgfh.com.au</a>
+    </div>
+    <p class="f-credit">Developed by <a href="https://rafatofen.netlify.app" target="_blank">Rafael Thofehrn</a></p>
+  </div>
+</footer>
+<script>
+function toggleMob(){document.getElementById('mobNav').classList.toggle('open');document.body.style.overflow=document.getElementById('mobNav').classList.contains('open')?'hidden':''}
+</script>
+
+<script>
+// Scroll-in animations — IntersectionObserver
+document.addEventListener('DOMContentLoaded', function() {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) {
+        e.target.classList.add('anim-in');
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+  // Animate single elements
+  document.querySelectorAll('[data-anim]').forEach(function(el) {
+    obs.observe(el);
+  });
+
+  // Animate group children with stagger
+  document.querySelectorAll('[data-anim-group]').forEach(function(group) {
+    group.querySelectorAll(':scope > *').forEach(function(child) {
+      obs.observe(child);
+    });
+  });
+});
+
+// Count-up animation for stats
+document.addEventListener('DOMContentLoaded', function() {
+  var counters = document.querySelectorAll('[data-count]');
+  var obsC = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (!e.isIntersecting) return;
+      var el = e.target;
+      var target = parseInt(el.dataset.count);
+      var suffix = el.dataset.suffix || '';
+      var start = 0;
+      var duration = 1400;
+      var step = duration / target;
+      var timer = setInterval(function() {
+        start += 1;
+        el.textContent = start + suffix;
+        if (start >= target) { el.textContent = target + suffix; clearInterval(timer); }
+      }, step);
+      obsC.unobserve(el);
+    });
+  }, { threshold: 0.5 });
+  counters.forEach(function(el) { obsC.observe(el); });
+});
+</script>
+
+</body>
+</html>
