@@ -446,21 +446,34 @@ body { animation: pageFadeIn 0.4s ease both; }
 
 
 
+
 /* ── BOOQABLE TEXT FIX ── */
-.bq-content,
-.bq-content *,
-.bq-product-description,
-.bq-product-description *,
-.booqable-product-detail-wrapper,
-.booqable-product-detail-wrapper .bq-content h3,
-.booqable-product-detail-wrapper .bq-product-name {
+/* Reset color for all Booqable white-background elements */
+body .bq-content,
+body .bq-content *,
+body .bq-product-description,
+body .bq-product-description p,
+body .bq-product-description *,
+body .booqable-product-detail-wrapper,
+body .booqable-product-detail-wrapper *,
+body .bq-product-name,
+body h3.bq-product-name {
   color: #111111 !important;
 }
-.bq-price, .bq-price-details, span.bq-price {
+body .bq-price,
+body span.bq-price,
+body .bq-price-details {
   color: #1a1a2e !important;
   font-weight: 600 !important;
 }
-.bq-duration { color: #555555 !important; }
+body .bq-duration {
+  color: #444444 !important;
+}
+/* Also target the quantity input and other form elements in modal */
+body .bq-control,
+body .bq-control * {
+  color: #111111 !important;
+}
 </style>
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
