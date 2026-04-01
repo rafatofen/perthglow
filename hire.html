@@ -354,61 +354,49 @@ body { animation: pageFadeIn 0.4s ease both; }
 
 
 @media(max-width:720px){
-  /* Catalog layout: stack sidebar above products */
-  #catalog > div > div[style*="grid-template-columns"] {
-    display: block !important;
-  }
-  #catalog aside {
-    margin-bottom: 1rem;
-  }
-  /* Products grid: 2 per row */
-  .booqable-product-list-grid {
-    grid-template-columns: 1fr 1fr !important;
-    gap: 8px !important;
-  }
-  /* Sidebar: horizontal scroll */
-  .booqable-sidebar {
-    overflow-x: auto;
-  }
-  .bq-sidebar-component ul {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    gap: 4px !important;
-    padding: 0 !important;
-  }
-  .bq-sidebar-component ul li {
-    flex: 0 0 auto !important;
-  }
-}
+  
 
-
-/* Catalog layout desktop */
+/* ── CATALOG LAYOUT ── */
 .bq-catalog-layout {
   display: grid;
   grid-template-columns: 240px 1fr;
   gap: 2rem;
   align-items: start;
 }
+.bq-main-wrap { min-width: 0; }
+.bq-search-wrap { margin-bottom: 1rem; }
 
 @media(max-width:768px) {
+  /* Stack: sidebar → search → products */
   .bq-catalog-layout {
-    grid-template-columns: 1fr !important;
-    display: block !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0 !important;
   }
-  #catalog aside {
-    display: block !important;
+  .bq-sidebar-wrap {
+    order: 1;
     width: 100% !important;
     margin-bottom: 1rem !important;
   }
-  #catalog aside > div {
-    width: 100% !important;
+  .bq-search-wrap {
+    order: 2;
+    margin-bottom: 1rem !important;
   }
-  .booqable-product-list-grid,
-  div.booqable-product-list-grid,
-  .booqable-product-list .booqable-product-list-grid {
+  .booqable-product-list {
+    order: 3;
+  }
+  /* 2 products per row, centred */
+  .booqable-product-list-grid {
     display: grid !important;
     grid-template-columns: 1fr 1fr !important;
     gap: 8px !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .booqable-product {
+    width: 100% !important;
+    margin: 0 !important;
   }
 }
 </style>
@@ -556,20 +544,19 @@ body { animation: pageFadeIn 0.4s ease both; }
 <section id="catalog">
   <div style="max-width:1300px;margin:0 auto;padding:60px 5vw">
 
-    <!-- Search -->
-    <div style="margin-bottom:1.5rem">
-      <div class="booqable-product-search"></div>
-    </div>
-
+    <!-- Desktop layout: sidebar left, search+products right -->
     <div class="bq-catalog-layout">
 
-      <!-- Sidebar — Booqable native -->
-      <aside>
+      <!-- Sidebar — stays on left desktop, goes above products on mobile -->
+      <aside class="bq-sidebar-wrap">
         <div class="booqable-sidebar"></div>
       </aside>
 
-      <!-- Product list — Booqable native -->
-      <div>
+      <!-- Right column: search + products -->
+      <div class="bq-main-wrap">
+        <div class="bq-search-wrap">
+          <div class="booqable-product-search"></div>
+        </div>
         <div class="booqable-product-list"></div>
       </div>
 
@@ -856,35 +843,27 @@ window.addEventListener('load', function() {
 // Fix Booqable mobile layout after it renders
 function fixBooqableMobile() {
   if (window.innerWidth > 768) return;
-  
-  // Fix product grid to 2 columns
   var grids = document.querySelectorAll('.booqable-product-list-grid');
-  grids.forEach(function(grid) {
-    grid.style.setProperty('display', 'grid', 'important');
-    grid.style.setProperty('grid-template-columns', '1fr 1fr', 'important');
-    grid.style.setProperty('gap', '8px', 'important');
+  grids.forEach(function(g) {
+    g.style.setProperty('display', 'grid', 'important');
+    g.style.setProperty('grid-template-columns', '1fr 1fr', 'important');
+    g.style.setProperty('gap', '8px', 'important');
+    g.style.setProperty('width', '100%', 'important');
   });
 }
-
-// Run on load
 window.addEventListener('load', function() {
-  // Run immediately and after delays to catch Booqable async render
   fixBooqableMobile();
   setTimeout(fixBooqableMobile, 500);
   setTimeout(fixBooqableMobile, 1500);
   setTimeout(fixBooqableMobile, 3000);
 });
-
-// Also watch for DOM changes (when Booqable re-renders on filter)
 if (window.MutationObserver) {
-  var observer = new MutationObserver(function() {
+  var bqObs = new MutationObserver(function() {
     if (window.innerWidth <= 768) fixBooqableMobile();
   });
   document.addEventListener('DOMContentLoaded', function() {
     var catalog = document.getElementById('catalog');
-    if (catalog) {
-      observer.observe(catalog, { childList: true, subtree: true });
-    }
+    if (catalog) bqObs.observe(catalog, { childList: true, subtree: true });
   });
 }
 </script>
