@@ -277,7 +277,8 @@ body { animation: pageFadeIn 0.4s ease both; }
 
 
 @media (prefers-reduced-motion: reduce) {
-  [data-anim], [data-anim-group] >
+  [data-anim], [data-anim-group] > * { opacity:1 !important; transform:none !important; transition:none !important; }
+}
 @media(max-width:1100px){
   .f-top{grid-template-columns:1fr 1fr}
 }
@@ -547,7 +548,7 @@ body { animation: pageFadeIn 0.4s ease both; }
     </ul></div>
     <div class="f-col"><h4>Contact</h4><ul>
       <li><a href="tel:0455484192">0455 484 192</a></li>
-      <li><a href="mailto:info@pgfh.com.au">info@pgfh.com.au</a></li>
+      <li><a href="/cdn-cgi/l/email-protection#81e8efe7eec1f1e6e7e9afe2eeecafe0f4"><span class="__cf_email__" data-cfemail="85ecebe3eac5f5e2e3edabe6eae8abe4f0">[email&#160;protected]</span></a></li>
       <li><a>Bassendean, Perth WA</a></li>
     </ul></div>
   </div>
@@ -562,7 +563,7 @@ body { animation: pageFadeIn 0.4s ease both; }
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // Mobile menu
 function toggleMob() {
   document.getElementById('mobNav').classList.toggle('open')
@@ -816,15 +817,4 @@ window.addEventListener('load', function() {
 });
 if (window.MutationObserver) {
   var bqObs = new MutationObserver(function() { fixBooqableLayout(); fixBooqableText(); });
-  document.addEventListener('DOMContentLoaded', function() {
-    // Watch body so we catch the modal which renders outside #catalog
-    bqObs.observe(document.body, { childList: true, subtree: true });
-  });
-}
-</script>
-
-<script>
-
-
-</body>
-</html>
+  document.
