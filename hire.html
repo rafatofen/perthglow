@@ -379,31 +379,62 @@ body { animation: pageFadeIn 0.4s ease both; }
 }
 .bq-search-wrap { margin-bottom: 1rem; }
 
+
+
 @media(max-width:768px) {
+  /* Prevent overflow */
+  #catalog {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+  }
+  #catalog > div {
+    padding: 20px !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
   #catalog .bq-catalog-layout {
     display: flex !important;
     flex-direction: column !important;
     gap: 0 !important;
     width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
   }
-  #catalog .bq-sidebar-wrap {
-    order: 1 !important;
-    width: 100% !important;
-    margin-bottom: 1rem !important;
-  }
-  .bq-search-wrap {
-    order: 2 !important;
-    margin-bottom: 1rem !important;
-  }
+  #catalog .bq-sidebar-wrap,
   #catalog .bq-main-wrap {
-    order: 3 !important;
     width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
   }
+  #catalog .bq-sidebar-wrap { order: 1 !important; margin-bottom: 1rem !important; }
+  #catalog .bq-search-wrap  { order: 2 !important; margin-bottom: 1rem !important; }
+  #catalog .bq-main-wrap    { order: 3 !important; }
+
+  /* All Booqable inner wrappers constrained */
+  .booqable-sidebar,
+  .booqable-product-search,
+  .booqable-product-list,
+  .booqable-product-list-wrapper,
+  .Themed-ebINTA {
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  /* 2 products per row */
   .booqable-product-list-grid {
     display: grid !important;
     grid-template-columns: 1fr 1fr !important;
     gap: 8px !important;
     width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .booqable-product,
+  .booqable-product-wrapper {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
   }
 }
 </style>
@@ -849,22 +880,38 @@ window.addEventListener('load', function() {
 <script>
 // Fix Booqable layout after it renders
 function fixBooqableLayout() {
-  // Desktop: enforce grid
+  var isMobile = window.innerWidth <= 768;
+
+  // Desktop: enforce sidebar grid
   var layout = document.querySelector('.bq-catalog-layout');
-  if (layout && window.innerWidth > 768) {
+  if (layout && !isMobile) {
     layout.style.setProperty('display', 'grid', 'important');
     layout.style.setProperty('grid-template-columns', '240px 1fr', 'important');
     layout.style.setProperty('gap', '2rem', 'important');
-    layout.style.setProperty('align-items', 'start', 'important');
   }
-  // Mobile: 2 columns for products
-  if (window.innerWidth <= 768) {
-    var grids = document.querySelectorAll('.booqable-product-list-grid');
-    grids.forEach(function(g) {
+
+  // Mobile: fix overflow + 2-col grid
+  if (isMobile) {
+    if (layout) {
+      layout.style.setProperty('display', 'flex', 'important');
+      layout.style.setProperty('flex-direction', 'column', 'important');
+      layout.style.setProperty('max-width', '100%', 'important');
+      layout.style.setProperty('overflow', 'hidden', 'important');
+    }
+    // Constrain all booqable wrappers
+    document.querySelectorAll('.booqable-product-list, .booqable-sidebar, .booqable-product-search, .Themed-ebINTA, .booqable-product-list-wrapper').forEach(function(el) {
+      el.style.setProperty('max-width', '100%', 'important');
+      el.style.setProperty('width', '100%', 'important');
+      el.style.setProperty('box-sizing', 'border-box', 'important');
+      el.style.setProperty('overflow', 'hidden', 'important');
+    });
+    // 2-col product grid
+    document.querySelectorAll('.booqable-product-list-grid').forEach(function(g) {
       g.style.setProperty('display', 'grid', 'important');
       g.style.setProperty('grid-template-columns', '1fr 1fr', 'important');
       g.style.setProperty('gap', '8px', 'important');
       g.style.setProperty('width', '100%', 'important');
+      g.style.setProperty('box-sizing', 'border-box', 'important');
     });
   }
 }
