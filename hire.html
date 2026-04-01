@@ -425,7 +425,7 @@ body { animation: pageFadeIn 0.4s ease both; }
   /* 2 products per row */
   .booqable-product-list-grid {
     display: grid !important;
-    grid-template-columns: 1fr 1fr !important;
+    grid-template-columns: 1fr !important;
     gap: 8px !important;
     width: 100% !important;
     box-sizing: border-box !important;
@@ -436,6 +436,27 @@ body { animation: pageFadeIn 0.4s ease both; }
     max-width: 100% !important;
     box-sizing: border-box !important;
   }
+}
+
+/* Fix Booqable text visibility on white cards */
+.bq-product-name,
+.booqable-product-title,
+div.bq-product-name,
+.bq-product-title-wrapper .bq-product-name {
+  color: #111111 !important;
+}
+.bq-price,
+.bq-price-details,
+span.bq-price {
+  color: #1a1a2e !important;
+  font-weight: 600 !important;
+}
+.bq-duration {
+  color: #555555 !important;
+}
+.bq-details {
+  background: #ffffff !important;
+  color: #111111 !important;
 }
 </style>
   <!-- Favicon -->
@@ -908,7 +929,7 @@ function fixBooqableLayout() {
     // 2-col product grid
     document.querySelectorAll('.booqable-product-list-grid').forEach(function(g) {
       g.style.setProperty('display', 'grid', 'important');
-      g.style.setProperty('grid-template-columns', '1fr 1fr', 'important');
+      g.style.setProperty('grid-template-columns', '1fr', 'important');
       g.style.setProperty('gap', '8px', 'important');
       g.style.setProperty('width', '100%', 'important');
       g.style.setProperty('box-sizing', 'border-box', 'important');
