@@ -439,12 +439,6 @@ body { animation: pageFadeIn 0.4s ease both; }
 
 
 
-/* ── BOOQABLE TEXT FIX ── */
-.bq-product-name { color: #111111 !important; }
-.bq-price, span.bq-price { color: #1a1a2e !important; font-weight: 600 !important; }
-.bq-duration { color: #555555 !important; }
-.bq-product-description p { color: #333333 !important; max-width: none !important; }
-.bq-content h3 { color: #111111 !important; font-family: inherit !important; font-size: 1.1rem !important; letter-spacing: normal !important; text-transform: none !important; }
 </style>
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
@@ -940,32 +934,6 @@ if (window.MutationObserver) {
 
 <script>
 
-<script>
-(function() {
-  // Inject a style into <head> so it applies regardless of cascade
-  var s = document.createElement('style');
-  s.textContent = [
-    '.booqable-product-detail-wrapper * { color: #111111 !important; }',
-    '.booqable-product-detail-wrapper .bq-price { color: #1a1a2e !important; }',
-    '.booqable-product-detail-wrapper .bq-branded { color: inherit; }',
-    '.bq-content * { color: #111111 !important; }',
-    '.bq-product-description * { color: #333 !important; }',
-  ].join(' ');
-  document.head.appendChild(s);
 
-  // Also use MutationObserver as backup
-  new MutationObserver(function() {
-    document.querySelectorAll('.booqable-product-detail-wrapper, .bq-content, .bq-product-description').forEach(function(el) {
-      el.style.setProperty('color', '#111111', 'important');
-      el.querySelectorAll('*').forEach(function(c) {
-        c.style.setProperty('color', '#111111', 'important');
-      });
-    });
-    document.querySelectorAll('.bq-price, span.bq-price').forEach(function(el) {
-      el.style.setProperty('color', '#1a1a2e', 'important');
-    });
-  }).observe(document.body, { childList: true, subtree: true });
-})();
-</script>
 </body>
 </html>
