@@ -380,6 +380,37 @@ body { animation: pageFadeIn 0.4s ease both; }
     flex: 0 0 auto !important;
   }
 }
+
+
+/* Catalog layout desktop */
+.bq-catalog-layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+@media(max-width:768px) {
+  .bq-catalog-layout {
+    grid-template-columns: 1fr !important;
+    display: block !important;
+  }
+  #catalog aside {
+    display: block !important;
+    width: 100% !important;
+    margin-bottom: 1rem !important;
+  }
+  #catalog aside > div {
+    width: 100% !important;
+  }
+  .booqable-product-list-grid,
+  div.booqable-product-list-grid,
+  .booqable-product-list .booqable-product-list-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+  }
+}
 </style>
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
@@ -530,7 +561,7 @@ body { animation: pageFadeIn 0.4s ease both; }
       <div class="booqable-product-search"></div>
     </div>
 
-    <div style="display:grid;grid-template-columns:240px 1fr;gap:2rem;align-items:start">
+    <div class="bq-catalog-layout">
 
       <!-- Sidebar — Booqable native -->
       <aside>
@@ -819,6 +850,43 @@ window.addEventListener('load', function() {
     window.booqable.init()
   }
 })
+</script>
+
+<script>
+// Fix Booqable mobile layout after it renders
+function fixBooqableMobile() {
+  if (window.innerWidth > 768) return;
+  
+  // Fix product grid to 2 columns
+  var grids = document.querySelectorAll('.booqable-product-list-grid');
+  grids.forEach(function(grid) {
+    grid.style.setProperty('display', 'grid', 'important');
+    grid.style.setProperty('grid-template-columns', '1fr 1fr', 'important');
+    grid.style.setProperty('gap', '8px', 'important');
+  });
+}
+
+// Run on load
+window.addEventListener('load', function() {
+  // Run immediately and after delays to catch Booqable async render
+  fixBooqableMobile();
+  setTimeout(fixBooqableMobile, 500);
+  setTimeout(fixBooqableMobile, 1500);
+  setTimeout(fixBooqableMobile, 3000);
+});
+
+// Also watch for DOM changes (when Booqable re-renders on filter)
+if (window.MutationObserver) {
+  var observer = new MutationObserver(function() {
+    if (window.innerWidth <= 768) fixBooqableMobile();
+  });
+  document.addEventListener('DOMContentLoaded', function() {
+    var catalog = document.getElementById('catalog');
+    if (catalog) {
+      observer.observe(catalog, { childList: true, subtree: true });
+    }
+  });
+}
 </script>
 </body>
 </html>
