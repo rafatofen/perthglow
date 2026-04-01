@@ -347,6 +347,10 @@ body { animation: pageFadeIn 0.4s ease both; }
   .btns,.hero-btns,.cta-strip-btns{justify-content:center!important;flex-wrap:wrap}
   .page-hero{min-height:280px}
 }
+
+/* Booqable iframe */
+.bq-area{flex:1;min-width:0}
+.bq-area iframe{width:100%;min-height:900px;border:none;display:block}
 </style>
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
@@ -603,9 +607,15 @@ body { animation: pageFadeIn 0.4s ease both; }
         <button class="sort-tab" onclick="setSort(this,'price-high')">Price: High–Low</button>
       </div>
 
-      <!-- Booqable product list — tag changes dynamically -->
+      <!-- Booqable storefront embed via iframe -->
       <div class="bq-area">
-        <div class="booqable-product-list" data-store="perth-glow-furniture-hire" id="mainProductList"></div>
+        <iframe
+          id="booqableFrame"
+          src="https://perth-glow-furniture-hire.booqable.com/products"
+          style="width:100%;min-height:800px;border:none;background:transparent"
+          allowtransparency="true"
+          loading="lazy"
+        ></iframe>
       </div>
 
     </div>
@@ -754,7 +764,6 @@ function handleSearch(val) {
 
 function updateCatalog(searchVal) {
   const heading = document.getElementById('catalogHeading')
-  const meta = document.getElementById('catalogMeta')
   const name = catNames[currentTag] || 'All Products'
 
   // Update heading
@@ -763,29 +772,22 @@ function updateCatalog(searchVal) {
   const last = parts[parts.length - 1]
   heading.innerHTML = first ? `${first} <em>${last}</em>` : `All <em>Products</em>`
 
-  // Rebuild Booqable product list with new tag
-  const area = document.getElementById('mainProductList')
-  const newList = document.createElement('div')
-  newList.className = 'booqable-product-list'
-  newList.setAttribute('data-store', 'perth-glow-furniture-hire')
-  if (currentTag) newList.setAttribute('data-tag', currentTag)
-  // Sort attribute
-  if (currentSort === 'name') newList.setAttribute('data-sort', 'name')
-  else if (currentSort === 'price-low') newList.setAttribute('data-sort', 'price_asc')
-  else if (currentSort === 'price-high') newList.setAttribute('data-sort', 'price_desc')
-  // Search
-  if (searchVal && searchVal.trim()) newList.setAttribute('data-search', searchVal.trim())
+  // Build Booqable storefront URL with filters
+  let url = 'https://perth-glow-furniture-hire.booqable.com/products'
+  const params = []
 
-  area.innerHTML = ''
-  area.appendChild(newList)
+  if (currentTag) params.push(`collection[]=${encodeURIComponent(currentTag)}`)
+  if (searchVal && searchVal.trim()) params.push(`q=${encodeURIComponent(searchVal.trim())}`)
+  if (currentSort === 'name') params.push('sort=name')
+  else if (currentSort === 'price-low') params.push('sort=price_asc')
+  else if (currentSort === 'price-high') params.push('sort=price_desc')
 
-  // Re-init Booqable if available
-  if (window.Booqable && typeof window.Booqable.mount === 'function') {
-    window.Booqable.mount()
-  } else if (window.booqable && typeof window.booqable.init === 'function') {
-    window.booqable.init()
-  }
+  if (params.length) url += '?' + params.join('&')
+
+  const frame = document.getElementById('booqableFrame')
+  if (frame) frame.src = url
 }
+
 
 // Hide fallback buttons if Booqable buttons rendered properly
 window.addEventListener('load', () => {
