@@ -74,7 +74,7 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:64px 5
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
-body { background: var(--black); color: var(--white); font-family: var(--body); font-weight: 300; overflow-x: hidden; }
+body { background: var(--black); font-family: var(--body); font-weight: 300; overflow-x: hidden;  color: var(--white);}
 body::after { content:''; position:fixed; inset:0; background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E"); pointer-events:none; z-index:9998; opacity:.3; mix-blend-mode:overlay; }
 
 /* ── NAV ── */
@@ -439,6 +439,45 @@ body { animation: pageFadeIn 0.4s ease both; }
 
 
 
+
+/* Restore Booqable branded elements */
+.bq-branded, .bq-button, .bq-status {
+  color: inherit !important;
+  font-family: inherit !important;
+}
+
+/* ── BOOQABLE COLOR RESET ── */
+#catalog .booqable-sidebar,
+#catalog .booqable-sidebar *,
+#catalog .booqable-product-list,
+#catalog .booqable-product-list *,
+#catalog .booqable-product-search,
+#catalog .booqable-product-search * {
+  color: #111111 !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+  letter-spacing: normal !important;
+  text-transform: none !important;
+  font-weight: normal !important;
+}
+body .booqable-product-detail-wrapper,
+body .booqable-product-detail-wrapper *,
+body .booqable-product-detail-wrapper p,
+body .booqable-product-detail-wrapper h3,
+body .booqable-product-detail-wrapper span,
+body .booqable-product-detail-wrapper div,
+body .bq-content,
+body .bq-content *,
+body .bq-content p,
+body .bq-product-description,
+body .bq-product-description *,
+body .bq-product-description p {
+  color: #111111 !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+  letter-spacing: normal !important;
+  text-transform: none !important;
+  font-weight: normal !important;
+  max-width: none !important;
+}
 </style>
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
@@ -881,6 +920,20 @@ window.addEventListener('load', function() {
 
 <script>
 // Fix Booqable layout after it renders
+function fixBooqableText(root) {
+  var els = (root || document).querySelectorAll(
+    '.booqable-product-detail-wrapper, .booqable-product-detail-wrapper *, ' +
+    '.bq-content, .bq-content *, .bq-product-description, .bq-product-description *, ' +
+    '.bq-product-name, .bq-price, .bq-price-details'
+  );
+  els.forEach(function(el) {
+    el.style.setProperty('color', '#111111', 'important');
+    el.style.setProperty('font-family', '-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif', 'important');
+    el.style.setProperty('letter-spacing', 'normal', 'important');
+    el.style.setProperty('text-transform', 'none', 'important');
+  });
+}
+fixBooqableText();
 function fixBooqableLayout() {
   var isMobile = window.innerWidth <= 768;
 
@@ -924,10 +977,10 @@ window.addEventListener('load', function() {
   setTimeout(fixBooqableLayout, 3000);
 });
 if (window.MutationObserver) {
-  var bqObs = new MutationObserver(fixBooqableLayout);
+  var bqObs = new MutationObserver(function() { fixBooqableLayout(); fixBooqableText(); });
   document.addEventListener('DOMContentLoaded', function() {
-    var catalog = document.getElementById('catalog');
-    if (catalog) bqObs.observe(catalog, { childList: true, subtree: true });
+    // Watch body so we catch the modal which renders outside #catalog
+    bqObs.observe(document.body, { childList: true, subtree: true });
   });
 }
 </script>
