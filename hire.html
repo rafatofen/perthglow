@@ -59,18 +59,18 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:64px 5
 /* ── FOOTER ── */
 .f-bottom p,
 :root {
-  --black: #050508;
-  --deep: #08080f;
-  --card: #0e0e1c;
-  --border: rgba(255,255,255,0.07);
-  --white: #f0eeea;
-  --dim: rgba(240,238,234,0.55);
-  --cyan: #b57bee;
-  --purple: #c77dff;
-  --magenta: #e040fb;
-  --display: 'Syncopate', sans-serif;
-  --serif: 'Cormorant Garamond', serif;
-  --body: 'DM Sans', sans-serif;
+--black: #050508;
+--deep: #08080f;
+--card: #0e0e1c;
+--border: rgba(255,255,255,0.07);
+--white: #f0eeea;
+--dim: rgba(240,238,234,0.55);
+--cyan: #b57bee;
+--purple: #c77dff;
+--magenta: #e040fb;
+--display: 'Syncopate', sans-serif;
+--serif: 'Cormorant Garamond', serif;
+--body: 'DM Sans', sans-serif;
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
@@ -241,8 +241,8 @@ footer { background:var(--black); border-top:1px solid var(--border); padding:64
 
 /* ── SCROLL ANIMATIONS ── */
 [data-anim] {
-  opacity: 0;
-  transition: opacity 0.7s ease, transform 0.7s ease;
+opacity: 0;
+transition: opacity 0.7s ease, transform 0.7s ease;
 }
 [data-anim="up"]    { transform: translateY(40px); }
 [data-anim="down"]  { transform: translateY(-30px); }
@@ -277,10 +277,11 @@ body { animation: pageFadeIn 0.4s ease both; }
 
 
 @media (prefers-reduced-motion: reduce) {
+  [data-anim], [data-anim-group] >
   [data-anim], [data-anim-group] > * { opacity:1 !important; transform:none !important; transition:none !important; }
 }
 @media(max-width:1100px){
-  .f-top{grid-template-columns:1fr 1fr}
+.f-top{grid-template-columns:1fr 1fr}
 }
 
 
@@ -290,329 +291,304 @@ body { animation: pageFadeIn 0.4s ease both; }
 
 
 @media(max-width:720px){
-  section{padding:70px 5vw}
-  .nav-links{display:none}
-  .hamburger{display:flex}
-  .feat-card{flex:0 0 85%!important}
-  .featured-wrap{padding:0 24px!important;overflow:hidden!important}
-  .hire-proc-grid{grid-template-columns:1fr 1fr!important;gap:1rem!important}
-  .hire-proc-card{padding:1.2rem .8rem!important}
-  #catalog .bq-catalog-layout{display:flex!important;flex-direction:column!important;max-width:100%!important;overflow:hidden!important}
-  #catalog .bq-sidebar-wrap{order:1!important;width:100%!important;max-width:100%!important;margin-bottom:1rem!important;box-sizing:border-box!important}
-  .bq-search-wrap{order:2!important;margin-bottom:1rem!important}
-  #catalog .bq-main-wrap{order:3!important;width:100%!important;max-width:100%!important;box-sizing:border-box!important}
-  #catalog,#catalog>div{overflow-x:hidden!important;max-width:100vw!important;box-sizing:border-box!important}
-  .booqable-product-list-grid{display:grid!important;grid-template-columns:1fr!important;gap:8px!important;width:100%!important;box-sizing:border-box!important}
-  .booqable-sidebar,.booqable-product-list,.booqable-product-search,.Themed-ebINTA,.booqable-product-list-wrapper{max-width:100%!important;width:100%!important;box-sizing:border-box!important;overflow:hidden!important}
-  .booqable-product,.booqable-product-wrapper{width:100%!important;max-width:100%!important;box-sizing:border-box!important}
-  .f-top{grid-template-columns:1fr}
-  .f-brand{text-align:center}
-  .f-brand p{margin-left:auto;margin-right:auto}
-  .socials{justify-content:center}
-  .f-col{text-align:center}
-  .f-col ul{align-items:center}
-  .f-bottom-links{flex-direction:column;gap:.5rem}
-  body{overflow-x:hidden}
-  .btns,.hero-btns{justify-content:center}
+section{padding:70px 5vw}
+.nav-links{display:none}
+.hamburger{display:flex}
+.feat-card{flex:0 0 85%!important}
+.featured-wrap{padding:0 24px!important;overflow:hidden!important}
+.hire-proc-grid{grid-template-columns:1fr 1fr!important;gap:1rem!important}
+.hire-proc-card{padding:1.2rem .8rem!important}
+#catalog .bq-catalog-layout{display:flex!important;flex-direction:column!important;max-width:100%!important;overflow:hidden!important}
+#catalog .bq-sidebar-wrap{order:1!important;width:100%!important;max-width:100%!important;margin-bottom:1rem!important;box-sizing:border-box!important}
+.bq-search-wrap{order:2!important;margin-bottom:1rem!important}
+#catalog .bq-main-wrap{order:3!important;width:100%!important;max-width:100%!important;box-sizing:border-box!important}
+#catalog,#catalog>div{overflow-x:hidden!important;max-width:100vw!important;box-sizing:border-box!important}
+.booqable-product-list-grid{display:grid!important;grid-template-columns:1fr!important;gap:8px!important;width:100%!important;box-sizing:border-box!important}
+.booqable-sidebar,.booqable-product-list,.booqable-product-search,.Themed-ebINTA,.booqable-product-list-wrapper{max-width:100%!important;width:100%!important;box-sizing:border-box!important;overflow:hidden!important}
+.booqable-product,.booqable-product-wrapper{width:100%!important;max-width:100%!important;box-sizing:border-box!important}
+.f-top{grid-template-columns:1fr}
+.f-brand{text-align:center}
+.f-brand p{margin-left:auto;margin-right:auto}
+.socials{justify-content:center}
+.f-col{text-align:center}
+.f-col ul{align-items:center}
+.f-bottom-links{flex-direction:column;gap:.5rem}
+body{overflow-x:hidden}
+.btns,.hero-btns{justify-content:center}
 }
 .booqable-pagination *,.bq-pagination-inner *,.bq-pagination-page,.bq-pagination-page button,.bq-pagination-current{color:#111111!important;font-family:-apple-system,sans-serif!important}
-
-/* ── BOOQABLE COLOR RESET ── */
-#catalog .booqable-sidebar,
-#catalog .booqable-sidebar *,
-#catalog .booqable-product-list,
-#catalog .booqable-product-list *,
-#catalog .booqable-product-search,
-#catalog .booqable-product-search * {
-  color: #111111 !important;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
-  letter-spacing: normal !important;
-  text-transform: none !important;
-  font-weight: normal !important;
-}
-body .booqable-product-detail-wrapper,
-body .booqable-product-detail-wrapper *,
-body .bq-content,
-body .bq-content *,
-body .bq-product-description,
-body .bq-product-description * {
-  color: #111111 !important;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
-  letter-spacing: normal !important;
-  text-transform: none !important;
-  font-weight: normal !important;
-  max-width: none !important;
-}
 </style>
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180.png">
-  <meta name="theme-color" content="#050508">
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180.png">
+<meta name="theme-color" content="#050508">
 <link rel="stylesheet" href="assets/global.css">
 </head>
 <body>
 
 <!-- NAV -->
 <nav>
-  <a href="index.html" class="nav-logo"><img src="assets/logo-transparent.png" alt="Perth Glow Furniture Hire"></a>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="hire.html" class="active">Hire Now</a></li>
-    <li><a href="gallery.html">Gallery</a></li>
-    <li><a href="faq.html">FAQ</a></li>
-    <li><a href="contact.html" class="nav-cta">Get a Quote</a></li>
-  </ul>
-  <button class="hamburger" onclick="toggleMob()"><span></span><span></span><span></span></button>
+<a href="index.html" class="nav-logo"><img src="assets/logo-transparent.png" alt="Perth Glow Furniture Hire"></a>
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="hire.html" class="active">Hire Now</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="faq.html">FAQ</a></li>
+<li><a href="contact.html" class="nav-cta">Get a Quote</a></li>
+</ul>
+<button class="hamburger" onclick="toggleMob()"><span></span><span></span><span></span></button>
 </nav>
 <div class="mobile-nav" id="mobNav">
-  <button class="mob-close" onclick="toggleMob()">✕</button>
-  <a href="index.html" onclick="toggleMob()">Home</a>
-  <a href="about.html" onclick="toggleMob()">About</a>
-  <a href="hire.html" onclick="toggleMob()">Hire Now</a>
-  <a href="gallery.html" onclick="toggleMob()">Gallery</a>
-  <a href="faq.html" onclick="toggleMob()">FAQ</a>
-  <a href="contact.html" onclick="toggleMob()">Contact</a>
+<button class="mob-close" onclick="toggleMob()">✕</button>
+<a href="index.html" onclick="toggleMob()">Home</a>
+<a href="about.html" onclick="toggleMob()">About</a>
+<a href="hire.html" onclick="toggleMob()">Hire Now</a>
+<a href="gallery.html" onclick="toggleMob()">Gallery</a>
+<a href="faq.html" onclick="toggleMob()">FAQ</a>
+<a href="contact.html" onclick="toggleMob()">Contact</a>
 </div>
 
 <!-- PAGE HERO -->
 <div class="page-hero">
-  <div class="page-hero-bg"><img src="assets/dance-floor-30.jpg" alt="Hire glow furniture Perth"></div>
-  <div class="page-hero-inner">
-    <p class="label">Browse & Book Online</p>
-    <h1 class="h1">Hire <em>Now</em></h1>
-    <p class="page-hero-sub">Choose your event date, browse our full range, and book instantly online.</p>
-  </div>
+<div class="page-hero-bg"><img src="assets/dance-floor-30.jpg" alt="Hire glow furniture Perth"></div>
+<div class="page-hero-inner">
+<p class="label">Browse & Book Online</p>
+<h1 class="h1">Hire <em>Now</em></h1>
+<p class="page-hero-sub">Choose your event date, browse our full range, and book instantly online.</p>
+</div>
 </div>
 
 <!-- ── FEATURED PACKAGES ── -->
 <section id="featured">
-  <div class="featured-inner">
-    <div class="section-top" data-anim="up">
-      <div>
-        <p class="label">Most Popular</p>
-        <h2 style="font-family:var(--serif);font-size:clamp(2rem,4vw,3.2rem);font-weight:300">Our <em style="font-style:italic;color:var(--cyan)">Top Picks</em></h2>
-        <div class="rule"></div>
-      </div>
-      <a href="#catalog" class="browse-all">Browse Full Catalogue ↓</a>
-    </div>
+<div class="featured-inner">
+<div class="section-top" data-anim="up">
+<div>
+<p class="label">Most Popular</p>
+<h2 style="font-family:var(--serif);font-size:clamp(2rem,4vw,3.2rem);font-weight:300">Our <em style="font-style:italic;color:var(--cyan)">Top Picks</em></h2>
+<div class="rule"></div>
+</div>
+<a href="#catalog" class="browse-all">Browse Full Catalogue ↓</a>
+</div>
 
-    <div class="featured-wrap">
-      <button class="feat-arrow feat-prev" onclick="featSlide(-1)" aria-label="Previous">&#8249;</button>
-      <div class="featured-grid" id="featGrid">
+<div class="featured-wrap">
+<button class="feat-arrow feat-prev" onclick="featSlide(-1)" aria-label="Previous">&#8249;</button>
+<div class="featured-grid" id="featGrid">
 
-      <!-- FEATURED 1 — Replace data-id with your actual Booqable product slug -->
-      <div class="feat-card highlighted">
-        <div class="feat-img">
-          <img src="assets/dance-floor-love.jpg" alt="Dance Floor & Furniture Package">
-          <div class="feat-img-grad"></div>
-          <div class="feat-badge">★ MOST POPULAR</div>
-        </div>
-        <div class="feat-body">
-          <p class="feat-name">Dance Floor & Furniture</p>
-          <p class="feat-desc">The ultimate event combo — infinity LED dance floor paired with your choice of glow furniture.</p>
-          <ul class="feat-highlights">
-            <li>LED Infinity Dance Floor (size TBC)</li>
-            <li>Selection of Glow Furniture</li>
-            <li>Remote Colour Control — 16 colours</li>
-            <li>Delivery & Setup Included</li>
-          </ul>
-          <div class="feat-price">
-            <span class="feat-old">$1,000</span>
-            <span class="feat-now">$799</span>
-          </div>
-          <!-- Booqable "Add to Cart" button — replace data-id -->
-          <!-- Fallback link if Booqable button doesn't render -->
-          <a href="https://perth-glow-furniture-hire.booqable.com/products/package-deal-dance-floor" target="_blank" class="feat-btn" id="btn-fallback-1">Book This Package</a>
-        </div>
-      </div>
+<!-- FEATURED 1 — Replace data-id with your actual Booqable product slug -->
+<div class="feat-card highlighted">
+<div class="feat-img">
+<img src="assets/dance-floor-love.jpg" alt="Dance Floor & Furniture Package">
+<div class="feat-img-grad"></div>
+<div class="feat-badge">★ MOST POPULAR</div>
+</div>
+<div class="feat-body">
+<p class="feat-name">Dance Floor & Furniture</p>
+<p class="feat-desc">The ultimate event combo — infinity LED dance floor paired with your choice of glow furniture.</p>
+<ul class="feat-highlights">
+<li>LED Infinity Dance Floor (size TBC)</li>
+<li>Selection of Glow Furniture</li>
+<li>Remote Colour Control — 16 colours</li>
+<li>Delivery & Setup Included</li>
+</ul>
+<div class="feat-price">
+<span class="feat-old">$1,000</span>
+<span class="feat-now">$799</span>
+</div>
+<!-- Booqable "Add to Cart" button — replace data-id -->
+<!-- Fallback link if Booqable button doesn't render -->
+<a href="https://perth-glow-furniture-hire.booqable.com/products/package-deal-dance-floor" target="_blank" class="feat-btn" id="btn-fallback-1">Book This Package</a>
+</div>
+</div>
 
-      <!-- FEATURED 2 — Replace with your 2nd most popular product -->
-      <div class="feat-card">
-        <div class="feat-img">
-          <img src="assets/dance-floor-nye.jpg" alt="3rd Gen Infinity Dance Floor">
-          <div class="feat-img-grad"></div>
-          <div class="feat-badge" style="background:rgba(14,14,28,.8);color:var(--purple);border:1px solid var(--purple)">FEATURED</div>
-        </div>
-        <div class="feat-body">
-          <p class="feat-name">3rd Gen Infinity Dance Floor</p>
-          <p class="feat-desc">Our flagship infinity mirror dance floor — the centrepiece of any event. Available in multiple sizes.</p>
-          <ul class="feat-highlights">
-            <li>Infinity Mirror Depth Effect</li>
-            <li>Multiple Sizes Available</li>
-            <li>16 Colour Modes + Wireless Remote</li>
-            <li>Indoor & Outdoor Suitable</li>
-          </ul>
+<!-- FEATURED 2 — Replace with your 2nd most popular product -->
+<div class="feat-card">
+<div class="feat-img">
+<img src="assets/dance-floor-nye.jpg" alt="3rd Gen Infinity Dance Floor">
+<div class="feat-img-grad"></div>
+<div class="feat-badge" style="background:rgba(14,14,28,.8);color:var(--purple);border:1px solid var(--purple)">FEATURED</div>
+</div>
+<div class="feat-body">
+<p class="feat-name">3rd Gen Infinity Dance Floor</p>
+<p class="feat-desc">Our flagship infinity mirror dance floor — the centrepiece of any event. Available in multiple sizes.</p>
+<ul class="feat-highlights">
+<li>Infinity Mirror Depth Effect</li>
+<li>Multiple Sizes Available</li>
+<li>16 Colour Modes + Wireless Remote</li>
+<li>Indoor & Outdoor Suitable</li>
+</ul>
 
-          <div class="feat-price">
-            <span class="feat-now" style="font-size:1.6rem;color:var(--dim)">From</span>
-            <span class="feat-now">$POA</span>
-          </div>
-          <a href="https://perth-glow-furniture-hire.booqable.com/products/3rd-gen-infinity-dance-floor" target="_blank" class="feat-btn" id="btn-fallback-2">Book This Product</a>
-        </div>
-      </div>
+<div class="feat-price">
+<span class="feat-now" style="font-size:1.6rem;color:var(--dim)">From</span>
+<span class="feat-now">$POA</span>
+</div>
+<a href="https://perth-glow-furniture-hire.booqable.com/products/3rd-gen-infinity-dance-floor" target="_blank" class="feat-btn" id="btn-fallback-2">Book This Product</a>
+</div>
+</div>
 
-      <!-- FEATURED 3 — Replace with your 3rd most popular product -->
-      <div class="feat-card">
-        <div class="feat-img">
-          <img src="assets/glow-bench.jpg" alt="LED Glow Furniture Set">
-          <div class="feat-img-grad"></div>
-          <div class="feat-badge" style="background:rgba(14,14,28,.8);color:var(--purple);border:1px solid var(--purple)">FEATURED</div>
-        </div>
-        <div class="feat-body">
-          <p class="feat-name">LED Glow Furniture Set</p>
-          <p class="feat-desc">Mix and match chairs, tables, bars and more — fully lit in 16 stunning colours.</p>
-          <ul class="feat-highlights">
-            <li>Chairs, Tables, Bar Sections</li>
-            <li>16 Colour Modes Wireless</li>
-            <li>8–10hr Battery Life</li>
-            <li>Delivery & Setup Included</li>
-          </ul>
-          <div class="feat-price">
-            <span class="feat-now" style="font-size:1.6rem;color:var(--dim)">From</span>
-            <span class="feat-now">$POA</span>
-          </div>
-          <a href="https://perth-glow-furniture-hire.booqable.com" target="_blank" class="feat-btn" id="btn-fallback-3">Browse Furniture</a>
-        </div>
-      </div>
+<!-- FEATURED 3 — Replace with your 3rd most popular product -->
+<div class="feat-card">
+<div class="feat-img">
+<img src="assets/glow-bench.jpg" alt="LED Glow Furniture Set">
+<div class="feat-img-grad"></div>
+<div class="feat-badge" style="background:rgba(14,14,28,.8);color:var(--purple);border:1px solid var(--purple)">FEATURED</div>
+</div>
+<div class="feat-body">
+<p class="feat-name">LED Glow Furniture Set</p>
+<p class="feat-desc">Mix and match chairs, tables, bars and more — fully lit in 16 stunning colours.</p>
+<ul class="feat-highlights">
+<li>Chairs, Tables, Bar Sections</li>
+<li>16 Colour Modes Wireless</li>
+<li>8–10hr Battery Life</li>
+<li>Delivery & Setup Included</li>
+</ul>
+<div class="feat-price">
+<span class="feat-now" style="font-size:1.6rem;color:var(--dim)">From</span>
+<span class="feat-now">$POA</span>
+</div>
+<a href="https://perth-glow-furniture-hire.booqable.com" target="_blank" class="feat-btn" id="btn-fallback-3">Browse Furniture</a>
+</div>
+</div>
 
-      </div><!-- /featured-grid -->
-      <button class="feat-arrow feat-next" onclick="featSlide(1)" aria-label="Next">&#8250;</button>
-      <div class="feat-dots" id="featDots"></div>
-    </div><!-- /featured-wrap -->
-  </div>
+</div><!-- /featured-grid -->
+<button class="feat-arrow feat-next" onclick="featSlide(1)" aria-label="Next">&#8250;</button>
+<div class="feat-dots" id="featDots"></div>
+</div><!-- /featured-wrap -->
+</div>
 </section>
 
 <!-- ── FULL CATALOGUE ── -->
 <section id="catalog">
-  <div style="max-width:1300px;margin:0 auto;padding:60px 5vw">
+<div style="max-width:1300px;margin:0 auto;padding:60px 5vw">
 
-    <!-- Desktop layout: sidebar left, search+products right -->
-    <div class="bq-catalog-layout">
+<!-- Desktop layout: sidebar left, search+products right -->
+<div class="bq-catalog-layout">
 
-      <!-- Sidebar — stays on left desktop, goes above products on mobile -->
-      <aside class="bq-sidebar-wrap">
-        <div class="booqable-sidebar"></div>
-      </aside>
+<!-- Sidebar — stays on left desktop, goes above products on mobile -->
+<aside class="bq-sidebar-wrap">
+<div class="booqable-sidebar"></div>
+</aside>
 
-      <!-- Right column: search + products -->
-      <div class="bq-main-wrap">
-        <div class="bq-search-wrap">
-          <div class="booqable-product-search"></div>
-        </div>
-        <div class="booqable-product-list"></div>
-      </div>
+<!-- Right column: search + products -->
+<div class="bq-main-wrap">
+<div class="bq-search-wrap">
+<div class="booqable-product-search"></div>
+</div>
+<div class="booqable-product-list"></div>
+</div>
 
-    </div>
-  </div>
+</div>
+</div>
 </section>
 
 <!-- HOW IT WORKS -->
 <section style="background:var(--deep);padding:90px 5vw">
-  <div style="max-width:1300px;margin:0 auto">
-    <div style="text-align:center;max-width:560px;margin:0 auto 3.5rem" data-anim="up">
-      <p style="font-family:var(--display);font-size:.55rem;letter-spacing:.3em;color:var(--cyan);text-transform:uppercase;margin-bottom:.9rem">It's Simple</p>
-      <h2 style="font-family:var(--serif);font-size:clamp(2rem,4vw,3.2rem);font-weight:300;margin-bottom:1rem">How It <em style="font-style:italic;color:var(--cyan)">Works</em></h2>
-      <div style="width:56px;height:1px;background:linear-gradient(to right,var(--cyan),var(--purple),transparent);margin:0 auto"></div>
-    </div>
-    <div class="hire-proc-grid" data-anim-group>
-      <div class="hire-proc-card">
-        <div class="hire-proc-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
-        <p class="hire-proc-num">01</p><h4 class="hire-proc-h">Pick Your Products</h4>
-        <p class="hire-proc-p">Browse our range — dance floors, glow furniture, light-up letters and more.</p>
-      </div>
-      <div class="hire-proc-card">
-        <div class="hire-proc-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
-        <p class="hire-proc-num">02</p><h4 class="hire-proc-h">Pick Your Date</h4>
-        <p class="hire-proc-p">Select your event date, confirm availability and lock it in with a deposit.</p>
-      </div>
-      <div class="hire-proc-card">
-        <div class="hire-proc-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
-        <p class="hire-proc-num">03</p><h4 class="hire-proc-h">We Deliver & Set Up</h4>
-        <p class="hire-proc-p">Our team arrives early and has everything ready before your first guests arrive.</p>
-      </div>
-      <div class="hire-proc-card">
-        <div class="hire-proc-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-        <p class="hire-proc-num">04</p><h4 class="hire-proc-h">We Pick Up</h4>
-        <p class="hire-proc-p">Enjoy the night. We return after the event to pack everything down.</p>
-      </div>
-    </div>
-    <div style="text-align:center;margin-top:3rem" data-anim="up">
-      <p style="color:var(--dim);margin-bottom:1.5rem;font-size:.95rem">Need help choosing the right setup for your event?</p>
-      <a href="contact.html" style="font-family:var(--display);font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;padding:16px 38px;text-decoration:none;display:inline-block;transition:.3s;background:linear-gradient(135deg,var(--purple),var(--cyan));color:var(--black);font-weight:700">Talk to Us →</a>
-    </div>
-  </div>
+<div style="max-width:1300px;margin:0 auto">
+<div style="text-align:center;max-width:560px;margin:0 auto 3.5rem" data-anim="up">
+<p style="font-family:var(--display);font-size:.55rem;letter-spacing:.3em;color:var(--cyan);text-transform:uppercase;margin-bottom:.9rem">It's Simple</p>
+<h2 style="font-family:var(--serif);font-size:clamp(2rem,4vw,3.2rem);font-weight:300;margin-bottom:1rem">How It <em style="font-style:italic;color:var(--cyan)">Works</em></h2>
+<div style="width:56px;height:1px;background:linear-gradient(to right,var(--cyan),var(--purple),transparent);margin:0 auto"></div>
+</div>
+<div class="hire-proc-grid" data-anim-group>
+<div class="hire-proc-card">
+<div class="hire-proc-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+<p class="hire-proc-num">01</p><h4 class="hire-proc-h">Pick Your Products</h4>
+<p class="hire-proc-p">Browse our range — dance floors, glow furniture, light-up letters and more.</p>
+</div>
+<div class="hire-proc-card">
+<div class="hire-proc-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+<p class="hire-proc-num">02</p><h4 class="hire-proc-h">Pick Your Date</h4>
+<p class="hire-proc-p">Select your event date, confirm availability and lock it in with a deposit.</p>
+</div>
+<div class="hire-proc-card">
+<div class="hire-proc-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+<p class="hire-proc-num">03</p><h4 class="hire-proc-h">We Deliver & Set Up</h4>
+<p class="hire-proc-p">Our team arrives early and has everything ready before your first guests arrive.</p>
+</div>
+<div class="hire-proc-card">
+<div class="hire-proc-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+<p class="hire-proc-num">04</p><h4 class="hire-proc-h">We Pick Up</h4>
+<p class="hire-proc-p">Enjoy the night. We return after the event to pack everything down.</p>
+</div>
+</div>
+<div style="text-align:center;margin-top:3rem" data-anim="up">
+<p style="color:var(--dim);margin-bottom:1.5rem;font-size:.95rem">Need help choosing the right setup for your event?</p>
+<a href="contact.html" style="font-family:var(--display);font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;padding:16px 38px;text-decoration:none;display:inline-block;transition:.3s;background:linear-gradient(135deg,var(--purple),var(--cyan));color:var(--black);font-weight:700">Talk to Us →</a>
+</div>
+</div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="f-top">
-    <div class="f-brand">
-      <img src="assets/logo-transparent.png" alt="Perth Glow Furniture Hire">
-      <p>Perth's premier LED furniture, dance floor and 360 photo booth hire. Transforming events across Perth & surrounds.</p>
-      <div class="socials">
-        <a href="https://www.facebook.com/PerthGLOWFurnitureHire" target="_blank" class="soc">f</a>
-        <a href="https://www.instagram.com/perth_glow_furniture_hire/" target="_blank" class="soc">ig</a>
-        <a href="https://www.youtube.com/channel/UCYcpUvd9s-UxPmfELeZsySg" target="_blank" class="soc">▶</a>
-      </div>
-    </div>
-    <div class="f-col"><h4>Pages</h4><ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="hire.html">Hire Now</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="faq.html">FAQ</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul></div>
-    <div class="f-col"><h4>Products</h4><ul>
-      <li><a href="dance-floor.html">LED Dance Floors</a></li>
-      <li><a href="glow-furniture.html">Glow Furniture</a></li>
-      <li><a href="photo-booth.html">360° Photo Booth</a></li>
-      <li><a href="numbers-letters.html">Light Up Numbers & Letters</a></li>
-      <li><a href="hire.html">Package Deals</a></li>
-    </ul></div>
-    <div class="f-col"><h4>Contact</h4><ul>
-      <li><a href="tel:0455484192">0455 484 192</a></li>
-      <li><a href="/cdn-cgi/l/email-protection#a4cdcac2cbe4d4c3c2cc8ac7cbc98ac5d1"><span class="__cf_email__" data-cfemail="dcb5b2bab39cacbbbab4f2bfb3b1f2bda9">[email&#160;protected]</span></a></li>
-      <li><a>Bassendean, Perth WA</a></li>
-    </ul></div>
-  </div>
-  <div class="f-bottom">
-    <div class="f-bottom-links">
-      <p>© 2026 Perth Glow Furniture Hire. All rights reserved.</p>
-      <a href="terms.html">Terms & Conditions</a>
-      <a href="terms.html">Privacy Policy</a>
-      <a href="https://pgfh.com.au">pgfh.com.au</a>
-    </div>
-    <p class="f-credit">Developed by <a href="https://rafatofen.netlify.app" target="_blank">Rafael Thofehrn</a></p>
-  </div>
+<div class="f-top">
+<div class="f-brand">
+<img src="assets/logo-transparent.png" alt="Perth Glow Furniture Hire">
+<p>Perth's premier LED furniture, dance floor and 360 photo booth hire. Transforming events across Perth & surrounds.</p>
+<div class="socials">
+<a href="https://www.facebook.com/PerthGLOWFurnitureHire" target="_blank" class="soc">f</a>
+<a href="https://www.instagram.com/perth_glow_furniture_hire/" target="_blank" class="soc">ig</a>
+<a href="https://www.youtube.com/channel/UCYcpUvd9s-UxPmfELeZsySg" target="_blank" class="soc">▶</a>
+</div>
+</div>
+<div class="f-col"><h4>Pages</h4><ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="hire.html">Hire Now</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="faq.html">FAQ</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul></div>
+<div class="f-col"><h4>Products</h4><ul>
+<li><a href="dance-floor.html">LED Dance Floors</a></li>
+<li><a href="glow-furniture.html">Glow Furniture</a></li>
+<li><a href="photo-booth.html">360° Photo Booth</a></li>
+<li><a href="numbers-letters.html">Light Up Numbers & Letters</a></li>
+<li><a href="hire.html">Package Deals</a></li>
+</ul></div>
+<div class="f-col"><h4>Contact</h4><ul>
+<li><a href="tel:0455484192">0455 484 192</a></li>
+      <li><a href="mailto:info@pgfh.com.au">info@pgfh.com.au</a></li>
+      <li><a href="/cdn-cgi/l/email-protection#81e8efe7eec1f1e6e7e9afe2eeecafe0f4"><span class="__cf_email__" data-cfemail="85ecebe3eac5f5e2e3edabe6eae8abe4f0">[email&#160;protected]</span></a></li>
+<li><a>Bassendean, Perth WA</a></li>
+</ul></div>
+</div>
+<div class="f-bottom">
+<div class="f-bottom-links">
+<p>© 2026 Perth Glow Furniture Hire. All rights reserved.</p>
+<a href="terms.html">Terms & Conditions</a>
+<a href="terms.html">Privacy Policy</a>
+<a href="https://pgfh.com.au">pgfh.com.au</a>
+</div>
+<p class="f-credit">Developed by <a href="https://rafatofen.netlify.app" target="_blank">Rafael Thofehrn</a></p>
+</div>
 </footer>
 
+<script>
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // Mobile menu
 function toggleMob() {
-  document.getElementById('mobNav').classList.toggle('open')
-  document.body.style.overflow = document.getElementById('mobNav').classList.contains('open') ? 'hidden' : ''
+document.getElementById('mobNav').classList.toggle('open')
+document.body.style.overflow = document.getElementById('mobNav').classList.contains('open') ? 'hidden' : ''
 }
 
 // Category names map
 const catNames = {
-  '': 'All Products',
-  'illuminated-dance-floor': 'Glow Dance Floor',
-  'led-glow-furniture': 'LED Glow Furniture',
-  'light-up-numbers-and-letters': 'Light Up Numbers & Letters',
-  'photobooth': 'Photobooth',
-  'backdrop': 'Backdrop',
-  'decoration': 'Decoration',
-  'neon-sign': 'Neon Sign',
-  'table-chair': 'Table & Chair',
-  'bollards': 'Bollards, Ropes & Carpets',
-  'electronics': 'Electronics',
-  'bar-dj-desk': 'BAR / DJ Desk',
-  'bean-bag': 'Bean Bag',
-  'cultural-indian-wedding': 'Cultural / Indian / Wedding',
+'': 'All Products',
+'illuminated-dance-floor': 'Glow Dance Floor',
+'led-glow-furniture': 'LED Glow Furniture',
+'light-up-numbers-and-letters': 'Light Up Numbers & Letters',
+'photobooth': 'Photobooth',
+'backdrop': 'Backdrop',
+'decoration': 'Decoration',
+'neon-sign': 'Neon Sign',
+'table-chair': 'Table & Chair',
+'bollards': 'Bollards, Ropes & Carpets',
+'electronics': 'Electronics',
+'bar-dj-desk': 'BAR / DJ Desk',
+'bean-bag': 'Bean Bag',
+'cultural-indian-wedding': 'Cultural / Indian / Wedding',
 }
 
 
@@ -624,231 +600,236 @@ const catNames = {
 
 // Hide fallback buttons if Booqable buttons rendered properly
 window.addEventListener('load', () => {
-  setTimeout(() => {
-    document.querySelectorAll('.booqable-product-button').forEach((bqBtn, i) => {
-      if (bqBtn.children.length > 0 || bqBtn.innerHTML.trim() !== '') {
-        const fallback = document.getElementById(`btn-fallback-${i+1}`)
-        if (fallback) fallback.style.display = 'none'
-      }
-    })
-  }, 2000)
+setTimeout(() => {
+document.querySelectorAll('.booqable-product-button').forEach((bqBtn, i) => {
+if (bqBtn.children.length > 0 || bqBtn.innerHTML.trim() !== '') {
+const fallback = document.getElementById(`btn-fallback-${i+1}`)
+if (fallback) fallback.style.display = 'none'
+}
+})
+}, 2000)
 
-  // Dark theme CSS injection for Booqable
-  const s = document.createElement('style')
-  s.textContent = `
-    .booqable-storefront, .booqable-store, [class*="Storefront"] { background:transparent!important; color:#f0eeea!important; }
-    [class*="ProductList"], .booqable-product-list-grid {
-      display:grid!important;
-      grid-template-columns:repeat(auto-fill,minmax(240px,1fr))!important;
-      gap:1rem!important;
-    }
-    [class*="ProductCard"], .booqable-product-item, .booqable-product-card {
-      background:#0e0e1c!important; border:1px solid rgba(255,255,255,0.07)!important;
-      border-radius:2px!important; overflow:hidden!important;
-      transition:border-color .3s,transform .3s!important;
-  }
-    [class*="ProductCard"]:hover, .booqable-product-item:hover {
-      border-color:rgba(181,123,238,.3)!important; transform:translateY(-2px)!important;
-    }
-    [class*="ProductName"], [class*="product-name"], .booqable-product-title {
-      color:#f0eeea!important; font-family:'Cormorant Garamond',serif!important;
-      font-size:1.1rem!important; font-weight:300!important;
-    }
-    [class*="ProductPrice"], [class*="product-price"], .booqable-price {
-      color:#b57bee!important; font-family:'Cormorant Garamond',serif!important;
-      font-size:1.2rem!important; font-weight:300!important;
-    }
-    [class*="description"], .booqable-product-description { color:rgba(240,238,234,.55)!important; }
-    button[class*="booqable"], [class*="AddToCart"], [class*="add-to-cart"],
-    .booqable-add-to-cart, [class*="CartButton"] {
-      background:linear-gradient(135deg,#c77dff,#b57bee)!important; color:#050508!important;
-      border:none!important; font-family:'Syncopate',sans-serif!important;
-      font-size:.48rem!important; letter-spacing:.14em!important; text-transform:uppercase!important;
-      font-weight:700!important; border-radius:0!important; padding:10px 16px!important;
-      cursor:pointer!important; transition:box-shadow .3s!important;
-    }
-    button[class*="booqable"]:hover { box-shadow:0 0 20px rgba(181,123,238,.4)!important; }
-    /* Datepicker */
-    [class*="DatePicker"], [class*="calendar"], .booqable-datepicker { color:#f0eeea!important; }
-    [class*="selected"], [class*="Selected"] { background:#c77dff!important; color:#050508!important; border-radius:3px!important; }
-    [class*="day"]:hover, [class*="Day"]:hover { background:rgba(181,123,238,.2)!important; }
-    input[class*="booqable"], .booqable input {
-      background:#08080f!important; border:1px solid rgba(255,255,255,.1)!important;
-      color:#f0eeea!important; padding:9px 12px!important;
-    }
-    /* Cart */
-    [class*="cart"], .booqable-cart { background:#0e0e1c!important; color:#f0eeea!important; border-color:rgba(255,255,255,.07)!important; }
-    [class*="total"], [class*="Total"] { color:#b57bee!important; font-family:'Cormorant Garamond',serif!important; }
-    /* Pagination */
-    [class*="pagination"] button, [class*="Pagination"] button {
-      background:transparent!important; border:1px solid rgba(255,255,255,.1)!important; color:rgba(240,238,234,.55)!important;
-    }
-    [class*="pagination"] button:hover { border-color:#b57bee!important; color:#b57bee!important; }
-    /* Search within Booqable */
-    [class*="Search"] input, [class*="search"] input {
-      background:#08080f!important; border:1px solid rgba(255,255,255,.1)!important; color:#f0eeea!important;
-    }
-  `
-  document.head.appendChild(s)
+// Dark theme CSS injection for Booqable
+const s = document.createElement('style')
+s.textContent = `
+   .booqable-storefront, .booqable-store, [class*="Storefront"] { background:transparent!important; color:#f0eeea!important; }
+   [class*="ProductList"], .booqable-product-list-grid {
+     display:grid!important;
+     grid-template-columns:repeat(auto-fill,minmax(240px,1fr))!important;
+     gap:1rem!important;
+   }
+   [class*="ProductCard"], .booqable-product-item, .booqable-product-card {
+     background:#0e0e1c!important; border:1px solid rgba(255,255,255,0.07)!important;
+     border-radius:2px!important; overflow:hidden!important;
+     transition:border-color .3s,transform .3s!important;
+ }
+   [class*="ProductCard"]:hover, .booqable-product-item:hover {
+     border-color:rgba(181,123,238,.3)!important; transform:translateY(-2px)!important;
+   }
+   [class*="ProductName"], [class*="product-name"], .booqable-product-title {
+     color:#f0eeea!important; font-family:'Cormorant Garamond',serif!important;
+     font-size:1.1rem!important; font-weight:300!important;
+   }
+   [class*="ProductPrice"], [class*="product-price"], .booqable-price {
+     color:#b57bee!important; font-family:'Cormorant Garamond',serif!important;
+     font-size:1.2rem!important; font-weight:300!important;
+   }
+   [class*="description"], .booqable-product-description { color:rgba(240,238,234,.55)!important; }
+   button[class*="booqable"], [class*="AddToCart"], [class*="add-to-cart"],
+   .booqable-add-to-cart, [class*="CartButton"] {
+     background:linear-gradient(135deg,#c77dff,#b57bee)!important; color:#050508!important;
+     border:none!important; font-family:'Syncopate',sans-serif!important;
+     font-size:.48rem!important; letter-spacing:.14em!important; text-transform:uppercase!important;
+     font-weight:700!important; border-radius:0!important; padding:10px 16px!important;
+     cursor:pointer!important; transition:box-shadow .3s!important;
+   }
+   button[class*="booqable"]:hover { box-shadow:0 0 20px rgba(181,123,238,.4)!important; }
+   /* Datepicker */
+   [class*="DatePicker"], [class*="calendar"], .booqable-datepicker { color:#f0eeea!important; }
+   [class*="selected"], [class*="Selected"] { background:#c77dff!important; color:#050508!important; border-radius:3px!important; }
+   [class*="day"]:hover, [class*="Day"]:hover { background:rgba(181,123,238,.2)!important; }
+   input[class*="booqable"], .booqable input {
+     background:#08080f!important; border:1px solid rgba(255,255,255,.1)!important;
+     color:#f0eeea!important; padding:9px 12px!important;
+   }
+   /* Cart */
+   [class*="cart"], .booqable-cart { background:#0e0e1c!important; color:#f0eeea!important; border-color:rgba(255,255,255,.07)!important; }
+   [class*="total"], [class*="Total"] { color:#b57bee!important; font-family:'Cormorant Garamond',serif!important; }
+   /* Pagination */
+   [class*="pagination"] button, [class*="Pagination"] button {
+     background:transparent!important; border:1px solid rgba(255,255,255,.1)!important; color:rgba(240,238,234,.55)!important;
+   }
+   [class*="pagination"] button:hover { border-color:#b57bee!important; color:#b57bee!important; }
+   /* Search within Booqable */
+   [class*="Search"] input, [class*="search"] input {
+     background:#08080f!important; border:1px solid rgba(255,255,255,.1)!important; color:#f0eeea!important;
+   }
+ `
+document.head.appendChild(s)
 })
 </script>
 
 <script>
 // Scroll-in animations — IntersectionObserver
 document.addEventListener('DOMContentLoaded', function() {
-  var obs = new IntersectionObserver(function(entries) {
-    entries.forEach(function(e) {
-      if (e.isIntersecting) {
-        e.target.classList.add('anim-in');
-        obs.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+var obs = new IntersectionObserver(function(entries) {
+entries.forEach(function(e) {
+if (e.isIntersecting) {
+e.target.classList.add('anim-in');
+obs.unobserve(e.target);
+}
+});
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-  // Animate single elements
-  document.querySelectorAll('[data-anim]').forEach(function(el) {
-    obs.observe(el);
-  });
+// Animate single elements
+document.querySelectorAll('[data-anim]').forEach(function(el) {
+obs.observe(el);
+});
 
-  // Animate group children with stagger
-  document.querySelectorAll('[data-anim-group]').forEach(function(group) {
-    group.querySelectorAll(':scope > *').forEach(function(child) {
-      obs.observe(child);
-    });
-  });
+// Animate group children with stagger
+document.querySelectorAll('[data-anim-group]').forEach(function(group) {
+group.querySelectorAll(':scope > *').forEach(function(child) {
+obs.observe(child);
+});
+});
 });
 
 // ── FEATURED TOP PICKS CAROUSEL ──
 var featIndex = 0;
 function featSlide(dir) {
-  var grid = document.getElementById('featGrid');
-  if (!grid) return;
-  var cards = grid.children;
-  var perView = window.innerWidth < 720 ? 1 : (window.innerWidth < 1100 ? 2 : 3);
-  var max = Math.max(0, cards.length - perView);
-  featIndex = Math.max(0, Math.min(featIndex + dir, max));
-  var w = cards[0].offsetWidth;
-  grid.style.transform = 'translateX(-' + (featIndex * w) + 'px)';
-  updateFeatDots();
+var grid = document.getElementById('featGrid');
+if (!grid) return;
+var cards = grid.children;
+var perView = window.innerWidth < 720 ? 1 : (window.innerWidth < 1100 ? 2 : 3);
+var max = Math.max(0, cards.length - perView);
+featIndex = Math.max(0, Math.min(featIndex + dir, max));
+var w = cards[0].offsetWidth;
+grid.style.transform = 'translateX(-' + (featIndex * w) + 'px)';
+updateFeatDots();
 }
 function updateFeatDots() {
-  var dots = document.getElementById('featDots');
-  if (!dots) return;
-  var grid = document.getElementById('featGrid');
-  var perView = window.innerWidth < 720 ? 1 : (window.innerWidth < 1100 ? 2 : 3);
-  var total = Math.max(1, grid.children.length - perView + 1);
-  dots.innerHTML = '';
-  for (var i = 0; i < total; i++) {
-    var d = document.createElement('button');
-    d.className = 'feat-dot' + (i === featIndex ? ' active' : '');
-    d.setAttribute('aria-label', 'Slide ' + (i+1));
-    (function(idx){ d.onclick = function(){ featIndex = idx; featSlide(0); }; })(i);
-    dots.appendChild(d);
-  }
+var dots = document.getElementById('featDots');
+if (!dots) return;
+var grid = document.getElementById('featGrid');
+var perView = window.innerWidth < 720 ? 1 : (window.innerWidth < 1100 ? 2 : 3);
+var total = Math.max(1, grid.children.length - perView + 1);
+dots.innerHTML = '';
+for (var i = 0; i < total; i++) {
+var d = document.createElement('button');
+d.className = 'feat-dot' + (i === featIndex ? ' active' : '');
+d.setAttribute('aria-label', 'Slide ' + (i+1));
+(function(idx){ d.onclick = function(){ featIndex = idx; featSlide(0); }; })(i);
+dots.appendChild(d);
+}
 }
 window.addEventListener('load', function() {
-  updateFeatDots();
-  window.addEventListener('resize', function() {
-    featIndex = 0;
-    var g = document.getElementById('featGrid');
-    if (g) g.style.transform = '';
-    updateFeatDots();
-  });
-  var ft = document.querySelector('.featured-wrap');
-  if (ft) {
-    var sx = 0;
-    ft.addEventListener('touchstart', function(e){ sx = e.touches[0].clientX; });
-    ft.addEventListener('touchend', function(e){
-      var dx = e.changedTouches[0].clientX - sx;
-      if (Math.abs(dx) > 50) featSlide(dx < 0 ? 1 : -1);
-    });
-  }
+updateFeatDots();
+window.addEventListener('resize', function() {
+featIndex = 0;
+var g = document.getElementById('featGrid');
+if (g) g.style.transform = '';
+updateFeatDots();
+});
+var ft = document.querySelector('.featured-wrap');
+if (ft) {
+var sx = 0;
+ft.addEventListener('touchstart', function(e){ sx = e.touches[0].clientX; });
+ft.addEventListener('touchend', function(e){
+var dx = e.changedTouches[0].clientX - sx;
+if (Math.abs(dx) > 50) featSlide(dx < 0 ? 1 : -1);
+});
+}
 });
 
 // Mobile sidebar show more
 var moreShown = false;
 function toggleMoreCats() {
-  moreShown = !moreShown;
-  document.querySelectorAll('.cat-item.hide-mobile').forEach(function(el) {
-    el.classList.toggle('show', moreShown);
-  });
-  document.getElementById('showMoreText').textContent = moreShown ? '− Less categories' : '+ More categories';
+moreShown = !moreShown;
+document.querySelectorAll('.cat-item.hide-mobile').forEach(function(el) {
+el.classList.toggle('show', moreShown);
+});
+document.getElementById('showMoreText').textContent = moreShown ? '− Less categories' : '+ More categories';
 }
 </script>
 
 <script>
 window.addEventListener('load', function() {
-  if (window.booqable && typeof window.booqable.init === 'function') {
-    window.booqable.init()
-  }
+if (window.booqable && typeof window.booqable.init === 'function') {
+window.booqable.init()
+}
 })
 </script>
 
 <script>
 // Fix Booqable layout after it renders
 function fixBooqableText(root) {
-  var els = (root || document).querySelectorAll(
-    '.booqable-product-detail-wrapper, .booqable-product-detail-wrapper *, ' +
-    '.bq-content, .bq-content *, .bq-product-description, .bq-product-description *, ' +
-    '.bq-product-name, .bq-price, .bq-price-details'
-  );
-  els.forEach(function(el) {
-    el.style.setProperty('color', '#111111', 'important');
-    el.style.setProperty('font-family', '-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif', 'important');
-    el.style.setProperty('letter-spacing', 'normal', 'important');
-    el.style.setProperty('text-transform', 'none', 'important');
-  });
+var els = (root || document).querySelectorAll(
+'.booqable-product-detail-wrapper, .booqable-product-detail-wrapper *, ' +
+'.bq-content, .bq-content *, .bq-product-description, .bq-product-description *, ' +
+'.bq-product-name, .bq-price, .bq-price-details'
+);
+els.forEach(function(el) {
+el.style.setProperty('color', '#111111', 'important');
+el.style.setProperty('font-family', '-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif', 'important');
+el.style.setProperty('letter-spacing', 'normal', 'important');
+el.style.setProperty('text-transform', 'none', 'important');
+});
 }
 fixBooqableText();
 function fixBooqableLayout() {
-  var isMobile = window.innerWidth <= 768;
+var isMobile = window.innerWidth <= 768;
 
-  // Desktop: enforce sidebar grid
-  var layout = document.querySelector('.bq-catalog-layout');
-  if (layout && !isMobile) {
-    layout.style.setProperty('display', 'grid', 'important');
-    layout.style.setProperty('grid-template-columns', '240px 1fr', 'important');
-    layout.style.setProperty('gap', '2rem', 'important');
-  }
+// Desktop: enforce sidebar grid
+var layout = document.querySelector('.bq-catalog-layout');
+if (layout && !isMobile) {
+layout.style.setProperty('display', 'grid', 'important');
+layout.style.setProperty('grid-template-columns', '240px 1fr', 'important');
+layout.style.setProperty('gap', '2rem', 'important');
+}
 
-  // Mobile: fix overflow + 2-col grid
-  if (isMobile) {
-    if (layout) {
-      layout.style.setProperty('display', 'flex', 'important');
-      layout.style.setProperty('flex-direction', 'column', 'important');
-      layout.style.setProperty('max-width', '100%', 'important');
-      layout.style.setProperty('overflow', 'hidden', 'important');
-    }
-    // Constrain all booqable wrappers
-    document.querySelectorAll('.booqable-product-list, .booqable-sidebar, .booqable-product-search, .Themed-ebINTA, .booqable-product-list-wrapper').forEach(function(el) {
-      el.style.setProperty('max-width', '100%', 'important');
-      el.style.setProperty('width', '100%', 'important');
-      el.style.setProperty('box-sizing', 'border-box', 'important');
-      el.style.setProperty('overflow', 'hidden', 'important');
-    });
-    // 2-col product grid
-    document.querySelectorAll('.booqable-product-list-grid').forEach(function(g) {
-      g.style.setProperty('display', 'grid', 'important');
-      g.style.setProperty('grid-template-columns', '1fr', 'important');
-      g.style.setProperty('gap', '8px', 'important');
-      g.style.setProperty('width', '100%', 'important');
-      g.style.setProperty('box-sizing', 'border-box', 'important');
-    });
-  }
+// Mobile: fix overflow + 2-col grid
+if (isMobile) {
+if (layout) {
+layout.style.setProperty('display', 'flex', 'important');
+layout.style.setProperty('flex-direction', 'column', 'important');
+layout.style.setProperty('max-width', '100%', 'important');
+layout.style.setProperty('overflow', 'hidden', 'important');
+}
+// Constrain all booqable wrappers
+document.querySelectorAll('.booqable-product-list, .booqable-sidebar, .booqable-product-search, .Themed-ebINTA, .booqable-product-list-wrapper').forEach(function(el) {
+el.style.setProperty('max-width', '100%', 'important');
+el.style.setProperty('width', '100%', 'important');
+el.style.setProperty('box-sizing', 'border-box', 'important');
+el.style.setProperty('overflow', 'hidden', 'important');
+});
+// 2-col product grid
+document.querySelectorAll('.booqable-product-list-grid').forEach(function(g) {
+g.style.setProperty('display', 'grid', 'important');
+g.style.setProperty('grid-template-columns', '1fr', 'important');
+g.style.setProperty('gap', '8px', 'important');
+g.style.setProperty('width', '100%', 'important');
+g.style.setProperty('box-sizing', 'border-box', 'important');
+});
+}
 }
 window.addEventListener('load', function() {
-  fixBooqableLayout();
-  setTimeout(fixBooqableLayout, 500);
-  setTimeout(fixBooqableLayout, 1500);
-  setTimeout(fixBooqableLayout, 3000);
+fixBooqableLayout();
+setTimeout(fixBooqableLayout, 500);
+setTimeout(fixBooqableLayout, 1500);
+setTimeout(fixBooqableLayout, 3000);
 });
 if (window.MutationObserver) {
-  var bqObs = new MutationObserver(function() { fixBooqableLayout(); fixBooqableText(); });
+var bqObs = new MutationObserver(function() { fixBooqableLayout(); fixBooqableText(); });
   document.addEventListener('DOMContentLoaded', function() {
+    // Watch body so we catch the modal which renders outside #catalog
     bqObs.observe(document.body, { childList: true, subtree: true });
   });
 }
 </script>
 
+<script>
+
+
 </body>
 </html>
+  document.
