@@ -7,6 +7,7 @@
 <meta name="description" content="Browse and book LED dance floors, glow furniture and 360 photo booth hire in Perth. Easy online booking.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Syncopate:wght@400;700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<script>var booqableOptions = { company: 'a2043469-1fe1-43f9-895a-c9a786b47800', storeProvider: 'custom' };</script>
 <script src="https://a2043469-1fe1-43f9-895a-c9a786b47800.assets.booqable.com/v2/booqable.js"></script>
 <style>
 /* NAV */
@@ -493,125 +494,23 @@ body { animation: pageFadeIn 0.4s ease both; }
 
 <!-- ── FULL CATALOGUE ── -->
 <section id="catalog">
-  <div class="catalog-layout">
+  <div style="max-width:1300px;margin:0 auto;padding:60px 5vw">
 
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
-      <p class="sidebar-title">Browse By Category</p>
-      <ul class="cat-list" id="catList">
-        <li class="cat-item active" data-tag="" onclick="selectCat(this)">
-          <span class="cat-name">All Products</span>
-          <span class="cat-count">265</span>
-        </li>
-        <div class="sidebar-divider"></div>
-        <li class="cat-item hide-mobile" data-tag="illuminated-dance-floor" onclick="selectCat(this)">
-          <span class="cat-name">Glow Dance Floor</span>
-          <span class="cat-count">18</span>
-        </li>
-        <li class="cat-item hide-mobile" data-tag="led-glow-furniture" onclick="selectCat(this)">
-          <span class="cat-name">LED Glow Furniture</span>
-          <span class="cat-count">63</span>
-        </li>
-        <li class="cat-item hide-mobile" data-tag="light-up-numbers-and-letters" onclick="selectCat(this)">
-          <span class="cat-name">Light Up Numbers & Letters</span>
-          <span class="cat-count">109</span>
-        </li>
-        <li class="cat-item hide-mobile" data-tag="" onclick="selectCat(this)">
-          <span class="cat-name">Package Deals</span>
-          <span class="cat-count">2</span>
-        </li>
-        <li class="cat-item hide-mobile" data-tag="photobooth" onclick="selectCat(this)">
-          <span class="cat-name">Photobooth</span>
-          <span class="cat-count">2</span>
-        </li>
-        <div class="sidebar-divider"></div>
-        <li class="cat-item hide-mobile" data-tag="backdrop" onclick="selectCat(this)">
-          <span class="cat-name">Backdrop</span>
-          <span class="cat-count">29</span>
-        </li>
-        <li class="cat-item hide-mobile" data-tag="decoration" onclick="selectCat(this)">
-          <span class="cat-name">Decoration</span>
-          <span class="cat-count">25</span>
-        </li>
-        <li class="cat-item hide-mobile" data-tag="neon-sign" onclick="selectCat(this)">
-          <span class="cat-name">Neon Sign</span>
-          <span class="cat-count">14</span>
-        </li>
-        <li class="cat-item hide-mobile" data-tag="Table &amp; Chair" onclick="selectCat(this)">
-          <span class="cat-name">Table & Chair</span>
-          <span class="cat-count">46</span>
-        </li>
-        <li class="cat-item hide-mobile" data-tag="bollards" onclick="selectCat(this)">
-          <span class="cat-name">Bollards, Ropes & Carpets</span>
-          <span class="cat-count">10</span>
-        </li>
-        <li class="cat-item hide-mobile" data-tag="electronics" onclick="selectCat(this)">
-          <span class="cat-name">Electronics</span>
-          <span class="cat-count">12</span>
-        </li>
-        <li class="cat-item hide-mobile" data-tag="bar-dj-desk" onclick="selectCat(this)">
-          <span class="cat-name">BAR / DJ Desk</span>
-          <span class="cat-count">7</span>
-        </li>
-        <li class="cat-item hide-mobile" data-tag="bean-bag" onclick="selectCat(this)">
-          <span class="cat-name">Bean Bag</span>
-          <span class="cat-count">1</span>
-        </li>
-        <li class="cat-item hide-mobile" data-tag="cultural-indian-wedding" onclick="selectCat(this)">
-          <span class="cat-name">Cultural / Indian / Wedding</span>
-          <span class="cat-count">1</span>
-        </li>
-      </ul>
+    <!-- Search -->
+    <div style="margin-bottom:1.5rem">
+      <div class="booqable-product-search"></div>
+    </div>
 
-      <!-- Date picker inside sidebar -->
-      <div class="sidebar-divider"></div>
-      <div class="sidebar-date">
-        <span class="sidebar-date-label">📅 Event Dates</span>
-        <div class="booqable-datepicker"></div>
-      </div>
+    <div style="display:grid;grid-template-columns:240px 1fr;gap:2rem;align-items:start">
 
-      <div class="sidebar-show-more" id="sidebarShowMore" onclick="toggleMoreCats()">
-        <span id="showMoreText">+ More categories</span>
-      </div>
-    </aside>
+      <!-- Sidebar — Booqable native -->
+      <aside>
+        <div class="booqable-sidebar"></div>
+      </aside>
 
-    <!-- MAIN CATALOG -->
-    <div class="catalog-main">
-
-      <!-- Search -->
-      <div class="search-wrap">
-        <span class="search-icon">🔍</span>
-        <input
-          type="text"
-          class="search-input"
-          id="searchInput"
-          placeholder="Search products… e.g. dance floor, neon sign, table"
-          oninput="handleSearch(this.value)"
-        >
-      </div>
-
-      <!-- Top bar -->
-      <div class="catalog-topbar">
-        <h2 class="catalog-heading" id="catalogHeading">All <em>Products</em></h2>
-        <span class="catalog-meta" id="catalogMeta"></span>
-      </div>
-
-      <!-- Search note -->
-      <p style="font-size:.72rem;color:rgba(240,238,234,.3);margin-top:-1.2rem;margin-bottom:1.5rem;font-style:italic">Product search is handled by our booking system — use the category filters or sort options below.</p>
-      <!-- Sort tabs -->
-      <div class="sort-tabs">
-        <button class="sort-tab active" onclick="setSort(this,'popular')">Most Popular</button>
-        <button class="sort-tab" onclick="setSort(this,'name')">Name A–Z</button>
-        <button class="sort-tab" onclick="setSort(this,'price-low')">Price: Low–High</button>
-        <button class="sort-tab" onclick="setSort(this,'price-high')">Price: High–Low</button>
-      </div>
-
-      <!-- Booqable product list -->
-      <div class="bq-area">
-        <div class="booqable-product-list" 
-             data-store="perth-glow-furniture-hire"
-             id="mainProductList">
-        </div>
+      <!-- Product list — Booqable native -->
+      <div>
+        <div class="booqable-product-list"></div>
       </div>
 
     </div>
@@ -724,75 +623,9 @@ const catNames = {
   'cultural-indian-wedding': 'Cultural / Indian / Wedding',
 }
 
-let currentTag = ''
-let currentSort = 'popular'
-let searchTimer = null
 
 // Select category from sidebar
-function selectCat(el) {
-  document.querySelectorAll('.cat-item').forEach(i => i.classList.remove('active'))
-  el.classList.add('active')
-  currentTag = el.dataset.tag
-  updateCatalog()
-  // Scroll to catalog on mobile
-  if (window.innerWidth < 900) {
-    document.getElementById('catalog').scrollIntoView({ behavior: 'smooth', block: 'start' })
-  }
-}
 
-function selectCatByTag(tag) {
-  const el = document.querySelector(`.cat-item[data-tag="${tag}"]`)
-  if (el) selectCat(el)
-  document.getElementById('catalog').scrollIntoView({ behavior: 'smooth' })
-}
-
-function setSort(btn, sort) {
-  document.querySelectorAll('.sort-tab').forEach(t => t.classList.remove('active'))
-  btn.classList.add('active')
-  currentSort = sort
-  updateCatalog()
-}
-
-function handleSearch(val) {
-  clearTimeout(searchTimer)
-  searchTimer = setTimeout(() => updateCatalog(val), 350)
-}
-
-function updateCatalog(searchVal) {
-  const heading = document.getElementById('catalogHeading')
-  const name = catNames[currentTag] || 'All Products'
-
-  // Update heading
-  const parts = name.split(' ')
-  const first = parts.slice(0, -1).join(' ')
-  const last = parts[parts.length - 1]
-  heading.innerHTML = first ? `${first} <em>${last}</em>` : `All <em>Products</em>`
-
-  // Rebuild the Booqable product list div with new attributes
-  const area = document.getElementById('mainProductList')
-  if (!area) return
-
-  // Create fresh div with correct attributes
-  const newDiv = document.createElement('div')
-  newDiv.className = 'booqable-product-list'
-  newDiv.setAttribute('data-store', 'perth-glow-furniture-hire')
-  if (currentTag) newDiv.setAttribute('data-tag', currentTag)
-  if (currentSort === 'name') newDiv.setAttribute('data-sort', 'name')
-  else if (currentSort === 'price-low') newDiv.setAttribute('data-sort', 'price_asc')
-  else if (currentSort === 'price-high') newDiv.setAttribute('data-sort', 'price_desc')
-  if (searchVal && searchVal.trim()) newDiv.setAttribute('data-search', searchVal.trim())
-
-  // Replace old div with new one
-  area.parentNode.replaceChild(newDiv, area)
-  newDiv.id = 'mainProductList'
-
-  // Call Booqable init after a short delay to ensure DOM is updated
-  setTimeout(function() {
-    if (window.booqable && typeof window.booqable.init === 'function') {
-      window.booqable.init()
-    }
-  }, 50)
-}
 
 
 
