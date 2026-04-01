@@ -202,8 +202,6 @@ nav { position:fixed; top:0; left:0; right:0; z-index:1000; padding:0 5vw; heigh
   /* Nav hamburger */
   
 /* Featured carousel: 1 per slide */
-  .feat-card{flex:0 0 85%}
-  .featured-wrap{padding:0 24px}
   /* Catalog: sidebar becomes horizontal pill filter */
   .catalog-layout{grid-template-columns:1fr}
   .sidebar{position:static;height:auto;border-right:none;border-bottom:1px solid var(--border);padding:16px 0 0}
@@ -229,7 +227,6 @@ nav { position:fixed; top:0; left:0; right:0; z-index:1000; padding:0 5vw; heigh
   .btns,.hero-btns{justify-content:center}
 
   body{overflow-x:hidden}
-  .hire-proc-grid{grid-template-columns:1fr 1fr!important;gap:1rem!important}
 
   .f-top{grid-template-columns:1fr}
   .f-brand{text-align:center}
@@ -240,8 +237,6 @@ nav { position:fixed; top:0; left:0; right:0; z-index:1000; padding:0 5vw; heigh
   .f-bottom-links{flex-direction:column;gap:.5rem}
 
   /* Featured carousel overflow */
-  .featured-wrap { overflow-x: hidden !important; }
-  .feat-grid { width: max-content; }
   /* How it works: 2x2 grid */
   .hire-proc-grid { grid-template-columns: 1fr 1fr !important; gap: 1rem !important; }
   .hire-proc-card { padding: 1.2rem .8rem !important; }
@@ -482,6 +477,15 @@ body .bq-product-description p {
   text-transform: none !important;
   font-weight: normal !important;
   max-width: none !important;
+}
+
+@media(max-width:720px){
+  /* Featured Top Picks carousel: 1 card per view */
+  .feat-card { flex: 0 0 85% !important; }
+  .featured-wrap { padding: 0 24px !important; overflow: hidden !important; }
+  /* How It Works: 2x2 grid */
+  .hire-proc-grid { grid-template-columns: 1fr 1fr !important; gap: 1rem !important; }
+  .hire-proc-card { padding: 1.2rem .8rem !important; }
 }
 </style>
   <!-- Favicon -->
