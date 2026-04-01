@@ -356,47 +356,54 @@ body { animation: pageFadeIn 0.4s ease both; }
 @media(max-width:720px){
   
 
+
 /* ── CATALOG LAYOUT ── */
-.bq-catalog-layout {
-  display: grid;
-  grid-template-columns: 240px 1fr;
-  gap: 2rem;
-  align-items: start;
+#catalog .bq-catalog-layout {
+  display: grid !important;
+  grid-template-columns: 240px 1fr !important;
+  gap: 2rem !important;
+  align-items: start !important;
 }
-.bq-main-wrap { min-width: 0; }
+#catalog .bq-sidebar-wrap {
+  min-width: 0 !important;
+  width: 240px !important;
+}
+#catalog .bq-sidebar-wrap > div,
+#catalog .bq-sidebar-wrap .Themed-ebINTA {
+  width: 100% !important;
+  min-width: 0 !important;
+}
+#catalog .bq-main-wrap {
+  min-width: 0 !important;
+  flex: 1 !important;
+}
 .bq-search-wrap { margin-bottom: 1rem; }
 
 @media(max-width:768px) {
-  /* Stack: sidebar → search → products */
-  .bq-catalog-layout {
+  #catalog .bq-catalog-layout {
     display: flex !important;
     flex-direction: column !important;
     gap: 0 !important;
+    width: 100% !important;
   }
-  .bq-sidebar-wrap {
-    order: 1;
+  #catalog .bq-sidebar-wrap {
+    order: 1 !important;
     width: 100% !important;
     margin-bottom: 1rem !important;
   }
   .bq-search-wrap {
-    order: 2;
+    order: 2 !important;
     margin-bottom: 1rem !important;
   }
-  .booqable-product-list {
-    order: 3;
+  #catalog .bq-main-wrap {
+    order: 3 !important;
+    width: 100% !important;
   }
-  /* 2 products per row, centred */
   .booqable-product-list-grid {
     display: grid !important;
     grid-template-columns: 1fr 1fr !important;
     gap: 8px !important;
     width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-  .booqable-product {
-    width: 100% !important;
-    margin: 0 !important;
   }
 }
 </style>
@@ -840,27 +847,35 @@ window.addEventListener('load', function() {
 </script>
 
 <script>
-// Fix Booqable mobile layout after it renders
-function fixBooqableMobile() {
-  if (window.innerWidth > 768) return;
-  var grids = document.querySelectorAll('.booqable-product-list-grid');
-  grids.forEach(function(g) {
-    g.style.setProperty('display', 'grid', 'important');
-    g.style.setProperty('grid-template-columns', '1fr 1fr', 'important');
-    g.style.setProperty('gap', '8px', 'important');
-    g.style.setProperty('width', '100%', 'important');
-  });
+// Fix Booqable layout after it renders
+function fixBooqableLayout() {
+  // Desktop: enforce grid
+  var layout = document.querySelector('.bq-catalog-layout');
+  if (layout && window.innerWidth > 768) {
+    layout.style.setProperty('display', 'grid', 'important');
+    layout.style.setProperty('grid-template-columns', '240px 1fr', 'important');
+    layout.style.setProperty('gap', '2rem', 'important');
+    layout.style.setProperty('align-items', 'start', 'important');
+  }
+  // Mobile: 2 columns for products
+  if (window.innerWidth <= 768) {
+    var grids = document.querySelectorAll('.booqable-product-list-grid');
+    grids.forEach(function(g) {
+      g.style.setProperty('display', 'grid', 'important');
+      g.style.setProperty('grid-template-columns', '1fr 1fr', 'important');
+      g.style.setProperty('gap', '8px', 'important');
+      g.style.setProperty('width', '100%', 'important');
+    });
+  }
 }
 window.addEventListener('load', function() {
-  fixBooqableMobile();
-  setTimeout(fixBooqableMobile, 500);
-  setTimeout(fixBooqableMobile, 1500);
-  setTimeout(fixBooqableMobile, 3000);
+  fixBooqableLayout();
+  setTimeout(fixBooqableLayout, 500);
+  setTimeout(fixBooqableLayout, 1500);
+  setTimeout(fixBooqableLayout, 3000);
 });
 if (window.MutationObserver) {
-  var bqObs = new MutationObserver(function() {
-    if (window.innerWidth <= 768) fixBooqableMobile();
-  });
+  var bqObs = new MutationObserver(fixBooqableLayout);
   document.addEventListener('DOMContentLoaded', function() {
     var catalog = document.getElementById('catalog');
     if (catalog) bqObs.observe(catalog, { childList: true, subtree: true });
