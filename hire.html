@@ -438,25 +438,42 @@ body { animation: pageFadeIn 0.4s ease both; }
   }
 }
 
-/* Fix Booqable text visibility on white cards */
-.bq-product-name,
-.booqable-product-title,
-div.bq-product-name,
-.bq-product-title-wrapper .bq-product-name {
+
+
+.bq-price,
+
+
+
+
+/* ── BOOQABLE TEXT FIX ── */
+/* Cards */
+.bq-product-name, .bq-price, .bq-duration, .bq-price-details { color: #111 !important; }
+.bq-details { background: #fff !important; }
+
+/* Modal/popup — target everything inside white background */
+.bq-product-modal, [class*="Modal"], [class*="modal"],
+[class*="Dialog"], [class*="dialog"],
+[class*="Overlay"] > div, [class*="overlay"] > div {
+  color: #111111 !important;
+  background: #ffffff !important;
+}
+[class*="Modal"] p, [class*="Modal"] h1, [class*="Modal"] h2,
+[class*="Modal"] h3, [class*="Modal"] h4, [class*="Modal"] span,
+[class*="Modal"] div, [class*="Dialog"] p, [class*="Dialog"] span,
+[class*="Dialog"] div, [class*="Dialog"] h1, [class*="Dialog"] h2,
+[class*="Dialog"] h3 {
   color: #111111 !important;
 }
-.bq-price,
-.bq-price-details,
-span.bq-price {
+/* Price in modal */
+[class*="Modal"] [class*="price"], [class*="Modal"] [class*="Price"],
+[class*="Dialog"] [class*="price"], [class*="Dialog"] [class*="Price"] {
   color: #1a1a2e !important;
   font-weight: 600 !important;
 }
-.bq-duration {
-  color: #555555 !important;
-}
-.bq-details {
-  background: #ffffff !important;
-  color: #111111 !important;
+/* Description text */
+[class*="Modal"] [class*="description"], [class*="Modal"] [class*="Description"],
+[class*="Dialog"] [class*="description"] {
+  color: #333333 !important;
 }
 </style>
   <!-- Favicon -->
@@ -949,6 +966,42 @@ if (window.MutationObserver) {
     if (catalog) bqObs.observe(catalog, { childList: true, subtree: true });
   });
 }
+</script>
+
+<script>
+// Fix Booqable modal text color when it opens
+(function() {
+  function fixModalText() {
+    // Target all white-background popup elements
+    var candidates = document.querySelectorAll('[class*="Modal"], [class*="modal"], [class*="Dialog"], [class*="dialog"], [class*="Popup"], [class*="popup"]');
+    candidates.forEach(function(el) {
+      var bg = window.getComputedStyle(el).backgroundColor;
+      // If background is white or light, force dark text
+      if (bg === 'rgb(255, 255, 255)' || bg === 'rgba(255, 255, 255, 1)' || el.style.background === '#fff' || el.style.backgroundColor === 'white') {
+        el.style.setProperty('color', '#111111', 'important');
+        // Fix all child text elements
+        el.querySelectorAll('p, h1, h2, h3, h4, h5, span, div, li, a').forEach(function(child) {
+          var childBg = window.getComputedStyle(child).backgroundColor;
+          if (childBg === 'rgb(255, 255, 255)' || childBg === 'rgba(0, 0, 0, 0)' || childBg === 'transparent') {
+            child.style.setProperty('color', '#111111', 'important');
+          }
+        });
+      }
+    });
+  }
+
+  // Watch for modal appearing
+  if (window.MutationObserver) {
+    var modalObs = new MutationObserver(function(mutations) {
+      mutations.forEach(function(m) {
+        if (m.addedNodes.length) fixModalText();
+      });
+    });
+    document.addEventListener('DOMContentLoaded', function() {
+      modalObs.observe(document.body, { childList: true, subtree: true });
+    });
+  }
+})();
 </script>
 </body>
 </html>
