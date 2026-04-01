@@ -605,7 +605,7 @@ body { animation: pageFadeIn 0.4s ease both; }
 
       <!-- Booqable product list — tag changes dynamically -->
       <div class="bq-area">
-        <div class="booqable-product-list" id="mainProductList"></div>
+        <div class="booqable-product-list" data-store="perth-glow-furniture-hire" id="mainProductList"></div>
       </div>
 
     </div>
@@ -768,6 +768,7 @@ function updateCatalog(searchVal) {
   const area = document.getElementById('mainProductList')
   const newList = document.createElement('div')
   newList.className = 'booqable-product-list'
+  newList.setAttribute('data-store', 'perth-glow-furniture-hire')
   if (currentTag) newList.setAttribute('data-tag', currentTag)
   // Sort attribute
   if (currentSort === 'name') newList.setAttribute('data-sort', 'name')
