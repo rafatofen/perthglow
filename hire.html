@@ -351,6 +351,192 @@ body { animation: pageFadeIn 0.4s ease both; }
 
 /* Booqable iframe */
 .bq-area{flex:1;min-width:0}
+
+/* ── BOOQABLE THEME OVERRIDE ── */
+
+/* Search bar */
+.booqable-product-search input,
+[class*="SearchInput"],
+[class*="search-input"],
+[class*="ProductSearch"] input {
+  background: rgba(181,123,238,.1) !important;
+  border: 1px solid rgba(181,123,238,.4) !important;
+  color: var(--white) !important;
+  border-radius: 0 !important;
+  padding: 14px 14px 14px 48px !important;
+  font-family: var(--body) !important;
+  font-size: .92rem !important;
+}
+.booqable-product-search input::placeholder,
+[class*="SearchInput"]::placeholder { color: rgba(240,238,234,.4) !important; }
+.booqable-product-search input:focus,
+[class*="SearchInput"]:focus {
+  border-color: var(--purple) !important;
+  box-shadow: 0 0 20px rgba(181,123,238,.2) !important;
+  outline: none !important;
+}
+[class*="SearchIcon"], [class*="search-icon"],
+.booqable-product-search svg {
+  color: var(--purple) !important;
+  fill: var(--purple) !important;
+}
+
+/* Sidebar */
+.booqable-sidebar,
+[class*="Sidebar"],
+[class*="sidebar"] {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+[class*="CategoryList"],
+[class*="category-list"],
+[class*="CollectionList"] {
+  background: transparent !important;
+  border: none !important;
+}
+[class*="CategoryItem"],
+[class*="category-item"],
+[class*="CollectionItem"] {
+  background: transparent !important;
+  border: none !important;
+  border-left: 2px solid transparent !important;
+  color: var(--dim) !important;
+  font-family: var(--body) !important;
+  padding: 8px 12px !important;
+  border-radius: 0 !important;
+  transition: all .2s !important;
+}
+[class*="CategoryItem"]:hover,
+[class*="CollectionItem"]:hover {
+  background: rgba(181,123,238,.08) !important;
+  color: var(--white) !important;
+  border-left-color: var(--purple) !important;
+}
+[class*="CategoryItem"][class*="active"],
+[class*="CategoryItem"][class*="selected"],
+[class*="CollectionItem"][class*="active"],
+[class*="CollectionItem"][class*="selected"] {
+  background: rgba(181,123,238,.12) !important;
+  color: var(--white) !important;
+  border-left-color: var(--purple) !important;
+}
+[class*="CategoryCount"],
+[class*="category-count"],
+[class*="CollectionCount"] {
+  background: rgba(181,123,238,.2) !important;
+  color: var(--purple) !important;
+  border-radius: 20px !important;
+  font-size: .75rem !important;
+}
+
+/* Date picker */
+[class*="DatePicker"],
+[class*="date-picker"],
+[class*="Datepicker"],
+.booqable-datepicker {
+  background: var(--card) !important;
+  border: 1px solid var(--border) !important;
+  color: var(--white) !important;
+  border-radius: 0 !important;
+}
+[class*="DatePicker"] button,
+[class*="Datepicker"] button {
+  color: var(--dim) !important;
+  background: transparent !important;
+}
+[class*="DatePicker"] input,
+[class*="Datepicker"] input,
+[class*="date-input"] {
+  background: rgba(181,123,238,.08) !important;
+  border: 1px solid rgba(181,123,238,.3) !important;
+  color: var(--white) !important;
+  border-radius: 0 !important;
+}
+
+/* Product cards */
+[class*="ProductCard"],
+[class*="product-card"],
+.booqable-product-card,
+[class*="ProductItem"],
+.booqable-product-item {
+  background: var(--card) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  overflow: hidden !important;
+  transition: border-color .3s, transform .3s !important;
+}
+[class*="ProductCard"]:hover,
+[class*="ProductItem"]:hover {
+  border-color: rgba(181,123,238,.3) !important;
+  transform: translateY(-3px) !important;
+  box-shadow: 0 8px 30px rgba(181,123,238,.1) !important;
+}
+[class*="ProductName"],
+[class*="product-name"],
+[class*="ProductTitle"],
+.booqable-product-title {
+  color: var(--white) !important;
+  font-family: var(--serif) !important;
+  font-weight: 300 !important;
+}
+[class*="ProductPrice"],
+[class*="product-price"],
+[class*="Price"],
+.booqable-price {
+  color: var(--purple) !important;
+  font-family: var(--serif) !important;
+  font-size: 1.1rem !important;
+}
+[class*="ProductDescription"],
+.booqable-product-description {
+  color: var(--dim) !important;
+  font-family: var(--body) !important;
+}
+
+/* Available badge */
+[class*="Available"],
+[class*="available"],
+[class*="Badge"] {
+  background: rgba(181,123,238,.2) !important;
+  color: var(--purple) !important;
+  border: 1px solid rgba(181,123,238,.4) !important;
+  border-radius: 20px !important;
+  font-size: .7rem !important;
+}
+
+/* Add to cart button */
+[class*="AddToCart"],
+[class*="add-to-cart"],
+[class*="CartButton"],
+button[class*="booqable"],
+.booqable-add-to-cart {
+  background: linear-gradient(135deg, var(--purple), var(--cyan)) !important;
+  border: none !important;
+  border-radius: 0 !important;
+  color: var(--black) !important;
+  transition: box-shadow .3s !important;
+}
+[class*="AddToCart"]:hover,
+button[class*="booqable"]:hover {
+  box-shadow: 0 0 20px rgba(181,123,238,.4) !important;
+  opacity: .9 !important;
+}
+
+/* Cart / storefront wrapper */
+[class*="Storefront"],
+[class*="storefront"],
+.booqable-storefront,
+.booqable-store {
+  background: transparent !important;
+  color: var(--white) !important;
+}
+
+/* Scrollbars */
+[class*="booqable"]::-webkit-scrollbar { width: 4px; }
+[class*="booqable"]::-webkit-scrollbar-track { background: var(--deep); }
+[class*="booqable"]::-webkit-scrollbar-thumb { background: var(--purple); }
 </style>
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
