@@ -316,6 +316,33 @@ body { animation: pageFadeIn 0.4s ease both; }
   .btns,.hero-btns{justify-content:center}
 }
 .booqable-pagination *,.bq-pagination-inner *,.bq-pagination-page,.bq-pagination-page button,.bq-pagination-current{color:#111111!important;font-family:-apple-system,sans-serif!important}
+
+/* ── BOOQABLE COLOR RESET ── */
+#catalog .booqable-sidebar,
+#catalog .booqable-sidebar *,
+#catalog .booqable-product-list,
+#catalog .booqable-product-list *,
+#catalog .booqable-product-search,
+#catalog .booqable-product-search * {
+  color: #111111 !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+  letter-spacing: normal !important;
+  text-transform: none !important;
+  font-weight: normal !important;
+}
+body .booqable-product-detail-wrapper,
+body .booqable-product-detail-wrapper *,
+body .bq-content,
+body .bq-content *,
+body .bq-product-description,
+body .bq-product-description * {
+  color: #111111 !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+  letter-spacing: normal !important;
+  text-transform: none !important;
+  font-weight: normal !important;
+  max-width: none !important;
+}
 </style>
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
@@ -548,7 +575,7 @@ body { animation: pageFadeIn 0.4s ease both; }
     </ul></div>
     <div class="f-col"><h4>Contact</h4><ul>
       <li><a href="tel:0455484192">0455 484 192</a></li>
-      <li><a href="/cdn-cgi/l/email-protection#81e8efe7eec1f1e6e7e9afe2eeecafe0f4"><span class="__cf_email__" data-cfemail="85ecebe3eac5f5e2e3edabe6eae8abe4f0">[email&#160;protected]</span></a></li>
+      <li><a href="/cdn-cgi/l/email-protection#a4cdcac2cbe4d4c3c2cc8ac7cbc98ac5d1"><span class="__cf_email__" data-cfemail="dcb5b2bab39cacbbbab4f2bfb3b1f2bda9">[email&#160;protected]</span></a></li>
       <li><a>Bassendean, Perth WA</a></li>
     </ul></div>
   </div>
@@ -817,4 +844,11 @@ window.addEventListener('load', function() {
 });
 if (window.MutationObserver) {
   var bqObs = new MutationObserver(function() { fixBooqableLayout(); fixBooqableText(); });
-  document.
+  document.addEventListener('DOMContentLoaded', function() {
+    bqObs.observe(document.body, { childList: true, subtree: true });
+  });
+}
+</script>
+
+</body>
+</html>
