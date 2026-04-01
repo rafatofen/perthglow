@@ -222,9 +222,7 @@ nav { position:fixed; top:0; left:0; right:0; z-index:1000; padding:0 5vw; heigh
   
 .sidebar-show-more{display:none;padding:.6rem 1.8rem;font-family:var(--display);font-size:.46rem;letter-spacing:.14em;color:var(--purple);cursor:pointer;text-transform:uppercase;border-top:1px solid var(--border);margin-top:.3rem}
 
-.hire-proc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;margin-top:2rem}
 
-.hire-proc-card{padding:1.2rem .8rem}
   /* Process row: 2x2 grid on mobile */
   [data-anim-group] > *:nth-child(n){transition-delay:0s}
   /* CTA centering */
@@ -240,6 +238,13 @@ nav { position:fixed; top:0; left:0; right:0; z-index:1000; padding:0 5vw; heigh
   .f-col{text-align:center}
   .f-col ul{align-items:center}
   .f-bottom-links{flex-direction:column;gap:.5rem}
+
+  /* Featured carousel overflow */
+  .featured-wrap { overflow-x: hidden !important; }
+  .feat-grid { width: max-content; }
+  /* How it works: 2x2 grid */
+  .hire-proc-grid { grid-template-columns: 1fr 1fr !important; gap: 1rem !important; }
+  .hire-proc-card { padding: 1.2rem .8rem !important; }
 }
 .search-input { width:100%; background:rgba(181,123,238,.12); border:1px solid rgba(181,123,238,.4); border-radius:0; color:var(--white); padding:14px 14px 14px 52px; font-family:var(--body); font-size:.92rem; outline:none; transition:all .25s; box-shadow:0 0 20px rgba(181,123,238,.1),inset 0 0 12px rgba(181,123,238,.05); }
 .search-input:focus { border-color:var(--purple); background:rgba(181,123,238,.18); box-shadow:0 0 30px rgba(181,123,238,.25),inset 0 0 16px rgba(181,123,238,.08); }
