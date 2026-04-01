@@ -37,7 +37,7 @@ nav.scrolled{background:rgba(5,5,8,.92);backdrop-filter:blur(24px);border-bottom
 footer{background:var(--black);border-top:1px solid var(--border);padding:64px 5vw 30px}
 .f-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3.5rem;max-width:1300px;margin-left:auto;margin-right:auto}
 .f-brand img{height:42px;filter:drop-shadow(0 0 10px rgba(181,123,238,.35))}
-.f-brand p{color:var(--dim);font-size:.83rem;line-height:1.7;margin:1rem 0 1.4rem;max-width:270px}
+.f-brand 
 .socials{display:flex;gap:.7rem}
 .soc{width:36px;height:36px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--dim);text-decoration:none;font-size:.8rem;transition:.2s}
 .soc:hover{border-color:var(--cyan);color:var(--cyan)}
@@ -196,7 +196,7 @@ nav { position:fixed; top:0; left:0; right:0; z-index:1000; padding:0 5vw; heigh
 .hire-proc-card:hover .hire-proc-icon{box-shadow:0 0 35px rgba(199,125,255,.3)}
 .hire-proc-num{font-family:var(--display);font-size:.48rem;letter-spacing:.15em;color:rgba(181,123,238,.5);margin-bottom:.4rem}
 .hire-proc-h{font-family:var(--serif);font-size:1.1rem;font-weight:300;margin-bottom:.4rem;color:var(--white)}
-.hire-proc-p{font-size:.8rem;color:var(--dim);line-height:1.65}
+.hire-proc-
 @media(max-width:720px){
   section{padding:70px 5vw}
   /* Nav hamburger */
@@ -297,11 +297,7 @@ footer { background:var(--black); border-top:1px solid var(--border); padding:64
 [data-anim].anim-in { opacity: 1 !important; transform: none !important; }
 
 /* Staggered grid children */
-[data-anim-group] > * {
-  opacity: 0;
-  transform: translateY(32px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
+[data-anim-group] >
 [data-anim-group] > *.anim-in { opacity: 1 !important; transform: none !important; }
 [data-anim-group] > *:nth-child(1) { transition-delay: 0s; }
 [data-anim-group] > *:nth-child(2) { transition-delay: 0.1s; }
@@ -325,13 +321,7 @@ body { animation: pageFadeIn 0.4s ease both; }
 
 
 @media (prefers-reduced-motion: reduce) {
-  [data-anim], [data-anim-group] > * { opacity:1 !important; transform:none !important; transition:none !important; }
-
-
-
-
-
-
+  [data-anim], [data-anim-group] >
 @media(max-width:1100px){
   .f-top{grid-template-columns:1fr 1fr}
 }
@@ -448,21 +438,13 @@ body { animation: pageFadeIn 0.4s ease both; }
 
 
 
+
 /* ── BOOQABLE TEXT FIX ── */
-/* The body has color:var(--white). We reset it specifically for Booqable white-bg elements */
-.booqable-product-detail-wrapper,
-.booqable-product-detail-wrapper *:not(.bq-branded):not(.bq-button):not(.bq-status) {
-  color: #111111 !important;
-}
-.bq-price, span.bq-price, .bq-price-details { color: #1a1a2e !important; font-weight:600 !important; }
-.bq-duration { color: #555 !important; }
-/* Also reset the Themed wrapper that contains the detail */
-.booqable-component .bq-content,
-.booqable-component .bq-content *,
-.booqable-component .bq-product-description,
-.booqable-component .bq-product-description * {
-  color: #111111 !important;
-}
+.bq-product-name { color: #111111 !important; }
+.bq-price, span.bq-price { color: #1a1a2e !important; font-weight: 600 !important; }
+.bq-duration { color: #555555 !important; }
+.bq-product-description p { color: #333333 !important; max-width: none !important; }
+.bq-content h3 { color: #111111 !important; font-family: inherit !important; font-size: 1.1rem !important; letter-spacing: normal !important; text-transform: none !important; }
 </style>
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
